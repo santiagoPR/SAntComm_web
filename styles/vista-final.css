@@ -183,38 +183,36 @@ body {
 /* PICTURE FRAME - The bordered container */
 .picture-frame {
     border: 1px solid var(--frame-border);
-    padding: 60px;
+    padding: 0; /* NO padding on picture-frame itself */
     background: rgba(27, 28, 30, 0.4);
     backdrop-filter: blur(10px);
+    overflow: hidden;
 }
 
 /* Grid layout inside picture frame: LEFT for image, RIGHT for text */
 .frame-grid {
     display: grid;
     grid-template-columns: 400px 1fr;
-    gap: 80px;
+    gap: 0; /* NO gap, divider line handles spacing */
 }
 
-/* LEFT column: Image fills ONLY left side, stops at divider */
+/* LEFT column: Image fills entire left side */
 .frame-left {
     position: relative;
     border-right: 1px solid var(--frame-border); /* DIVIDER LINE */
-    overflow: hidden; /* Keep image contained in left column only */
     display: flex;
     flex-direction: column;
-    gap: 30px;
     justify-content: center;
-    padding: 0; /* No padding, image fills edge to edge */
+    padding: 60px; /* Padding for text overlay */
+    min-height: 500px;
 }
 
 .frame-left img {
     position: absolute;
-    top: -60px; /* Extend to top edge of picture-frame */
-    left: -60px; /* Extend to left edge of picture-frame */
-    bottom: -60px; /* Extend to bottom edge of picture-frame */
-    right: 0; /* Stop at the divider line */
-    width: calc(100% + 60px); /* Fill from left edge to divider */
-    height: calc(100% + 120px); /* Fill full height */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: 0;
 }
@@ -227,7 +225,6 @@ body {
     position: relative;
     z-index: 1;
     color: var(--text-white);
-    padding: 0 60px; /* Add padding back for text only */
 }
 
 .frame-left p {
@@ -236,11 +233,12 @@ body {
     color: var(--text-gray);
 }
 
-/* RIGHT column: Text content (subdued styling) */
+/* RIGHT column: Text content */
 .frame-right {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    padding: 60px; /* Padding for right side content */
 }
 
 .frame-right h2 {
