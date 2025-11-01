@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+ACTUAL Vista.io Redesign - Based on EXTRACTED HTML/CSS
+Not guessing anymore - using the REAL code structure
+"""
+
+html = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -252,4 +258,20 @@
         });
     </script>
 </body>
-</html>
+</html>'''
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html)
+
+print("=" * 70)
+print("ACTUAL VISTA.IO REDESIGN - BASED ON EXTRACTED CODE")
+print("=" * 70)
+print("\nKey Features:")
+print("- Integrated header + hero (NO separation)")
+print("- Login icon with user SVG")
+print("- Hero font: 80px Poppins ExtraLight")
+print("- Thin divider lines between features (Vista.io style)")
+print("- Two-column: Image/text LEFT + Feature cards RIGHT")
+print("- Background images fill entire sections")
+print("- Proper logo sizing (not stretched)")
+print("=" * 70)
