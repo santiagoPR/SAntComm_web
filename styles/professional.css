@@ -1340,6 +1340,22 @@ body {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Full-Width Image Sections (NO overlays - clean professional) */
+.full-width-image-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--primary-dark);
+}
+
+.full-section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 /* Remove old tiny panel styles */
 .visualization-container {
     display: none;
