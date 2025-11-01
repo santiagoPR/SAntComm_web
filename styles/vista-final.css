@@ -178,34 +178,34 @@ body {
 
 /* ========================================
    PICTURE-FRAME LAYOUT (like Vista.io)
-   Images on LEFT in frames, text on RIGHT subdued
+   ONE bordered box containing BOTH image and text
    ======================================== */
-/* Grid layout: LEFT column for image frame, RIGHT for text */
+/* PICTURE FRAME - The bordered container */
+.picture-frame {
+    border: 1px solid var(--frame-border);
+    padding: 60px;
+    background: rgba(27, 28, 30, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* Grid layout inside picture frame: LEFT for image, RIGHT for text */
 .frame-grid {
     display: grid;
     grid-template-columns: 400px 1fr;
     gap: 80px;
 }
 
-/* LEFT column: Image in picture frame + title */
+/* LEFT column: Image + optional title */
 .frame-left {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.image-frame {
-    border: 1px solid var(--frame-border);
-    padding: 20px;
-    background: rgba(27, 28, 30, 0.4);
-    backdrop-filter: blur(10px);
-}
-
-.image-frame img {
+.frame-left img {
     width: 100%;
     height: auto;
     display: block;
-    opacity: 0.15; /* Subdued image */
 }
 
 .frame-left h2 {
