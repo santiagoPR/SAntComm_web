@@ -198,23 +198,15 @@ body {
 
 /* LEFT column: Image fills entire left side */
 .frame-left {
-    position: relative;
     border-right: 1px solid var(--frame-border); /* DIVIDER LINE */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px; /* Padding for text overlay */
+    padding: 60px;
     min-height: 500px;
-}
-
-.frame-left img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .frame-left h2 {
@@ -222,9 +214,8 @@ body {
     font-size: 30px;
     font-weight: 600;
     line-height: 1.4;
-    position: relative;
-    z-index: 1;
     color: var(--text-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .frame-left p {
