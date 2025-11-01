@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+FINAL PRECISE Vista.io Redesign
+- Picture-frame borders (boxes around content, NOT section dividers)
+- Correct image paths: image1.png through image6.png
+- image5 as hero background
+- Subdued backgrounds blended properly
+"""
+
+html = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -254,4 +263,17 @@
         AOS.init({ duration: 1000, easing: 'ease-out-cubic', once: true });
     </script>
 </body>
-</html>
+</html>'''
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html)
+
+print("=" * 70)
+print("FINAL PRECISE VISTA.IO REDESIGN")
+print("=" * 70)
+print("\nFIXED:")
+print("✅ Image paths: image1.png through image6.png")
+print("✅ PICTURE-FRAME borders (boxes around content, NOT section dividers)")
+print("✅ image5 as hero background")
+print("✅ image2, image3, image6, image4 as subdued section backgrounds")
+print("=" * 70)
