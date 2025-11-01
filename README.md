@@ -2,8 +2,7 @@
 
 A modern web and mobile application platform for communication solutions.
 
-🌐 **Live:** https://dev.santcom.com (Development)
-🚀 **Production:** https://santcom.com (Coming Soon)
+🌐 **Live:** https://santcom.com
 
 ## 🎯 Quick Start
 
@@ -88,7 +87,7 @@ npm start
 
 ### Deployment
 
-**Auto-deploys to dev.santcom.com on every push to GitHub!**
+**Auto-deploys to santcom.com on every push to GitHub!**
 
 ```bash
 # Make changes to your files
@@ -96,7 +95,7 @@ git add .
 git commit -m "Your changes"
 git push
 
-# Automatically deploys to https://dev.santcom.com
+# Automatically deploys to https://santcom.com
 ```
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for setup instructions.
@@ -147,8 +146,7 @@ git push                    # Deploys to production
 
 | Environment | URL | Purpose |
 |-------------|-----|---------|
-| **Development** | https://dev.santcom.com | Testing & preview |
-| **Production** | https://santcom.com | Live site (soon) |
+| **Production** | https://santcom.com | Live site |
 | **Local** | http://localhost:8080 | Local development |
 
 ---

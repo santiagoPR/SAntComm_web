@@ -23,7 +23,7 @@ git push -u origin main
 3. Add repository:
    - URL: `https://github.com/YOUR_USERNAME/YOUR_REPO.git`
    - Branch: `main`
-   - Path: `/domains/dev.santcom.com/public_html`
+   - Path: `/public_html` (or `/domains/santcom.com/public_html`)
 4. Click **Auto Deployment** → Copy webhook URL
 
 ### Step 3: Add Webhook (2 minutes)
@@ -42,7 +42,7 @@ git commit -m "Test deployment"
 git push
 ```
 
-Visit **https://dev.santcom.com** - You should see your site! 🎉
+Visit **https://santcom.com** - You should see your site! 🎉
 
 ---
 
@@ -58,7 +58,7 @@ git add .
 git commit -m "Your change description"
 git push
 
-# 4. Auto-deploys to dev.santcom.com!
+# 4. Auto-deploys to santcom.com!
 ```
 
 ---
@@ -113,5 +113,4 @@ Use slash commands or natural language:
 
 **Need help?** Just ask me naturally - I'll detect which agent to use!
 
-**Development URL:** https://dev.santcom.com
-**Production URL:** https://santcom.com (coming soon)
+**Live URL:** https://santcom.com

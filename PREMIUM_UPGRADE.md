@@ -341,7 +341,7 @@ Test with real users before full switch.
 ### Questions?
 - Review code comments in premium-main.js
 - Check DESIGN_RESEARCH_REPOSITORY.md for assets
-- Test on https://dev.santcom.com after deployment
+- Test on https://santcom.com after deployment
 
 ---
 
