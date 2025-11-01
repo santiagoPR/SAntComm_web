@@ -134,6 +134,14 @@
 
         <!-- Problem Section with Data Visualization -->
         <section class="problem-section-premium">
+            <!-- Video Background -->
+            <div class="section-video-bg">
+                <video autoplay muted loop playsinline class="section-bg-video">
+                    <source src="https://cdn.pixabay.com/video/2023/06/20/167726-838945624_large.mp4" type="video/mp4">
+                </video>
+                <div class="section-video-overlay"></div>
+            </div>
+
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
                     <span class="section-badge">The Challenge</span>
@@ -249,6 +257,15 @@
                     </div>
                 </div>
 
+
+                <!-- Real-Time Data Stream -->
+                <div class="visualization-container" data-aos="fade-up" data-aos-delay="250">
+                    <h3 class="viz-title">Live Project Data Stream</h3>
+                    <div class="canvas-wrapper">
+                        <canvas id="dataStream"></canvas>
+                    </div>
+                </div>
+                
                 <!-- Technology Stack -->
                 <div class="tech-stack-grid" data-aos="fade-up" data-aos-delay="300">
                     <div class="tech-item">
@@ -292,12 +309,28 @@
                         <h4>Secure & Private</h4>
                         <p>Your data never leaves your environment</p>
                     </div>
+                
+
+                <!-- HTML5 Network Visualization -->
+                <div class="visualization-container" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="viz-title">Neural Network Architecture</h3>
+                    <div class="canvas-wrapper">
+                        <canvas id="networkGraph"></canvas>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Solutions Section with Interactive Cards -->
         <section id="solutions" class="solutions-section-premium">
+            <!-- Video Background -->
+            <div class="section-video-bg">
+                <video autoplay muted loop playsinline class="section-bg-video">
+                    <source src="https://cdn.pixabay.com/video/2022/11/29/141358-777339305_large.mp4" type="video/mp4">
+                </video>
+                <div class="section-video-overlay"></div>
+            </div>
+
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
                     <span class="section-badge">Our Approach</span>
@@ -400,6 +433,15 @@
                             <a href="#contact">Learn more →</a>
                         </div>
                     </div>
+                
+
+                <!-- Project Risk Heatmap -->
+                <div class="visualization-container" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="viz-title">Project Risk Analysis Heatmap</h3>
+                    <p class="viz-subtitle">Monthly risk assessment across project phases</p>
+                    <div class="canvas-wrapper">
+                        <canvas id="heatmap"></canvas>
+                    </div>
                 </div>
             </div>
         </section>
@@ -452,7 +494,20 @@
                                 </div>
                                 <h4>Partnership</h4>
                                 <p>Custom solutions built for your specific needs</p>
+                            
+
+                        <!-- Performance Gauges -->
+                        <div class="gauges-grid">
+                            <div class="gauge-item">
+                                <canvas id="accuracyGauge"></canvas>
                             </div>
+                            <div class="gauge-item">
+                                <canvas id="uptimeGauge"></canvas>
+                            </div>
+                            <div class="gauge-item">
+                                <canvas id="speedGauge"></canvas>
+                            </div>
+                        </div>
                         </div>
                     </div>
                     <div class="about-visual" data-aos="fade-left">
@@ -613,5 +668,9 @@
 
     <!-- Custom Scripts -->
     <script src="scripts/premium-main.js"></script>
+
+    <!-- HTML5 Canvas Visualizations -->
+    <script src="scripts/canvas-visualizations.js"></script>
+
 </body>
 </html>

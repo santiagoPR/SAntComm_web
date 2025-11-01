@@ -32,7 +32,8 @@
       "Bash('/c/Users/sigfr/AppData/Local/Programs/Python/Python313/python.exe' color_based_split.py)",
       "Bash(netstat:*)",
       "Bash(curl:*)",
-      "Bash(npx http-server -p 3000)"
+      "Bash(npx http-server -p 3000)",
+      "Bash(/c/Users/sigfr/AppData/Local/Programs/Python/Python313/python.exe:*)"
     ],
     "deny": [],
     "ask": []
