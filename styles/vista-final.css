@@ -192,8 +192,12 @@ body {
 /* Grid layout inside picture frame: LEFT for image, RIGHT for text */
 .frame-grid {
     display: grid;
-    grid-template-columns: 400px 1fr;
     gap: 0; /* NO gap, divider line handles spacing */
+}
+
+/* Default balanced split */
+.frame-grid {
+    grid-template-columns: 1fr 1fr;
 }
 
 /* LEFT column: Image fills entire left side */
@@ -205,8 +209,46 @@ body {
     padding: 60px;
     min-height: 500px;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+}
+
+/* Section-specific optimizations based on image aspect ratios and content */
+
+/* Section 1: image2 (2.29 aspect ratio) - More space for image, short title on left */
+.section:nth-of-type(2) .frame-grid {
+    grid-template-columns: 58% 42%;
+}
+
+.section:nth-of-type(2) .frame-left {
+    min-height: 600px;
+}
+
+/* Section 2: image3 (1.75 aspect ratio - more square) - Balanced split */
+.section:nth-of-type(3) .frame-grid {
+    grid-template-columns: 48% 52%;
+}
+
+.section:nth-of-type(3) .frame-left {
+    min-height: 550px;
+}
+
+/* Section 3: image6 (3.53 aspect ratio - very wide) - Less space for image, more for stats */
+.section:nth-of-type(4) .frame-grid {
+    grid-template-columns: 40% 60%;
+}
+
+.section:nth-of-type(4) .frame-left {
+    min-height: 500px;
+}
+
+/* Section 4: image4 (2.55 aspect ratio) - More space for image, minimal text */
+.section:nth-of-type(5) .frame-grid {
+    grid-template-columns: 58% 42%;
+}
+
+.section:nth-of-type(5) .frame-left {
+    min-height: 450px;
 }
 
 .frame-left h2 {
@@ -513,9 +555,13 @@ body {
    RESPONSIVE
    ======================================== */
 @media (max-width: 1200px) {
-    .frame-grid,
+    /* Override custom section layouts on smaller screens */
+    .section:nth-of-type(2) .frame-grid,
+    .section:nth-of-type(3) .frame-grid,
+    .section:nth-of-type(4) .frame-grid,
+    .section:nth-of-type(5) .frame-grid,
     .frame-split {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     .stats-grid {
