@@ -25,7 +25,7 @@ body {
 header {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -48,7 +48,7 @@ nav {
 }
 
 .logo-img {
-    height: 50px;
+    height: 80px;
     width: auto;
     display: block;
     transition: transform 0.3s ease;
@@ -77,7 +77,7 @@ nav {
 
 /* Main Content */
 main {
-    margin-top: 70px;
+    margin-top: 90px;
 }
 
 /* Hero Section */
@@ -140,7 +140,7 @@ footer {
     }
 
     .logo-img {
-        height: 40px;
+        height: 60px;
     }
 
     .nav-links {
