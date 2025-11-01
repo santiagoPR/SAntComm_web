@@ -195,19 +195,29 @@ body {
     gap: 80px;
 }
 
-/* LEFT column: Image + optional title */
+/* LEFT column: Image fills entire space */
 .frame-left {
+    position: relative;
+    border-right: 1px solid var(--frame-border); /* DIVIDER LINE */
+    margin: -60px 0 -60px -60px; /* Extend to edges of picture-frame */
+    padding: 60px 80px 60px 60px; /* Maintain spacing but fill background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    border-right: 1px solid var(--frame-border); /* DIVIDER LINE */
-    padding-right: 80px;
+    justify-content: center;
 }
 
 .frame-left img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .frame-left h2 {
@@ -215,6 +225,9 @@ body {
     font-size: 30px;
     font-weight: 600;
     line-height: 1.4;
+    position: relative;
+    z-index: 1;
+    color: var(--text-white);
 }
 
 .frame-left p {
