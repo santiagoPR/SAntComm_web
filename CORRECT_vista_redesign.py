@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+CORRECT Vista.io Redesign
+Using the EXACT image placement strategy from Vista.io:
+- image5 as full background for hero
+- image2 as subdued background for "Let your data" section
+- image3 for next section
+- image6 and image4 for stats sections
+- Bordered frames like Vista.io
+"""
+
+html = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -254,4 +265,19 @@
         });
     </script>
 </body>
-</html>
+</html>'''
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html)
+
+print("=" * 70)
+print("CORRECT VISTA.IO REDESIGN")
+print("=" * 70)
+print("\nIMAGE USAGE:")
+print("- image5: FULL background for hero (side to side)")
+print("- image2: Subdued background for 'Let Your Data' section")
+print("- image3: Subdued background for 'Unprecedented Velocity' section")
+print("- image6: Subdued background for stats section")
+print("- image4: Subdued background for CTA section")
+print("\nBORDERED FRAMES: Each section has subtle bezel borders")
+print("=" * 70)

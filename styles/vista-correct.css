@@ -1,0 +1,549 @@
+/* ========================================
+   CORRECT VISTA.IO MATCH
+   With bordered frames and subdued backgrounds
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #1B1C1E;
+    --text-white: #ffffff;
+    --text-gray: #B8B8B8;
+    --accent-red: #FD6262;
+    --border-frame: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* ========================================
+   HERO SECTION - image5 FULL BACKGROUND
+   ======================================== */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* FULL background image from side to side */
+.hero-bg-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom right; /* Like Vista.io */
+}
+
+/* Header integrated */
+.header-integrated {
+    position: relative;
+    z-index: 100;
+    padding: 30px 0;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--accent-red);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: var(--text-white);
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login:hover {
+    color: var(--accent-red);
+}
+
+.btn-outline {
+    padding: 12px 28px;
+    background: transparent;
+    border: 2px solid var(--text-white);
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--text-white);
+    color: var(--bg-dark);
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    margin-top: 180px;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 80px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero-subtitle {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--accent-red);
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #ff8080;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   FRAMED SECTIONS with Subdued Backgrounds
+   ======================================== */
+.section-framed {
+    position: relative;
+    padding: 100px 0;
+    margin: 40px 0;
+    /* BEZEL BORDER FRAME like Vista.io */
+    border: 1px solid var(--border-frame);
+    border-left: none;
+    border-right: none;
+}
+
+/* Subdued background image */
+.section-bg-subdued {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15; /* Very subdued */
+    z-index: 0;
+    overflow: hidden;
+}
+
+.section-bg-subdued img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ========================================
+   LEFT-RIGHT GRID SECTION
+   ======================================== */
+.section-grid-left-right {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 80px;
+}
+
+.content-left {
+    padding-right: 40px;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-gray);
+}
+
+/* Stacked Features */
+.features-stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.feature-box {
+    padding: 30px 40px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--accent-red);
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #A0C4FF;
+    margin-bottom: 12px;
+}
+
+.feature-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+/* Thin divider line */
+.divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(184, 184, 184, 0.3);
+}
+
+/* ========================================
+   SPLIT SECTION (Image + Text)
+   ======================================== */
+.section-split {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.split-image {
+    position: relative;
+    min-height: 400px;
+}
+
+.overlay-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-white);
+}
+
+.split-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.split-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-gray);
+}
+
+/* ========================================
+   STATS SECTION
+   ======================================== */
+.stats-heading {
+    position: relative;
+    z-index: 10;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.stats-grid {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #A0C4FF;
+    margin-bottom: 12px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+/* Red divider for stats */
+.divider-red {
+    width: 80px;
+    height: 2px;
+    background: var(--accent-red);
+    margin: 0 auto;
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+.cta-center {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-center h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 24px;
+}
+
+.cta-center p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background: var(--bg-dark);
+    padding: 80px 0 40px 0;
+    border-top: 1px solid var(--border-frame);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain; /* NO stretching */
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+.footer-col h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.footer-col a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--accent-red);
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.newsletter input[type="email"] {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-frame);
+    color: var(--text-white);
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.newsletter input[type="email"]:focus {
+    outline: none;
+    border-color: var(--accent-red);
+}
+
+.newsletter label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-gray);
+}
+
+.btn-small {
+    background: var(--accent-red);
+    color: var(--text-white);
+    padding: 10px 24px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn-small:hover {
+    background: #ff8080;
+}
+
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+.social a {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-frame);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social a:hover {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-frame);
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1200px) {
+    .section-grid-left-right,
+    .section-split {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
