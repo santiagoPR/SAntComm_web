@@ -215,13 +215,27 @@ body {
 
 /* Section-specific optimizations based on image aspect ratios and content */
 
-/* Section 1: image2 (2.29 aspect ratio) - More space for image, short title on left */
+/* Section 1: image2 (2.29 aspect ratio) - HORIZONTAL SPLIT (top/bottom) */
 .section:nth-of-type(2) .frame-grid {
-    grid-template-columns: 58% 42%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
 }
 
 .section:nth-of-type(2) .frame-left {
-    min-height: 600px;
+    position: relative;
+    min-height: 400px;
+    border-right: none;
+    border-bottom: 1px solid var(--frame-border); /* HORIZONTAL DIVIDER */
+    padding: 0; /* No padding - image fills entire top */
+}
+
+.section:nth-of-type(2) .frame-left h2 {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    right: 60px;
+    margin: 0;
+    z-index: 10;
 }
 
 /* Section 2: image3 (1.75 aspect ratio - more square) - Balanced split */
@@ -233,13 +247,17 @@ body {
     min-height: 550px;
 }
 
-/* Section 3: image6 (3.53 aspect ratio - very wide) - Less space for image, more for stats */
+/* Section 3: image6 (3.53 aspect ratio - very wide) - HORIZONTAL SPLIT (top/bottom) */
 .section:nth-of-type(4) .frame-grid {
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
 }
 
 .section:nth-of-type(4) .frame-left {
-    min-height: 500px;
+    min-height: 350px;
+    border-right: none;
+    border-bottom: 1px solid var(--frame-border); /* HORIZONTAL DIVIDER */
+    padding: 0; /* No padding - image fills entire top */
 }
 
 /* Section 4: image4 (2.55 aspect ratio) - More space for image, minimal text */
@@ -555,13 +573,19 @@ body {
    RESPONSIVE
    ======================================== */
 @media (max-width: 1200px) {
-    /* Override custom section layouts on smaller screens */
-    .section:nth-of-type(2) .frame-grid,
+    /* Override vertical split sections on smaller screens */
     .section:nth-of-type(3) .frame-grid,
-    .section:nth-of-type(4) .frame-grid,
     .section:nth-of-type(5) .frame-grid,
     .frame-split {
         grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+    }
+
+    /* Horizontal splits (sections 2 and 4) already mobile-friendly */
+    .section:nth-of-type(3) .frame-left,
+    .section:nth-of-type(5) .frame-left {
+        border-right: none;
+        border-bottom: 1px solid var(--frame-border);
     }
 
     .stats-grid {
