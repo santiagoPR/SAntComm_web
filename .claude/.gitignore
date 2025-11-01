@@ -1,0 +1,12 @@
+# Claude session data
+*.jsonl
+debug/
+file-history/
+shell-snapshots/
+ide/
+.credentials.json
+
+# Keep these
+!commands/
+!settings.local.json
+!.mcp.json

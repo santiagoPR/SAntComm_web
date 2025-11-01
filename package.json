@@ -1,0 +1,17 @@
+{
+  "name": "santcomm-web",
+  "version": "1.0.0",
+  "description": "SAntComm Web Application",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "dev": "npx live-server"
+  },
+  "keywords": ["web", "santcomm"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}

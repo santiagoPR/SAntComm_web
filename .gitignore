@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+
+# Git
+.git/
+
+# Claude AI (keep settings, but ignore debug/cache)
+.claude/debug/
+.claude/file-history/
+.claude/shell-snapshots/
+.claude/ide/
+.claude/todos/
+.claude/history.jsonl
+
+# Build outputs (if using build tools later)
+dist/
+build/
