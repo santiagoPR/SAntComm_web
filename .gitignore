@@ -40,4 +40,6 @@ build/
 logo/*.py
 logo/*.svg
 logo/*-clean.png
+logo/*-cropped.png
 logo/full-logo-temp.png
+logo/screenshots/
