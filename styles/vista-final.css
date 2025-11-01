@@ -169,48 +169,43 @@ body {
 }
 
 /* ========================================
-   SECTIONS with Subdued Backgrounds
+   SECTIONS - Clean background
    ======================================== */
 .section {
-    position: relative;
     padding: 100px 0;
-}
-
-.section-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.12; /* Very subdued */
-    z-index: 0;
-}
-
-.section-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background-color: var(--bg-dark);
 }
 
 /* ========================================
-   PICTURE-FRAME BOXES (like Vista.io)
-   NOT full-width section dividers!
+   PICTURE-FRAME LAYOUT (like Vista.io)
+   Images on LEFT in frames, text on RIGHT subdued
    ======================================== */
-.frame-box {
-    position: relative;
-    z-index: 10;
-    /* BORDER creates a FRAME around content */
-    border: 1px solid var(--frame-border);
-    padding: 60px;
-    background: rgba(27, 28, 30, 0.4); /* Slight background */
-    backdrop-filter: blur(10px);
-}
-
-/* Grid layout inside frame */
+/* Grid layout: LEFT column for image frame, RIGHT for text */
 .frame-grid {
     display: grid;
     grid-template-columns: 400px 1fr;
     gap: 80px;
+}
+
+/* LEFT column: Image in picture frame + title */
+.frame-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.image-frame {
+    border: 1px solid var(--frame-border);
+    padding: 20px;
+    background: rgba(27, 28, 30, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.15; /* Subdued image */
 }
 
 .frame-left h2 {
@@ -218,7 +213,6 @@ body {
     font-size: 30px;
     font-weight: 600;
     line-height: 1.4;
-    margin-bottom: 30px;
 }
 
 .frame-left p {
@@ -227,12 +221,28 @@ body {
     color: var(--text-gray);
 }
 
-/* Feature cards */
+/* RIGHT column: Text content (subdued styling) */
 .frame-right {
     display: flex;
     flex-direction: column;
+    gap: 24px;
 }
 
+.frame-right h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.frame-right p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-gray); /* Subdued text */
+}
+
+/* Feature cards in RIGHT column */
 .feature-card {
     padding: 30px 0;
 }
@@ -300,19 +310,18 @@ body {
 }
 
 /* ========================================
-   STATS (inside frame)
+   STATS (inside RIGHT column)
    ======================================== */
 .stats-title {
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: 600;
-    text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
 
@@ -342,27 +351,25 @@ body {
 }
 
 /* ========================================
-   CTA (inside frame)
+   CTA (inside RIGHT column)
    ======================================== */
 .cta-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .cta-content h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 1.3;
-    margin-bottom: 24px;
 }
 
 .cta-content p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
-    color: var(--text-gray);
-    margin-bottom: 40px;
+    color: var(--text-gray); /* Subdued */
 }
 
 /* ========================================
