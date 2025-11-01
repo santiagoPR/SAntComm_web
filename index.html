@@ -4,53 +4,403 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SAntComm</title>
+    <title>SAntComm | ML Predictive Analytics for Construction</title>
+    <meta name="description" content="Transform construction project management with AI-powered predictive analytics. Prevent budget overruns and schedule delays before they happen.">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#home">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="logo/s-logo-mobile-metallic.png">
-                        <img src="logo/full-logo-header-metallic.png" alt="SAntComm Logo" class="logo-img">
-                    </picture>
-                </a>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#home">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="logo/s-logo-mobile-metallic.png">
+                            <img src="logo/full-logo-header-metallic.png" alt="SAntComm Logo" class="logo-img">
+                        </picture>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#platform">Platform</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="nav-cta">Get Started</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
+            <div class="hero-background"></div>
             <div class="hero-content">
-                <h2>Welcome to SAntComm</h2>
-                <p>Your communication platform</p>
+                <div class="container">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Prevent Construction Delays & Overruns with
+                            <span class="gradient-text">AI-Powered Analytics</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Transform your project data into actionable insights. Our machine learning platform predicts budget overruns and schedule delays before they happen.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#contact" class="btn btn-primary">Request Demo</a>
+                            <a href="#platform" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 11l3 3L22 4"></path>
+                                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Prediction Accuracy</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v20M2 12h20"></path>
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                </svg>
+                            </div>
+                            <div class="stat-number">$500M+</div>
+                            <div class="stat-label">Overruns Prevented</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Projects Analyzed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"></path>
+                </svg>
             </div>
         </section>
 
-        <section id="about" class="section">
+        <!-- Problem Section -->
+        <section class="problem-section">
             <div class="container">
-                <h2>About Us</h2>
-                <p>SAntComm provides innovative communication solutions.</p>
+                <h2 class="section-title">The Construction Industry Challenge</h2>
+                <p class="section-subtitle">Traditional project management leaves billions on the table</p>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <div class="problem-stat">86%</div>
+                        <h3>Budget Overruns</h3>
+                        <p>of large construction projects exceed their original budget estimates</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-stat">77%</div>
+                        <h3>Schedule Delays</h3>
+                        <p>of projects fail to meet their planned completion deadlines</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-stat">95%</div>
+                        <h3>Data Unused</h3>
+                        <p>of project data goes unanalyzed, hiding critical warning signs</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="section">
+        <!-- Solutions Section -->
+        <section id="solutions" class="solutions-section">
             <div class="container">
-                <h2>Contact</h2>
-                <p>Get in touch with us.</p>
+                <h2 class="section-title">Our Solutions</h2>
+                <p class="section-subtitle">Advanced ML analytics that transform how you manage construction projects</p>
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3>Predictive Analytics</h3>
+                        <p>AI models that forecast budget overruns and schedule delays weeks before they occur, giving you time to take corrective action.</p>
+                        <ul class="solution-features">
+                            <li>Early warning system for cost overruns</li>
+                            <li>Schedule risk assessment</li>
+                            <li>Resource allocation optimization</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card featured">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                            </svg>
+                        </div>
+                        <h3>Real-Time Monitoring</h3>
+                        <p>Live dashboards that track project health metrics, identifying anomalies and trends as they develop.</p>
+                        <ul class="solution-features">
+                            <li>Automated anomaly detection</li>
+                            <li>Real-time KPI tracking</li>
+                            <li>Customizable alert system</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Historical Analysis</h3>
+                        <p>Learn from past projects with deep analytics that reveal patterns and insights for better future planning.</p>
+                        <ul class="solution-features">
+                            <li>Pattern recognition across projects</li>
+                            <li>Benchmarking and comparisons</li>
+                            <li>Success factor identification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Section -->
+        <section id="platform" class="platform-section">
+            <div class="container">
+                <div class="platform-content">
+                    <div class="platform-text">
+                        <h2 class="section-title">Intelligent Platform Built for Construction</h2>
+                        <p class="platform-description">
+                            SAntComm combines cutting-edge machine learning with deep construction industry expertise. Our platform ingests data from your existing systems and transforms it into actionable intelligence.
+                        </p>
+                        <div class="platform-features">
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <div>
+                                    <h4>Easy Integration</h4>
+                                    <p>Seamlessly connects with your existing project management tools</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <div>
+                                    <h4>Custom Models</h4>
+                                    <p>ML algorithms trained on your specific project types and constraints</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <div>
+                                    <h4>Actionable Insights</h4>
+                                    <p>Clear recommendations, not just data visualization</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-visual">
+                        <div class="dashboard-mockup">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="mockup-title">Project Dashboard</div>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="mockup-chart">
+                                    <div class="chart-bars">
+                                        <div class="bar" style="height: 60%"></div>
+                                        <div class="bar" style="height: 85%"></div>
+                                        <div class="bar" style="height: 45%"></div>
+                                        <div class="bar" style="height: 92%"></div>
+                                        <div class="bar" style="height: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="mockup-metrics">
+                                    <div class="metric">
+                                        <div class="metric-label">Budget Health</div>
+                                        <div class="metric-value success">98%</div>
+                                    </div>
+                                    <div class="metric">
+                                        <div class="metric-label">Schedule Status</div>
+                                        <div class="metric-value warning">82%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About SAntComm</h2>
+                    <p class="about-text">
+                        SAntComm is at the intersection of machine learning, computer science, and construction communications. We leverage advanced predictive models and analytics to help construction companies prevent budget overruns and schedule delays before they impact project success.
+                    </p>
+                    <p class="about-text">
+                        Our team combines deep expertise in AI/ML with real-world construction industry experience. We understand the unique challenges of construction project management and have built our platform specifically to address them.
+                    </p>
+                    <div class="about-values">
+                        <div class="value-card">
+                            <h4>Innovation</h4>
+                            <p>Cutting-edge ML technology applied to real construction challenges</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Precision</h4>
+                            <p>95%+ accuracy in our predictive models through continuous refinement</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Partnership</h4>
+                            <p>We work closely with clients to customize solutions for their needs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="section-title">Ready to Transform Your Projects?</h2>
+                        <p class="contact-description">
+                            See how SAntComm can help prevent budget overruns and schedule delays on your construction projects. Request a demo and we'll show you the platform in action with your data.
+                        </p>
+                        <div class="contact-benefits">
+                            <div class="benefit-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>30-minute personalized demo</span>
+                            </div>
+                            <div class="benefit-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Free proof-of-concept with your data</span>
+                            </div>
+                            <div class="benefit-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Custom implementation roadmap</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Work Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company *</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="projectSize">Typical Project Size *</label>
+                                <select id="projectSize" name="projectSize" required>
+                                    <option value="">Select range...</option>
+                                    <option value="<1M">Under $1M</option>
+                                    <option value="1M-10M">$1M - $10M</option>
+                                    <option value="10M-50M">$10M - $50M</option>
+                                    <option value="50M-100M">$50M - $100M</option>
+                                    <option value="100M+">$100M+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Tell us about your challenges *</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Request Demo</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 SAntComm. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo/full-logo-header-metallic.png" alt="SAntComm Logo">
+                    </div>
+                    <p class="footer-description">
+                        AI-powered predictive analytics for construction project management.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#platform">Features</a></li>
+                        <li><a href="#contact">Pricing</a></li>
+                        <li><a href="#contact">Request Demo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact">Careers</a></li>
+                        <li><a href="#contact">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#contact">Documentation</a></li>
+                        <li><a href="#contact">Case Studies</a></li>
+                        <li><a href="#contact">Support</a></li>
+                        <li><a href="#contact">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SAntComm. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="scripts/main.js"></script>
