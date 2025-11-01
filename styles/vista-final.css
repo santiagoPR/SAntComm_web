@@ -200,6 +200,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    border-right: 1px solid var(--frame-border); /* DIVIDER LINE */
+    padding-right: 80px;
 }
 
 .frame-left img {
