@@ -35,3 +35,9 @@ npm-debug.log*
 # Build outputs (if using build tools later)
 dist/
 build/
+
+# Logo processing scripts and original files
+logo/*.py
+logo/*.svg
+logo/*-clean.png
+logo/full-logo-temp.png
