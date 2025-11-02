@@ -219,55 +219,55 @@ body {
     padding: var(--section-spacing) 0;
 }
 
-/* NO PICTURE FRAMES - Wix template has NO borders, NO boxes */
+/* EXACT WIX TEMPLATE STRUCTURE */
+/* Outer container - matches Wix 1110px content boxes */
 .picture-frame {
-    background-color: rgba(0, 0, 0, 0); /* Fully transparent */
-    border: 0px none; /* NO borders */
+    width: 1110px; /* Exact Wix width */
+    max-width: 1110px;
+    margin: 0 auto;
+    background: rgb(63, 67, 73); /* Exact Wix dark gray background */
+    border: 0px none; /* NO borders like Wix */
     padding: 0;
-    margin: 0;
-    max-width: 1265px;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
 }
 
-/* Grid layouts - simple, clean, NO gaps, NO borders */
+/* Grid layouts - Wix uses flex */
 .frame-grid {
-    display: grid;
-    gap: 0;
+    display: flex;
+    width: 100%;
 }
 
 /* Horizontal split */
 .frame-grid-horizontal {
-    grid-template-columns: 1fr;
+    flex-direction: column;
 }
 
-/* Vertical split */
+/* Vertical split - Wix uses flex, not grid */
 .frame-grid-vertical {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
 }
 
-.frame-left,
-.frame-right {
-    padding: 60px;
-    background: rgba(0, 0, 0, 0); /* Fully transparent */
-    border: 0px none; /* NO borders */
+/* Left column with image - Wix structure */
+.frame-left {
+    position: relative;
+    flex: 1;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
 }
 
-/* Images positioned absolutely like Wix */
 .frame-left.with-image {
     position: relative;
-    min-height: 600px;
-    padding: 60px;
-    overflow: visible; /* Don't clip - let it blend */
+    min-height: 708px; /* Match Wix height */
 }
 
+/* Images - EXACT Wix method */
 .frame-left.with-image img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Exact Wix method */
     opacity: 1;
     filter: none;
     z-index: 0;
@@ -276,6 +276,15 @@ body {
 .frame-left.with-image h2 {
     position: relative;
     z-index: 1;
+    padding: 54px; /* Wix spacing */
+}
+
+/* Right column - text content */
+.frame-right {
+    position: relative;
+    flex: 1;
+    padding: 60px;
+    background: rgba(0, 0, 0, 0);
 }
 
 .frame-left h2,
