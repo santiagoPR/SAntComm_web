@@ -423,31 +423,33 @@ body {
     margin: 0 auto;
 }
 
-/* Stats image - FIXED aspect ratio and sharpness */
+/* Stats image - FULL FILL bottom frame */
 .stats-image {
-    width: calc(100% + 120px); /* Extend beyond container */
+    width: 100%; /* Full width of frame */
     max-width: none;
-    margin: 0 -60px; /* Negative margin to push out to edges */
-    padding-top: 60px;
+    margin: 0;
+    padding: 0;
     border-top: 1px solid rgba(100, 180, 255, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    overflow: hidden;
+    height: 400px; /* Fixed height for full coverage */
 }
 
 .stats-image img {
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 500px; /* Increased max height for larger display */
-    object-fit: contain; /* Maintain aspect ratio */
+    height: 100%;
+    object-fit: cover; /* Fill the entire space */
     object-position: center;
     display: block;
     opacity: 1;
-    /* Enhance image quality */
-    filter: brightness(1.2) contrast(1.25) saturate(1.4);
+    /* Enhanced image quality for sharpness */
+    filter: brightness(1.25) contrast(1.3) saturate(1.5) blur(0px);
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+    image-rendering: high-quality;
+    /* Sharp rendering */
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 /* CTA section */
@@ -807,13 +809,16 @@ body {
 
     /* Stats image - full width on mobile */
     .stats-image {
-        width: calc(100% + 40px);
-        margin: 0 -20px;
-        padding-top: 40px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 250px; /* Smaller height on mobile */
     }
 
     .stats-image img {
-        max-height: 300px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     /* CTA section */
@@ -923,8 +928,9 @@ body {
     }
 
     .stats-image {
-        width: calc(100% + 30px);
-        margin: 0 -15px;
+        width: 100%;
+        margin: 0;
+        height: 200px; /* Even smaller on small phones */
     }
 
     .stat {
