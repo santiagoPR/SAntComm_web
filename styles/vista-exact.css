@@ -87,9 +87,9 @@ body {
 }
 
 .container {
-    max-width: 1265px; /* Exact Wix template width */
+    max-width: none; /* Full width container */
     margin: 0 auto;
-    padding: 0; /* No padding - full width */
+    padding: 0 70px; /* Minimal side padding like Wix - ~70-85px */
 }
 
 /* ========================================
@@ -222,8 +222,8 @@ body {
 /* EXACT WIX TEMPLATE STRUCTURE */
 /* Outer container - matches Wix content boxes */
 .picture-frame {
-    width: 1125px; /* EXACT Wix width from live template */
-    max-width: 1125px;
+    width: 100%; /* Full width - takes container width */
+    max-width: none; /* No max-width restriction */
     margin: 0 auto;
     background: rgb(63, 67, 73); /* EXACT Wix dark gray background */
     border: 0px none; /* NO borders like Wix */
