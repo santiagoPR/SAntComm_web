@@ -220,12 +220,12 @@ body {
 }
 
 /* EXACT WIX TEMPLATE STRUCTURE */
-/* Outer container - matches Wix 1110px content boxes */
+/* Outer container - matches Wix content boxes */
 .picture-frame {
-    width: 1110px; /* Exact Wix width */
-    max-width: 1110px;
+    width: 1125px; /* EXACT Wix width from live template */
+    max-width: 1125px;
     margin: 0 auto;
-    background: rgb(63, 67, 73); /* Exact Wix dark gray background */
+    background: rgb(63, 67, 73); /* EXACT Wix dark gray background */
     border: 0px none; /* NO borders like Wix */
     padding: 0;
     position: relative;
