@@ -252,6 +252,14 @@ body {
     background-color: rgba(0, 0, 0, 0); /* Transparent */
 }
 
+/* Frame with background images */
+.frame-left.with-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
+
 .frame-left h2,
 .frame-right h2 {
     font-family: 'Poppins', sans-serif;
@@ -318,8 +326,9 @@ body {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .stat {
@@ -328,23 +337,37 @@ body {
 
 .stat-num {
     font-family: 'Poppins', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     color: var(--color-blue-primary);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .stat-label {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--color-text-secondary);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .stat-line {
-    width: 80px;
+    width: 60px;
     height: 2px;
     background: var(--color-red-primary);
     margin: 0 auto;
+}
+
+/* Stats image below numbers */
+.stats-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 0;
+    display: block;
+}
+
+.stats-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* CTA section */
@@ -513,7 +536,11 @@ body {
     }
 
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat-num {
+        font-size: 35px;
     }
 }
 
