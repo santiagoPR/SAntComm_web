@@ -9,6 +9,12 @@
     box-sizing: border-box;
 }
 
+/* Mobile touch optimization */
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100%;
+}
+
 /* ========================================
    WIX TEMPLATE COLOR PALETTE
    ======================================== */
@@ -45,6 +51,10 @@ body {
     color: var(--color-text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    /* Mobile optimizations */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* ========================================
@@ -602,40 +612,158 @@ body {
 }
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE - OPTIMIZED FOR MOBILE/IPHONE
    ======================================== */
+
+/* Tablet and smaller desktop */
 @media (max-width: 1200px) {
     .frame-grid-vertical {
         flex-direction: column;
     }
 
     .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .stat-num {
-        font-size: 38px;
+        font-size: 36px;
+    }
+
+    .container {
+        padding: 0 15px;
     }
 }
 
+/* Mobile devices - iPhone optimized */
 @media (max-width: 768px) {
+    /* Typography adjustments for mobile */
     .hero-content h1 {
-        font-size: 48px;
+        font-size: 36px;
+        line-height: 1.3;
+        margin-bottom: 20px;
     }
 
     .hero-content p {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .hero-content {
+        margin-top: 100px;
+        padding: 0 10px;
+    }
+
+    /* Header adjustments */
+    .header {
+        padding: 20px 0;
+    }
+
+    .logo img {
+        height: 35px;
     }
 
     .nav {
         display: none;
     }
 
+    .header-actions {
+        gap: 10px;
+    }
+
+    .btn-outline {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .login {
+        font-size: 14px;
+    }
+
+    .login svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Section spacing */
+    .section {
+        padding: 60px 0;
+    }
+
+    /* Container padding for mobile */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Picture frames - stack vertically on mobile */
+    .picture-frame {
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+
+    .frame-grid-vertical,
+    .frame-grid-horizontal {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    /* Frame content padding */
+    .frame-left,
+    .frame-right {
+        padding: 30px 20px;
+    }
+
+    .frame-left.with-image {
+        min-height: 400px;
+    }
+
+    .frame-left.with-image h2 {
+        padding: 30px 20px;
+        font-size: 24px;
+    }
+
+    .frame-right h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .frame-right p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    /* Feature cards */
+    .feature-card {
+        margin-bottom: 30px;
+    }
+
+    .feature-card h3 {
+        font-size: 16px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Stats section */
+    .stats-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
     .stats-grid {
         grid-template-columns: 1fr;
+        margin-bottom: 40px;
     }
 
     .stat {
+        padding: 30px 20px;
         border-right: none;
         border-bottom: 1px solid rgba(100, 180, 255, 0.2);
     }
@@ -644,20 +772,135 @@ body {
         border-bottom: none;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
+    .stat-num {
+        font-size: 32px;
     }
 
-    .picture-frame {
-        border-radius: 4px;
+    .stat-label {
+        font-size: 12px;
+    }
+
+    .stat-line {
+        width: 80px;
+    }
+
+    /* Stats image - full width on mobile */
+    .stats-image {
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+        padding-top: 40px;
+    }
+
+    .stats-image img {
+        max-height: 300px;
+    }
+
+    /* CTA section */
+    .cta-content {
+        padding: 40px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .cta-content p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    /* Buttons */
+    .btn-red {
+        padding: 12px 32px;
+        font-size: 15px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 60px 0 30px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .footer-logo {
+        height: 35px;
+    }
+
+    .footer-col h4 {
+        font-size: 14px;
+    }
+
+    .footer-col p,
+    .footer-col a {
+        font-size: 13px;
+    }
+
+    .newsletter input[type="email"] {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .newsletter label {
+        font-size: 11px;
+    }
+
+    .btn-small {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .social a {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+}
+
+/* Small phones - iPhone SE and similar */
+@media (max-width: 375px) {
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 12px;
     }
 
     .frame-left,
     .frame-right {
-        padding: 40px 30px;
+        padding: 25px 15px;
     }
 
-    .container {
-        padding: 0 30px;
+    .frame-left.with-image {
+        min-height: 350px;
+    }
+
+    .stats-image {
+        width: calc(100% + 30px);
+        margin: 0 -15px;
+    }
+
+    .stat {
+        padding: 25px 15px;
+    }
+
+    .stat-num {
+        font-size: 28px;
     }
 }
