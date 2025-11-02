@@ -718,6 +718,11 @@ body {
         padding: 30px 20px;
     }
 
+    /* Remove bottom padding from frame-right in stats section */
+    .frame-right:has(.stats-image) {
+        padding-bottom: 0;
+    }
+
     .frame-left.with-image {
         min-height: 450px;
         position: relative;
@@ -813,7 +818,7 @@ body {
         margin-left: -20px;
         margin-right: -20px;
         margin-top: 30px;
-        margin-bottom: -30px;
+        margin-bottom: 0;
         padding: 0;
         height: 250px;
         display: block;
@@ -930,6 +935,11 @@ body {
         padding: 25px 15px;
     }
 
+    /* Remove bottom padding from frame-right in stats section */
+    .frame-right:has(.stats-image) {
+        padding-bottom: 0;
+    }
+
     .frame-left.with-image {
         min-height: 350px;
         position: relative;
@@ -949,7 +959,7 @@ body {
         margin-left: -15px;
         margin-right: -15px;
         margin-top: 25px;
-        margin-bottom: -25px;
+        margin-bottom: 0;
         padding: 0;
         height: 200px;
         display: block;
