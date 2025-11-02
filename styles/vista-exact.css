@@ -87,9 +87,9 @@ body {
 }
 
 .container {
-    max-width: var(--site-width);
+    max-width: 1265px; /* 1125px frame + (70px margin x 2) */
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 70px; /* Vista.io standard padding */
 }
 
 /* ========================================
@@ -219,21 +219,24 @@ body {
     padding: var(--section-spacing) 0;
 }
 
-/* Picture frames - minimal styling, no borders */
+/* Picture frames - Vista.io style with visible borders */
 .picture-frame {
-    background-color: rgba(27, 28, 30, 0.7); /* Slight dark tint */
-    border: 0px none; /* NO BORDERS */
+    background-color: rgb(63, 67, 73); /* Vista.io frame background */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Visible borders */
     border-radius: 0px;
-    padding: 60px;
+    padding: 0; /* No padding on frame itself */
     margin-bottom: 60px;
-    box-shadow: none; /* NO SHADOWS */
-    backdrop-filter: none; /* NO BLUR */
+    max-width: 1125px; /* Vista.io width */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none;
+    backdrop-filter: none;
 }
 
 /* Grid layouts */
 .frame-grid {
     display: grid;
-    gap: 60px;
+    gap: 0; /* No gap - borders handle separation */
 }
 
 /* Horizontal split */
@@ -249,15 +252,42 @@ body {
 
 .frame-left,
 .frame-right {
-    background-color: rgba(0, 0, 0, 0); /* Transparent */
+    padding: 60px; /* Padding inside frame sections */
 }
 
-/* Frame with background images */
+/* Frame with background images - semi-transparent with gradient overlay */
 .frame-left.with-image {
+    position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 400px;
+    padding: 60px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15); /* Divider line */
+}
+
+/* Semi-transparent gradient overlay for images */
+.frame-left.with-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to right,
+        rgba(63, 67, 73, 0.3) 0%, /* Blend with background on left */
+        rgba(63, 67, 73, 0.2) 50%, /* Less opacity in middle */
+        rgba(63, 67, 73, 0.4) 100% /* Fade more on right */
+    );
+    pointer-events: none; /* Allow clicks through overlay */
+    z-index: 1;
+}
+
+/* Ensure text content appears above the overlay */
+.frame-left.with-image h2 {
+    position: relative;
+    z-index: 2;
 }
 
 .frame-left h2,
@@ -356,18 +386,38 @@ body {
     margin: 0 auto;
 }
 
-/* Stats image below numbers */
+/* Stats image below numbers - with semi-transparent effect */
 .stats-image {
     width: 100%;
     max-width: 800px;
     margin: 40px auto 0;
     display: block;
+    position: relative;
+}
+
+.stats-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(63, 67, 73, 0.4) 0%, /* Blend with background on top */
+        rgba(63, 67, 73, 0.2) 50%, /* Less opacity in middle */
+        rgba(63, 67, 73, 0.4) 100% /* Fade more on bottom */
+    );
+    pointer-events: none;
+    z-index: 1;
 }
 
 .stats-image img {
     width: 100%;
     height: auto;
     display: block;
+    position: relative;
+    opacity: 0.85; /* Make image itself slightly transparent */
 }
 
 /* CTA section */
