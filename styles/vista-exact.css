@@ -45,7 +45,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: rgb(20, 20, 22); /* Exact Wix template background */
+    background-color: #000000; /* Pure black like Wix template */
     color: var(--color-text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -226,7 +226,7 @@ body {
     max-width: none; /* No max-width restriction */
     margin: 0 auto;
     background: rgb(63, 67, 73); /* EXACT Wix dark gray background */
-    border: 0px none; /* NO borders like Wix */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Thin white border like Wix */
     padding: 0;
     position: relative;
 }
@@ -354,40 +354,48 @@ body {
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-    margin-bottom: 40px;
+    gap: 0; /* No gap - use borders instead */
+    margin-bottom: 60px;
 }
 
 .stat {
     text-align: center;
+    padding: 40px 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15); /* Vertical divider */
+}
+
+.stat:last-child {
+    border-right: none; /* No border on last item */
 }
 
 .stat-num {
     font-family: 'Poppins', sans-serif;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 700;
-    color: var(--color-blue-primary);
-    margin-bottom: 8px;
+    color: var(--color-red-primary); /* RED like Wix, not blue */
+    margin-bottom: 12px;
 }
 
 .stat-label {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--color-text-secondary);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .stat-line {
-    width: 60px;
+    width: 100px;
     height: 2px;
-    background: var(--color-red-primary);
+    background: rgba(138, 138, 138, 0.5);
     margin: 0 auto;
 }
 
 /* Stats image below numbers - clean, no effects */
 .stats-image {
     width: 100%;
-    max-width: 800px;
-    margin: 40px auto 0;
+    max-width: none; /* Full width */
+    margin: 0;
+    padding-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Horizontal divider */
     display: block;
 }
 
