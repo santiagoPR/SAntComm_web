@@ -33,7 +33,15 @@
       "Bash(netstat:*)",
       "Bash(curl:*)",
       "Bash(npx http-server -p 3000)",
-      "Bash(/c/Users/sigfr/AppData/Local/Programs/Python/Python313/python.exe:*)"
+      "Bash(/c/Users/sigfr/AppData/Local/Programs/Python/Python313/python.exe:*)",
+      "Bash(git clean:*)",
+      "Bash(git checkout:*)",
+      "Bash(git revert:*)",
+      "Bash(start index.html)",
+      "Bash(for img in image*.png)",
+      "Bash(do identify \"$img\")",
+      "Bash(echo:*)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

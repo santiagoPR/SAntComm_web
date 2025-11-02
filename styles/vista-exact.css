@@ -219,30 +219,26 @@ body {
     padding: var(--section-spacing) 0;
 }
 
-/* Picture frames - Exact Wix template style */
+/* NO PICTURE FRAMES - Wix template has NO borders, NO boxes */
 .picture-frame {
-    background-color: rgba(0, 0, 0, 0); /* Fully transparent like Wix */
+    background-color: rgba(0, 0, 0, 0); /* Fully transparent */
     border: 0px none; /* NO borders */
-    border-radius: 0px;
     padding: 0;
-    margin-bottom: 60px;
-    max-width: 1265px; /* Full container width */
+    margin: 0;
+    max-width: 1265px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: none;
-    backdrop-filter: none;
 }
 
-/* Grid layouts */
+/* Grid layouts - simple, clean, NO gaps, NO borders */
 .frame-grid {
     display: grid;
-    gap: 0; /* No gap - borders handle separation */
+    gap: 0;
 }
 
 /* Horizontal split */
 .frame-grid-horizontal {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
 }
 
 /* Vertical split */
@@ -252,19 +248,34 @@ body {
 
 .frame-left,
 .frame-right {
-    padding: 60px; /* Padding inside frame sections */
+    padding: 60px;
+    background: rgba(0, 0, 0, 0); /* Fully transparent */
+    border: 0px none; /* NO borders */
 }
 
-/* Frame with background images - clean, no overlays */
+/* Images positioned absolutely like Wix */
 .frame-left.with-image {
     position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: normal;
-    min-height: 400px;
+    min-height: 600px;
     padding: 60px;
-    opacity: 1; /* Full opacity */
+    overflow: visible; /* Don't clip - let it blend */
+}
+
+.frame-left.with-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    filter: none;
+    z-index: 0;
+}
+
+.frame-left.with-image h2 {
+    position: relative;
+    z-index: 1;
 }
 
 .frame-left h2,
