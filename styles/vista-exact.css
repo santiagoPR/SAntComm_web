@@ -45,7 +45,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--color-bg-primary);
+    background-color: rgb(20, 20, 22); /* Exact Wix template background */
     color: var(--color-text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -87,9 +87,9 @@ body {
 }
 
 .container {
-    max-width: 1265px; /* 1125px frame + (70px margin x 2) */
+    max-width: 1265px; /* Exact Wix template width */
     margin: 0 auto;
-    padding: 0 70px; /* Vista.io standard padding */
+    padding: 0; /* No padding - full width */
 }
 
 /* ========================================
@@ -219,14 +219,14 @@ body {
     padding: var(--section-spacing) 0;
 }
 
-/* Picture frames - Vista.io style with visible borders */
+/* Picture frames - Exact Wix template style */
 .picture-frame {
-    background-color: rgb(63, 67, 73); /* Vista.io frame background */
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Visible borders */
+    background-color: rgba(0, 0, 0, 0); /* Fully transparent like Wix */
+    border: 0px none; /* NO borders */
     border-radius: 0px;
-    padding: 0; /* No padding on frame itself */
+    padding: 0;
     margin-bottom: 60px;
-    max-width: 1125px; /* Vista.io width */
+    max-width: 1265px; /* Full container width */
     margin-left: auto;
     margin-right: auto;
     box-shadow: none;
@@ -255,39 +255,16 @@ body {
     padding: 60px; /* Padding inside frame sections */
 }
 
-/* Frame with background images - semi-transparent with gradient overlay */
+/* Frame with background images - clean, no overlays */
 .frame-left.with-image {
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-blend-mode: normal;
     min-height: 400px;
     padding: 60px;
-    border-right: 1px solid rgba(255, 255, 255, 0.15); /* Divider line */
-}
-
-/* Semi-transparent gradient overlay for images */
-.frame-left.with-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        to right,
-        rgba(63, 67, 73, 0.3) 0%, /* Blend with background on left */
-        rgba(63, 67, 73, 0.2) 50%, /* Less opacity in middle */
-        rgba(63, 67, 73, 0.4) 100% /* Fade more on right */
-    );
-    pointer-events: none; /* Allow clicks through overlay */
-    z-index: 1;
-}
-
-/* Ensure text content appears above the overlay */
-.frame-left.with-image h2 {
-    position: relative;
-    z-index: 2;
+    opacity: 1; /* Full opacity */
 }
 
 .frame-left h2,
@@ -386,38 +363,19 @@ body {
     margin: 0 auto;
 }
 
-/* Stats image below numbers - with semi-transparent effect */
+/* Stats image below numbers - clean, no effects */
 .stats-image {
     width: 100%;
     max-width: 800px;
     margin: 40px auto 0;
     display: block;
-    position: relative;
-}
-
-.stats-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(63, 67, 73, 0.4) 0%, /* Blend with background on top */
-        rgba(63, 67, 73, 0.2) 50%, /* Less opacity in middle */
-        rgba(63, 67, 73, 0.4) 100% /* Fade more on bottom */
-    );
-    pointer-events: none;
-    z-index: 1;
 }
 
 .stats-image img {
     width: 100%;
     height: auto;
     display: block;
-    position: relative;
-    opacity: 0.85; /* Make image itself slightly transparent */
+    opacity: 1; /* Full opacity */
 }
 
 /* CTA section */
