@@ -807,35 +807,38 @@ body {
         width: 80px;
     }
 
-    /* Stats image - full width on mobile */
+    /* Stats image - full width on mobile, breaking out of padding */
     .stats-image {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: 250px; /* Smaller height on mobile */
-        display: block;
-        overflow: hidden;
-        position: relative;
+        width: calc(100% + 40px) !important; /* Break out of frame-right padding */
+        margin: 20px -20px 0 -20px !important; /* Negative margin to extend beyond padding */
+        padding: 0 !important;
+        height: 250px !important; /* Smaller height on mobile */
+        display: block !important;
+        overflow: hidden !important;
+        position: relative !important;
+        border-top: 1px solid rgba(100, 180, 255, 0.2) !important;
     }
 
     .stats-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
         /* Darker rendering for mobile */
-        filter: brightness(0.75) contrast(1.15) saturate(1.2);
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: high-quality;
+        filter: brightness(0.75) contrast(1.15) saturate(1.2) !important;
+        image-rendering: -webkit-optimize-contrast !important;
+        image-rendering: high-quality !important;
         /* Sharp rendering on mobile */
-        transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        max-width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        transform: translateZ(0) !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+        max-width: none !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
     }
 
     /* CTA section */
@@ -945,31 +948,34 @@ body {
     }
 
     .stats-image {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: 200px; /* Even smaller on small phones */
-        display: block;
-        overflow: hidden;
-        position: relative;
+        width: calc(100% + 30px) !important; /* Break out of smaller padding on small phones */
+        margin: 20px -15px 0 -15px !important; /* Negative margin for small phone padding */
+        padding: 0 !important;
+        height: 200px !important; /* Even smaller on small phones */
+        display: block !important;
+        overflow: hidden !important;
+        position: relative !important;
+        border-top: 1px solid rgba(100, 180, 255, 0.2) !important;
     }
 
     .stats-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        display: block;
-        filter: brightness(0.75) contrast(1.15) saturate(1.2);
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: high-quality;
-        transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        max-width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        filter: brightness(0.75) contrast(1.15) saturate(1.2) !important;
+        image-rendering: -webkit-optimize-contrast !important;
+        image-rendering: high-quality !important;
+        transform: translateZ(0) !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+        max-width: none !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
     }
 
     .stat {
