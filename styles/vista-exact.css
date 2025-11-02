@@ -412,9 +412,9 @@ body {
 
 /* Stats image - FIXED aspect ratio and sharpness */
 .stats-image {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
+    width: calc(100% + 120px); /* Extend beyond container */
+    max-width: none;
+    margin: 0 -60px; /* Negative margin to push out to edges */
     padding-top: 60px;
     border-top: 1px solid rgba(100, 180, 255, 0.2);
     display: flex;
@@ -426,7 +426,7 @@ body {
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: 400px; /* Prevent stretching */
+    max-height: 500px; /* Increased max height for larger display */
     object-fit: contain; /* Maintain aspect ratio */
     object-position: center;
     display: block;
