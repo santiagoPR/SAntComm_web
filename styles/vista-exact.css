@@ -51,7 +51,7 @@ body {
    STICKY BACKGROUND (Wix method)
    ======================================== */
 .sticky-background {
-    position: sticky;
+    position: fixed; /* FIXED for true parallax effect */
     top: 0;
     left: 0;
     width: 100vw;
@@ -84,9 +84,9 @@ body {
 }
 
 .container {
-    max-width: var(--site-width);
+    max-width: 100%; /* Full width like Wix */
     margin: 0 auto;
-    padding: 0 70px;
+    padding: 0 20px; /* Minimal padding - about 1 inch on each side */
 }
 
 /* ========================================
@@ -97,7 +97,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
-    margin-top: -100vh; /* Overlap the sticky background */
+    /* No negative margin needed with fixed background */
 }
 
 /* Header */
@@ -229,8 +229,8 @@ body {
 /* EXACT WIX TEMPLATE STRUCTURE */
 /* Semi-transparent boxes that blend with background */
 .picture-frame {
-    width: 100%;
-    max-width: var(--content-width);
+    width: 100%; /* Full width - takes entire container */
+    max-width: none; /* No max-width restriction like Wix */
     margin: 0 auto;
     background: var(--color-bg-box); /* Semi-transparent blue-gray */
     border: 1px solid rgba(100, 180, 255, 0.15); /* Subtle blue border */
