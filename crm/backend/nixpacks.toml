@@ -6,9 +6,8 @@ cmds = ["npm install"]
 
 [phases.build]
 cmds = [
-  "npx prisma generate --schema=prisma/schema.prisma",
-  "npx prisma migrate deploy --schema=prisma/schema.prisma"
+  "npx prisma generate --schema=prisma/schema.prisma"
 ]
 
 [start]
-cmd = "node src/server.js"
+cmd = "npx prisma db push --accept-data-loss --skip-generate --schema=prisma/schema.prisma && node src/server.js"
