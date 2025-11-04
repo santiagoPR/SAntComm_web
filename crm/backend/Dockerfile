@@ -19,8 +19,12 @@ RUN npx prisma generate
 # Copy application source from crm/backend
 COPY crm/backend/src ./src
 
+# Copy startup script
+COPY crm/backend/start.sh ./start.sh
+RUN chmod +x start.sh
+
 # Expose port
 EXPOSE 5000
 
-# Start command with database push
-CMD npx prisma db push --accept-data-loss && node src/server.js
+# Start command
+CMD ["./start.sh"]
