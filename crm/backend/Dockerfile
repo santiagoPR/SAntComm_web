@@ -4,20 +4,20 @@ FROM node:20-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy package files from crm/backend
+COPY crm/backend/package*.json ./
 
 # Install dependencies
 RUN npm install --production
 
-# Copy prisma schema
-COPY prisma ./prisma
+# Copy prisma schema from crm/backend
+COPY crm/backend/prisma ./prisma
 
 # Generate Prisma Client
 RUN npx prisma generate
 
-# Copy application source
-COPY src ./src
+# Copy application source from crm/backend
+COPY crm/backend/src ./src
 
 # Expose port
 EXPOSE 5000
