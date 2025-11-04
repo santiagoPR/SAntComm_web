@@ -27,4 +27,4 @@ RUN chmod +x start.sh
 EXPOSE 5000
 
 # Start command
-CMD ["./start.sh"]
+CMD ["/bin/sh", "./start.sh"]
