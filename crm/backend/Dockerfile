@@ -22,5 +22,5 @@ COPY crm/backend/src ./src
 # Expose port
 EXPOSE 5000
 
-# Start command
-CMD ["node", "src/server.js"]
+# Start command with database push
+CMD npx prisma db push --accept-data-loss && node src/server.js
