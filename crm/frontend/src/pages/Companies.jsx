@@ -269,7 +269,7 @@ const Companies = () => {
       {/* Companies Table */}
       <Paper sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 2, overflow: 'hidden' }}>
         <TableContainer sx={{ maxHeight: { xs: 'calc(100vh - 250px)', md: 'none' }, overflowX: 'auto' }}>
-          <Table sx={{ minWidth: 650 }}>
+          <Table sx={{ minWidth: { xs: 0, md: 650 } }}>
             <TableHead>
               <TableRow sx={{ bgcolor: 'grey.50' }}>
                 <TableCell sx={{ fontWeight: 700, fontSize: '0.875rem', color: 'text.primary', py: 2 }}>
