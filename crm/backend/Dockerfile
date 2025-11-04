@@ -1,6 +1,9 @@
 # Use Node.js 20 Alpine
 FROM node:20-alpine
 
+# Force rebuild - updated for PostgreSQL
+ENV FORCE_REBUILD=2
+
 # Set working directory
 WORKDIR /app
 
