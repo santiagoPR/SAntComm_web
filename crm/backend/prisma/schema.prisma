@@ -1,0 +1,481 @@
+// This is your Prisma schema file
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// CORE CRM MODELS
+// ============================================
+
+model User {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  password      String
+  firstName     String
+  lastName      String
+  role          String   @default("USER")
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relationships
+  contacts            Contact[]
+  companies           Company[]
+  deals               Deal[]
+  campaigns           Campaign[]
+  leads               Lead[]
+  quotes              Quote[]
+  invoices            Invoice[]
+  forecasts           Forecast[]
+  accounts            Account[]
+  integrationSettings IntegrationSettings?
+
+  @@map("users")
+}
+
+model Company {
+  id            String   @id @default(uuid())
+  name          String
+  industry      String?
+  website       String?
+  phone         String?
+  email         String?
+
+  // Address
+  street        String?
+  city          String?
+  state         String?
+  zipCode       String?
+
+  // Ownership
+  ownerId       String
+  owner         User     @relation(fields: [ownerId], references: [id])
+
+  // Timestamps
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relationships
+  contacts      Contact[]
+  deals         Deal[]
+
+  @@map("companies")
+}
+
+model Contact {
+  id            String   @id @default(uuid())
+  firstName     String
+  lastName      String
+  email         String?
+  phone         String?
+  position      String?
+
+  // Company Association
+  companyId     String?
+  company       Company? @relation(fields: [companyId], references: [id])
+
+  // Ownership
+  ownerId       String
+  owner         User     @relation(fields: [ownerId], references: [id])
+
+  // Timestamps
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relationships
+  deals         Deal[]
+  campaignContacts CampaignContact[]
+
+  @@map("contacts")
+}
+
+model Deal {
+  id                String   @id @default(uuid())
+  title             String
+  value             Float    @default(0)
+  stage             String   @default("Lead")
+  status            String   @default("OPEN")
+
+  // Associations
+  companyId         String?
+  company           Company? @relation(fields: [companyId], references: [id])
+  contactId         String?
+  contact           Contact? @relation(fields: [contactId], references: [id])
+
+  // Ownership
+  ownerId           String
+  owner             User     @relation(fields: [ownerId], references: [id])
+
+  // Forecasting
+  expectedCloseDate DateTime?
+  probability       Int      @default(50)
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("deals")
+}
+
+// ============================================
+// LEADS MANAGEMENT
+// ============================================
+
+model Lead {
+  id                String   @id @default(uuid())
+  firstName         String
+  lastName          String
+  email             String?
+  phone             String?
+  company           String?
+  position          String?
+
+  // Lead specific fields
+  source            String?  // Website, Referral, Campaign, etc.
+  status            String   @default("NEW") // NEW, CONTACTED, QUALIFIED, UNQUALIFIED, CONVERTED
+  rating            String?  // HOT, WARM, COLD
+  industry          String?
+
+  // Address
+  street            String?
+  city              String?
+  state             String?
+  zipCode           String?
+  country           String?
+
+  // Lead scoring
+  score             Int      @default(0)
+
+  // Conversion tracking
+  convertedToContactId String?
+  convertedAt       DateTime?
+
+  // Ownership
+  ownerId           String
+  owner             User     @relation(fields: [ownerId], references: [id])
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  // Relationships
+  notes             LeadNote[]
+  attachments       LeadAttachment[]
+  activities        LeadActivity[]
+
+  @@map("leads")
+}
+
+model LeadNote {
+  id                String   @id @default(uuid())
+
+  // Relationship
+  leadId            String
+  lead              Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  // Note details
+  title             String?
+  content           String
+  isPinned          Boolean  @default(false)
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("lead_notes")
+}
+
+model LeadAttachment {
+  id                String   @id @default(uuid())
+
+  // Relationship
+  leadId            String
+  lead              Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  // File details
+  fileName          String
+  fileType          String
+  fileSize          Int
+  filePath          String
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+
+  @@map("lead_attachments")
+}
+
+model LeadActivity {
+  id                String   @id @default(uuid())
+
+  // Relationship
+  leadId            String
+  lead              Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  // Activity details
+  type              String   // CALL, EMAIL, MEETING, NOTE, STATUS_CHANGE, etc.
+  subject           String
+  description       String?
+  outcome           String?
+
+  // Scheduling (for future activities)
+  scheduledAt       DateTime?
+  completedAt       DateTime?
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("lead_activities")
+}
+
+// ============================================
+// MARKETING CAMPAIGNS MODELS
+// ============================================
+
+model Campaign {
+  id                String   @id @default(uuid())
+  name              String
+  type              String   // EMAIL, SOCIAL_MEDIA, SMS, etc.
+  status            String   @default("DRAFT") // DRAFT, ACTIVE, PAUSED, COMPLETED
+  description       String?
+
+  // Campaign details
+  startDate         DateTime?
+  endDate           DateTime?
+  budget            Float?
+  targetAudience    String?
+
+  // Email campaign specific
+  emailSubject      String?
+  emailContent      String?
+
+  // Social media specific
+  socialPlatform    String? // FACEBOOK, LINKEDIN, TWITTER, etc.
+  socialContent     String?
+
+  // Ownership
+  ownerId           String
+  owner             User     @relation(fields: [ownerId], references: [id])
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  // Relationships
+  campaignContacts  CampaignContact[]
+  metrics           CampaignMetric[]
+  activities        CampaignActivity[]
+
+  @@map("campaigns")
+}
+
+model CampaignContact {
+  id                String   @id @default(uuid())
+
+  // Relationships
+  campaignId        String
+  campaign          Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  contactId         String
+  contact           Contact  @relation(fields: [contactId], references: [id], onDelete: Cascade)
+
+  // Status tracking
+  status            String   @default("PENDING") // PENDING, SENT, DELIVERED, OPENED, CLICKED, CONVERTED, BOUNCED, UNSUBSCRIBED
+  sentAt            DateTime?
+  openedAt          DateTime?
+  clickedAt         DateTime?
+  convertedAt       DateTime?
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@unique([campaignId, contactId])
+  @@map("campaign_contacts")
+}
+
+model CampaignMetric {
+  id                String   @id @default(uuid())
+
+  // Relationship
+  campaignId        String
+  campaign          Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  // Metrics
+  totalSent         Int      @default(0)
+  totalDelivered    Int      @default(0)
+  totalOpened       Int      @default(0)
+  totalClicked      Int      @default(0)
+  totalConverted    Int      @default(0)
+  totalBounced      Int      @default(0)
+  totalUnsubscribed Int      @default(0)
+
+  // Financial metrics
+  leadsGenerated    Int      @default(0)
+  revenue           Float    @default(0)
+  costPerLead       Float?
+  roi               Float?
+
+  // Date for daily/periodic tracking
+  metricDate        DateTime @default(now())
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("campaign_metrics")
+}
+
+model CampaignActivity {
+  id                String   @id @default(uuid())
+
+  // Relationship
+  campaignId        String
+  campaign          Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  // Activity details
+  activityType      String   // SENT, OPENED, CLICKED, CONVERTED, BOUNCED, UNSUBSCRIBED
+  description       String?
+  metadata          String?  // JSON string for additional data
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+
+  @@map("campaign_activities")
+}
+
+// ============================================
+// QUOTES, INVOICES, FORECASTS, ACCOUNTS
+// ============================================
+
+model Quote {
+  id                String   @id @default(uuid())
+  quoteName         String
+  accountName       String
+  amount            Float
+  stage             String   @default("Draft") // Draft, Sent, Accepted, Rejected
+  validUntil        DateTime
+
+  // Ownership
+  ownerId           String
+  owner             User     @relation(fields: [ownerId], references: [id])
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("quotes")
+}
+
+model Invoice {
+  id                String   @id @default(uuid())
+  invoiceNumber     String   @unique
+  accountName       String
+  amount            Float
+  status            String   @default("Pending") // Paid, Pending, Overdue
+  dueDate           DateTime
+  invoiceDate       DateTime
+
+  // Ownership
+  ownerId           String
+  owner             User     @relation(fields: [ownerId], references: [id])
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("invoices")
+}
+
+model Forecast {
+  id                String   @id @default(uuid())
+  forecastName      String
+  ownerName         String
+  period            String
+  targetRevenue     Float
+  actualRevenue     Float    @default(0)
+  achievement       Int      @default(0)
+  status            String   @default("In Progress") // In Progress, Completed
+
+  // Ownership
+  ownerId           String
+  owner             User     @relation(fields: [ownerId], references: [id])
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("forecasts")
+}
+
+model Account {
+  id                String   @id @default(uuid())
+  accountName       String
+  accountOwner      String
+  phone             String?
+  website           String?
+  annualRevenue     Float?
+  industry          String?
+  type              String   @default("Prospect") // Customer, Partner, Prospect
+
+  // Ownership
+  ownerId           String
+  owner             User     @relation(fields: [ownerId], references: [id])
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("accounts")
+}
+
+// ============================================
+// INTEGRATION SETTINGS
+// ============================================
+
+model IntegrationSettings {
+  id                    String   @id @default(uuid())
+
+  // User relationship (one-to-one)
+  userId                String   @unique
+  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Email Integration Settings
+  emailProvider         String?  // "SENDGRID" or "SMTP"
+  sendgridApiKey        String?
+  sendgridFromEmail     String?
+  sendgridFromName      String?
+
+  smtpHost              String?
+  smtpPort              Int?
+  smtpUser              String?
+  smtpPass              String?  // Encrypted
+
+  // Social Media Integration Settings
+  facebookPageId        String?
+  facebookAccessToken   String?  // Encrypted
+
+  linkedinAccessToken   String?  // Encrypted
+  linkedinOrgId         String?
+
+  twitterApiKey         String?  // Encrypted
+  twitterApiSecret      String?  // Encrypted
+  twitterAccessToken    String?  // Encrypted
+  twitterAccessSecret   String?  // Encrypted
+
+  // Webhook/Tracking
+  webhookBaseUrl        String?
+
+  // Timestamps
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  @@map("integration_settings")
+}
