@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Grid,
   Paper,
@@ -16,8 +17,9 @@ import {
 } from '@mui/icons-material';
 import { contactsAPI, companiesAPI, dealsAPI } from '../services/api';
 
-const StatCard = ({ title, value, icon, color, gradient }) => (
+const StatCard = ({ title, value, icon, color, gradient, onClick }) => (
   <Card
+    onClick={onClick}
     sx={{
       height: '100%',
       background: gradient,
@@ -25,6 +27,7 @@ const StatCard = ({ title, value, icon, color, gradient }) => (
       position: 'relative',
       overflow: 'hidden',
       transition: 'transform 0.2s, box-shadow 0.2s',
+      cursor: onClick ? 'pointer' : 'default',
       '&:hover': {
         transform: 'translateY(-4px)',
         boxShadow: '0 12px 24px -10px rgba(0,0,0,0.3)',
@@ -71,6 +74,7 @@ const StatCard = ({ title, value, icon, color, gradient }) => (
 );
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [stats, setStats] = useState({
     contacts: 0,
     companies: 0,
@@ -134,6 +138,7 @@ const Dashboard = () => {
             value={stats.contacts}
             icon={<PeopleIcon fontSize="inherit" />}
             gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+            onClick={() => navigate('/contacts')}
           />
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
@@ -142,6 +147,7 @@ const Dashboard = () => {
             value={stats.companies}
             icon={<BusinessIcon fontSize="inherit" />}
             gradient="linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+            onClick={() => navigate('/companies')}
           />
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
@@ -150,6 +156,7 @@ const Dashboard = () => {
             value={stats.deals}
             icon={<DealsIcon fontSize="inherit" />}
             gradient="linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+            onClick={() => navigate('/deals')}
           />
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
@@ -158,6 +165,7 @@ const Dashboard = () => {
             value={`$${stats.totalValue.toLocaleString()}`}
             icon={<TrendingUpIcon fontSize="inherit" />}
             gradient="linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+            onClick={() => navigate('/deals')}
           />
         </Grid>
       </Grid>

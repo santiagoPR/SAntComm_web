@@ -27,6 +27,18 @@ const SecondarySidebar = ({ isMobile = false, onItemClick }) => {
   // Module folders configuration
   const moduleFolders = [
     {
+      id: 'home',
+      name: 'Home',
+      modules: [
+        {
+          id: 'dashboard',
+          name: 'Dashboard',
+          icon: <HomeIcon fontSize="small" />,
+          path: '/dashboard',
+        },
+      ],
+    },
+    {
       id: 'pipeline',
       name: 'Pipeline',
       modules: [
