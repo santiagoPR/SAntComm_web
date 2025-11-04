@@ -63,8 +63,15 @@ const NewLayout = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Box sx={{ fontSize: '1.25rem', fontWeight: 700, color: 'primary.main' }}>
-              SAntComm CRM
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+              <img
+                src="/logo/s-logo-cropped.png"
+                alt="SAntComm"
+                style={{ width: '32px', height: '32px', objectFit: 'contain' }}
+              />
+              <Box sx={{ fontSize: '1.25rem', fontWeight: 700, color: 'primary.main' }}>
+                SAntComm CRM
+              </Box>
             </Box>
           </Toolbar>
         </AppBar>
