@@ -18,7 +18,7 @@ body {
     padding: 0 40px;
 }
 
-/* Header - Exact Match */
+/* Header - Exact Match with Sticky Animation */
 .header {
     position: fixed;
     top: 0;
@@ -28,6 +28,13 @@ body {
     border-bottom: 1px solid #e0e0e0;
     z-index: 1000;
     height: 70px;
+    opacity: 0;
+    animation: headerFadeIn 0.2s ease-in forwards;
+}
+
+@keyframes headerFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .header-container {
@@ -109,12 +116,13 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: border-color 0.4s, background-color 0.4s, transform 0.3s, box-shadow 0.3s;
 }
 
 .btn-get-started:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(253, 98, 98, 0.3);
+    background-color: #E55555;
 }
 
 /* Hero Section - Exact Match */
@@ -135,6 +143,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 0;
+    overflow: hidden;
 }
 
 .hero-background img {
@@ -142,6 +151,8 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: bottom;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .hero-content {
@@ -178,12 +189,13 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: border-color 0.4s, background-color 0.4s, transform 0.3s, box-shadow 0.3s;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(253, 98, 98, 0.4);
+    background-color: #E55555;
 }
 
 /* Features Section - Exact Match */
@@ -201,6 +213,7 @@ body {
 
 .features-left {
     position: relative;
+    overflow: hidden;
 }
 
 .features-image {
@@ -208,6 +221,11 @@ body {
     height: auto;
     border-radius: 0;
     margin-bottom: 30px;
+    transition: transform 0.4s ease-out;
+}
+
+.features-image:hover {
+    transform: scale(1.05);
 }
 
 .features-left h2 {
@@ -505,3 +523,38 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Scroll Animations */
+.feature-card {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.feature-card.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger animation for multiple cards */
+.feature-card:nth-child(1).animate-in { transition-delay: 0.1s; }
+.feature-card:nth-child(2).animate-in { transition-delay: 0.2s; }
+.feature-card:nth-child(3).animate-in { transition-delay: 0.3s; }
+.feature-card:nth-child(4).animate-in { transition-delay: 0.4s; }
+
+/* Stats Counter Animation */
+.stat-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.stat-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-item:nth-child(1).animate-in { transition-delay: 0.1s; }
+.stat-item:nth-child(2).animate-in { transition-delay: 0.2s; }
+.stat-item:nth-child(3).animate-in { transition-delay: 0.3s; }
+.stat-item:nth-child(4).animate-in { transition-delay: 0.4s; }

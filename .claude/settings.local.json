@@ -5,7 +5,8 @@
       "Bash(nslookup:*)",
       "Bash(ipconfig /flushdns)",
       "Bash(ipconfig //flushdns)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(git ls-tree:*)"
     ],
     "deny": [],
     "ask": []
