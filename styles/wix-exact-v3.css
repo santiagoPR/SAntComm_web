@@ -427,6 +427,7 @@ html {
 .video-section {
     padding: 120px 60px;
     background: transparent; /* CRITICAL */
+    overflow: hidden; /* Prevent overflow */
 }
 
 .video-container {
@@ -434,12 +435,16 @@ html {
     margin: 0 auto;
     border: 2px solid rgba(255, 255, 255, 0.3);
     padding: 12px;
+    overflow: hidden; /* Contain video */
+    position: relative; /* Establish positioning context */
 }
 
 .video-container video {
     width: 100%;
     height: auto;
     display: block;
+    max-width: 100%; /* Ensure no overflow */
+    object-fit: contain; /* Keep aspect ratio */
 }
 
 /* Footer - TRANSPARENT like Wix */
