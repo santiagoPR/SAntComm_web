@@ -1,9 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git pull:*)",
+      "Bash(nslookup:*)",
+      "Bash(ipconfig /flushdns)",
+      "Bash(ipconfig //flushdns)",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []
