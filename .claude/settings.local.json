@@ -6,7 +6,14 @@
       "Bash(ipconfig /flushdns)",
       "Bash(ipconfig //flushdns)",
       "Bash(git rm:*)",
-      "Bash(git ls-tree:*)"
+      "Bash(git ls-tree:*)",
+      "Bash(curl:*)",
+      "Bash(git log:*)",
+      "Bash(cat:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
