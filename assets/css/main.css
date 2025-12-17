@@ -999,9 +999,8 @@ a {
         display: none;
     }
 
-    .mobile-nav {
-        display: flex;
-    }
+    /* Mobile nav - keep hidden until .active is added via JS */
+    /* The .mobile-nav.active rule handles display: flex */
 
     .login-btn {
         display: none;
