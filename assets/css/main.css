@@ -857,6 +857,12 @@ a {
     cursor: pointer;
     padding: 10px;
     z-index: 1002;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: auto;
 }
 
 .mobile-menu-btn span {

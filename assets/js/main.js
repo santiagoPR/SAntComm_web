@@ -140,11 +140,23 @@
         const mobileNav = document.querySelector('.mobile-nav');
 
         if (mobileMenuBtn && mobileNav) {
-            mobileMenuBtn.addEventListener('click', () => {
+            // Toggle menu function
+            function toggleMenu(e) {
+                if (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
                 mobileMenuBtn.classList.toggle('active');
                 mobileNav.classList.toggle('active');
                 document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-            });
+            }
+
+            // Add both click and touchend for better mobile support
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            mobileMenuBtn.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                toggleMenu(e);
+            }, { passive: false });
 
             // Close menu when clicking a link
             mobileNav.querySelectorAll('a').forEach(link => {
