@@ -901,6 +901,7 @@ a {
 }
 
 .mobile-nav.active {
+    display: flex;
     opacity: 1;
     visibility: visible;
 }
