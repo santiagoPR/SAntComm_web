@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Get started with Santcom's machine learning solutions for construction analytics. Contact us today for a consultation.">
+
+    <title>Get Started | Santcom</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.wix.com/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="lang-en" class="lang-btn active">EN</button>
+        <button id="lang-es" class="lang-btn">ES</button>
+    </div>
+
+    <!-- Site Background -->
+    <div class="site-background"></div>
+
+    <!-- Site Content -->
+    <div class="site-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <div class="logo-section">
+                    <a href="../index.html">
+                        <img class="logo-icon" src="../assets/img/santcom_logo.png" alt="Santcom Logo">
+                    </a>
+                </div>
+
+                <nav class="nav">
+                    <a href="solutions.html">Solutions</a>
+                    <a href="vision.html">Vision</a>
+                    <a href="blog.html">Blog</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="login-btn">
+                        <svg width="20" height="20" viewBox="0 0 50 50" fill="currentColor">
+                            <path d="M25 48.077c-5.924 0-11.31-2.252-15.396-5.921 2.254-5.362 7.492-8.267 15.373-8.267 7.889 0 13.139 3.044 15.408 8.418-4.084 3.659-9.471 5.77-15.385 5.77m.278-35.3c4.927 0 8.611 3.812 8.611 8.878 0 5.21-3.875 9.456-8.611 9.456s-8.611-4.246-8.611-9.456c0-5.066 3.684-8.878 8.611-8.878M25 0C11.193 0 0 11.193 0 25c0 .915.056 1.816.152 2.705.032.295.091.581.133.873.085.589.173 1.176.298 1.751.073.338.169.665.256.997.135.515.273 1.027.439 1.529.114.342.243.675.37 1.01.18.476.369.945.577 1.406.149.331.308.657.472.98.225.446.463.883.714 1.313.182.312.365.619.56.922.272.423.56.832.856 1.237.207.284.41.568.629.841.325.408.671.796 1.02 1.182.22.244.432.494.662.728.405.415.833.801 1.265 1.186.173.154.329.325.507.475l.004-.011A24.886 24.886 0 0 0 25 50a24.881 24.881 0 0 0 16.069-5.861.126.126 0 0 1 .003.01c.172-.144.324-.309.49-.458.442-.392.88-.787 1.293-1.209.228-.232.437-.479.655-.72.352-.389.701-.78 1.028-1.191.218-.272.421-.556.627-.838.297-.405.587-.816.859-1.24a26.104 26.104 0 0 0 1.748-3.216c.208-.461.398-.93.579-1.406.127-.336.256-.669.369-1.012.167-.502.305-1.014.44-1.53.087-.332.183-.659.256-.996.126-.576.214-1.164.299-1.754.042-.292.101-.577.133-.872.095-.89.152-1.791.152-2.707C50 11.193 38.807 0 25 0"/>
+                        </svg>
+                        Log In
+                    </button>
+                    <a href="get-started.html" class="btn-get-started">Get Started</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Header -->
+        <section class="hero" style="height: 300px;">
+            <div class="hero-content">
+                <h1 class="gs-hero-title" style="font-size: 56px;">Get Started Today</h1>
+                <p class="gs-hero-subtitle" style="font-size: 20px; margin-top: 20px;">Transform your construction business with predictive analytics</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="section">
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 40px;">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <h2 class="gs-form-title" style="font-size: 42px; margin-bottom: 20px;">Schedule a Consultation</h2>
+                    <p class="gs-form-desc" style="font-size: 18px; line-height: 1.8; color: rgba(255,255,255,0.8);">
+                        Fill out the form below and one of our experts will reach out to discuss how we can help transform your construction analytics.
+                    </p>
+                </div>
+
+                <div class="feature-card scroll-animate" style="padding: 50px;">
+                    <form id="contactForm" action="https://formsubmit.co/request@santcom.com" method="POST" style="display: grid; gap: 25px;"><input type="hidden" name="_subject" value="New Contact Form Submission - Santcom"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://santiagopr.github.io/santcom-website/pages/get-started.html?success=true">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                            <div>
+                                <label class="gs-label-firstname" style="display: block; margin-bottom: 8px; font-weight: 500;">First Name *</label>
+                                <input type="text" name="firstName" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px;">
+                            </div>
+                            <div>
+                                <label class="gs-label-lastname" style="display: block; margin-bottom: 8px; font-weight: 500;">Last Name *</label>
+                                <input type="text" name="lastName" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px;">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="gs-label-email" style="display: block; margin-bottom: 8px; font-weight: 500;">Email *</label>
+                            <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px;">
+                        </div>
+
+                        <div>
+                            <label class="gs-label-phone" style="display: block; margin-bottom: 8px; font-weight: 500;">Phone</label>
+                            <input type="tel" name="phone" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px;">
+                        </div>
+
+                        <div>
+                            <label class="gs-label-company" style="display: block; margin-bottom: 8px; font-weight: 500;">Company Name *</label>
+                            <input type="text" name="company" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px;">
+                        </div>
+
+                        <div>
+                            <label class="gs-label-size" style="display: block; margin-bottom: 8px; font-weight: 500;">Company Size</label>
+                            <select id="companySizeSelect" name="companySize" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px;">
+                                <option value="" class="gs-size-placeholder">Select company size</option>
+                                <option value="1-10" class="gs-size-1">1-10 employees</option>
+                                <option value="11-50" class="gs-size-2">11-50 employees</option>
+                                <option value="51-200" class="gs-size-3">51-200 employees</option>
+                                <option value="201-500" class="gs-size-4">201-500 employees</option>
+                                <option value="500+" class="gs-size-5">500+ employees</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="gs-label-interest" style="display: block; margin-bottom: 8px; font-weight: 500;">What are you interested in? *</label>
+                            <select id="interestSelect" name="interest" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px;">
+                                <option value="" class="gs-interest-placeholder">Select an option</option>
+                                <option value="predictive-models" class="gs-interest-1">Predictive Analytics Models</option>
+                                <option value="data-management" class="gs-interest-2">Data Structuring & Management</option>
+                                <option value="training-programs" class="gs-interest-3">Training Programs</option>
+                                <option value="consulting" class="gs-interest-4">Consulting Services</option>
+                                <option value="other" class="gs-interest-5">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="gs-label-message" style="display: block; margin-bottom: 8px; font-weight: 500;">Tell us about your project</label>
+                            <textarea id="messageTextarea" name="message" rows="6" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px; resize: vertical;" placeholder="Describe your construction analytics needs and goals..."></textarea>
+                        </div>
+
+                        <div style="margin-top: 10px;">
+                            <label style="display: flex; align-items: start; cursor: pointer;">
+                                <input type="checkbox" required style="margin-right: 10px; margin-top: 4px;">
+                                <span class="gs-consent-text" style="font-size: 14px; line-height: 1.6;">
+                                    I agree to receive communications from Santcom and understand that I can unsubscribe at any time. *
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary gs-submit-btn" style="width: 100%; padding: 16px; font-size: 18px; margin-top: 10px;">
+                            Submit Request
+                        </button>
+                    </form>
+
+                    <div id="formSuccess" style="display: none; text-align: center; padding: 40px;">
+                        <svg width="60" height="60" viewBox="0 0 60 60" style="margin-bottom: 20px;">
+                            <circle cx="30" cy="30" r="28" fill="#FD6262" opacity="0.2"/>
+                            <path d="M20 30 L26 36 L40 22" stroke="#FD6262" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3 class="gs-success-title" style="font-size: 28px; margin-bottom: 15px;">Thank You!</h3>
+                        <p class="gs-success-text" style="font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.8);">
+                            Your request has been submitted successfully. One of our team members will contact you within 24-48 hours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section class="section" style="padding-top: 0;">
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 40px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center;">
+                    <div class="scroll-animate">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FD6262" stroke-width="2" style="margin: 0 auto 15px;">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <h4 class="gs-contact-email" style="margin-bottom: 10px; font-size: 18px;">Email Us</h4>
+                        <a href="mailto:request@santcom.com" style="color: rgba(255,255,255,0.7); text-decoration: none;">request@santcom.com</a>
+                    </div>
+
+                    <div class="scroll-animate">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FD6262" stroke-width="2" style="margin: 0 auto 15px;">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        <h4 class="gs-contact-phone" style="margin-bottom: 10px; font-size: 18px;">Call Us</h4>
+                        <p class="gs-contact-phone-text" style="color: rgba(255,255,255,0.7); font-size: 15px;">Coming soon</p>
+                    </div>
+
+                    <div class="scroll-animate">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FD6262" stroke-width="2" style="margin: 0 auto 15px;">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <h4 class="gs-contact-visit" style="margin-bottom: 10px; font-size: 18px;">Visit Us</h4>
+                        <p class="gs-contact-visit-text" style="color: rgba(255,255,255,0.7); font-size: 15px;">Coming soon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-col footer-logo-col">
+                    <div class="footer-logo">
+                        <img src="../assets/img/santcom_logo.png" alt="Santcom Logo">
+                    </div>
+                    
+                    <p class="footer-contact">request@santcom.com</p>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <a href="../index.html">Home</a>
+                    <a href="solutions.html">Solutions</a>
+                    <a href="vision.html">Vision</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Insights</a>
+                    <a href="#">Resources</a>
+                    <a href="get-started.html">Get Started</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email" required>
+                        <label>
+                            <input type="checkbox" required>
+                            <span>Yes, subscribe me to your newsletter.</span>
+                        </label>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </form>
+                    <div class="social-links">
+                        <h5>Follow Us On:</h5>
+                        <div class="social-icons">
+                            <a href="#" aria-label="LinkedIn"><img src="../assets/img/linkedin.png" alt="LinkedIn" width="25" height="25"></a>
+                            <a href="#" aria-label="Facebook"><img src="../assets/img/facebook.png" alt="Facebook" width="25" height="25"></a>
+                            <a href="#" aria-label="Twitter"><img src="../assets/img/twitter.png" alt="Twitter" width="25" height="25"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 by Santcom</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Show success message
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+
+            // In a real implementation, this would submit the form data to a backend
+            console.log('Form submitted:', new FormData(this));
+        });
+
+        // Page-specific translations for Get Started page
+        const gsTranslations = {
+            en: {
+                heroTitle: 'Get Started Today',
+                heroSubtitle: 'Transform your construction business with predictive analytics',
+                formTitle: 'Schedule a Consultation',
+                formDesc: 'Fill out the form below and one of our experts will reach out to discuss how we can help transform your construction analytics.',
+                labelFirstname: 'First Name *',
+                labelLastname: 'Last Name *',
+                labelEmail: 'Email *',
+                labelPhone: 'Phone',
+                labelCompany: 'Company Name *',
+                labelSize: 'Company Size',
+                sizePlaceholder: 'Select company size',
+                size1: '1-10 employees',
+                size2: '11-50 employees',
+                size3: '51-200 employees',
+                size4: '201-500 employees',
+                size5: '500+ employees',
+                labelInterest: 'What are you interested in? *',
+                interestPlaceholder: 'Select an option',
+                interest1: 'Predictive Analytics Models',
+                interest2: 'Data Structuring & Management',
+                interest3: 'Training Programs',
+                interest4: 'Consulting Services',
+                interest5: 'Other',
+                labelMessage: 'Tell us about your project',
+                messagePlaceholder: 'Describe your construction analytics needs and goals...',
+                consentText: 'I agree to receive communications from Santcom and understand that I can unsubscribe at any time. *',
+                submitBtn: 'Submit Request',
+                successTitle: 'Thank You!',
+                successText: 'Your request has been submitted successfully. One of our team members will contact you within 24-48 hours.',
+                contactEmail: 'Email Us',
+                contactPhone: 'Call Us',
+                contactPhoneText: 'Coming soon',
+                contactVisit: 'Visit Us',
+                contactVisitText: 'Coming soon'
+            },
+            es: {
+                heroTitle: 'Comience Hoy',
+                heroSubtitle: 'Transforme su negocio de construccion con analitica predictiva',
+                formTitle: 'Programe una Consulta',
+                formDesc: 'Complete el formulario a continuacion y uno de nuestros expertos se comunicara con usted para discutir como podemos ayudar a transformar su analitica de construccion.',
+                labelFirstname: 'Nombre *',
+                labelLastname: 'Apellido *',
+                labelEmail: 'Correo Electronico *',
+                labelPhone: 'Telefono',
+                labelCompany: 'Nombre de la Empresa *',
+                labelSize: 'Tamano de la Empresa',
+                sizePlaceholder: 'Seleccione tamano de empresa',
+                size1: '1-10 empleados',
+                size2: '11-50 empleados',
+                size3: '51-200 empleados',
+                size4: '201-500 empleados',
+                size5: '500+ empleados',
+                labelInterest: 'Que le interesa? *',
+                interestPlaceholder: 'Seleccione una opcion',
+                interest1: 'Modelos de Analitica Predictiva',
+                interest2: 'Estructuracion y Gestion de Datos',
+                interest3: 'Programas de Capacitacion',
+                interest4: 'Servicios de Consultoria',
+                interest5: 'Otro',
+                labelMessage: 'Cuentenos sobre su proyecto',
+                messagePlaceholder: 'Describa sus necesidades y objetivos de analitica de construccion...',
+                consentText: 'Acepto recibir comunicaciones de Santcom y entiendo que puedo cancelar mi suscripcion en cualquier momento. *',
+                submitBtn: 'Enviar Solicitud',
+                successTitle: 'Gracias!',
+                successText: 'Su solicitud ha sido enviada exitosamente. Uno de los miembros de nuestro equipo se comunicara con usted dentro de 24-48 horas.',
+                contactEmail: 'Envienos un Correo',
+                contactPhone: 'Llamenos',
+                contactPhoneText: 'Proximamente',
+                contactVisit: 'Visitenos',
+                contactVisitText: 'Proximamente'
+            }
+        };
+
+        function setGetStartedLanguage(lang) {
+            const t = gsTranslations[lang];
+            if (!t) return;
+
+            // Hero section
+            const heroTitle = document.querySelector('.gs-hero-title');
+            const heroSubtitle = document.querySelector('.gs-hero-subtitle');
+            if (heroTitle) heroTitle.textContent = t.heroTitle;
+            if (heroSubtitle) heroSubtitle.textContent = t.heroSubtitle;
+
+            // Form section
+            const formTitle = document.querySelector('.gs-form-title');
+            const formDesc = document.querySelector('.gs-form-desc');
+            if (formTitle) formTitle.textContent = t.formTitle;
+            if (formDesc) formDesc.textContent = t.formDesc;
+
+            // Form labels
+            const labelFirstname = document.querySelector('.gs-label-firstname');
+            const labelLastname = document.querySelector('.gs-label-lastname');
+            const labelEmail = document.querySelector('.gs-label-email');
+            const labelPhone = document.querySelector('.gs-label-phone');
+            const labelCompany = document.querySelector('.gs-label-company');
+            const labelSize = document.querySelector('.gs-label-size');
+            const labelInterest = document.querySelector('.gs-label-interest');
+            const labelMessage = document.querySelector('.gs-label-message');
+
+            if (labelFirstname) labelFirstname.textContent = t.labelFirstname;
+            if (labelLastname) labelLastname.textContent = t.labelLastname;
+            if (labelEmail) labelEmail.textContent = t.labelEmail;
+            if (labelPhone) labelPhone.textContent = t.labelPhone;
+            if (labelCompany) labelCompany.textContent = t.labelCompany;
+            if (labelSize) labelSize.textContent = t.labelSize;
+            if (labelInterest) labelInterest.textContent = t.labelInterest;
+            if (labelMessage) labelMessage.textContent = t.labelMessage;
+
+            // Company size select options
+            const sizePlaceholder = document.querySelector('.gs-size-placeholder');
+            const size1 = document.querySelector('.gs-size-1');
+            const size2 = document.querySelector('.gs-size-2');
+            const size3 = document.querySelector('.gs-size-3');
+            const size4 = document.querySelector('.gs-size-4');
+            const size5 = document.querySelector('.gs-size-5');
+
+            if (sizePlaceholder) sizePlaceholder.textContent = t.sizePlaceholder;
+            if (size1) size1.textContent = t.size1;
+            if (size2) size2.textContent = t.size2;
+            if (size3) size3.textContent = t.size3;
+            if (size4) size4.textContent = t.size4;
+            if (size5) size5.textContent = t.size5;
+
+            // Interest select options
+            const interestPlaceholder = document.querySelector('.gs-interest-placeholder');
+            const interest1 = document.querySelector('.gs-interest-1');
+            const interest2 = document.querySelector('.gs-interest-2');
+            const interest3 = document.querySelector('.gs-interest-3');
+            const interest4 = document.querySelector('.gs-interest-4');
+            const interest5 = document.querySelector('.gs-interest-5');
+
+            if (interestPlaceholder) interestPlaceholder.textContent = t.interestPlaceholder;
+            if (interest1) interest1.textContent = t.interest1;
+            if (interest2) interest2.textContent = t.interest2;
+            if (interest3) interest3.textContent = t.interest3;
+            if (interest4) interest4.textContent = t.interest4;
+            if (interest5) interest5.textContent = t.interest5;
+
+            // Textarea placeholder
+            const messageTextarea = document.getElementById('messageTextarea');
+            if (messageTextarea) messageTextarea.placeholder = t.messagePlaceholder;
+
+            // Consent and submit
+            const consentText = document.querySelector('.gs-consent-text');
+            const submitBtn = document.querySelector('.gs-submit-btn');
+            if (consentText) consentText.textContent = t.consentText;
+            if (submitBtn) submitBtn.textContent = t.submitBtn;
+
+            // Success message
+            const successTitle = document.querySelector('.gs-success-title');
+            const successText = document.querySelector('.gs-success-text');
+            if (successTitle) successTitle.textContent = t.successTitle;
+            if (successText) successText.textContent = t.successText;
+
+            // Contact section
+            const contactEmail = document.querySelector('.gs-contact-email');
+            const contactPhone = document.querySelector('.gs-contact-phone');
+            const contactPhoneText = document.querySelector('.gs-contact-phone-text');
+            const contactVisit = document.querySelector('.gs-contact-visit');
+            const contactVisitText = document.querySelector('.gs-contact-visit-text');
+
+            if (contactEmail) contactEmail.textContent = t.contactEmail;
+            if (contactPhone) contactPhone.textContent = t.contactPhone;
+            if (contactPhoneText) contactPhoneText.textContent = t.contactPhoneText;
+            if (contactVisit) contactVisit.textContent = t.contactVisit;
+            if (contactVisitText) contactVisitText.textContent = t.contactVisitText;
+        }
+
+        // Add event listeners for language buttons
+        document.getElementById('lang-en').addEventListener('click', function() {
+            setGetStartedLanguage('en');
+        });
+
+        document.getElementById('lang-es').addEventListener('click', function() {
+            setGetStartedLanguage('es');
+        });
+
+        // Check saved language preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('santcom-lang') || 'en';
+            setGetStartedLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

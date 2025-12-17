@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analítica Predictiva para Construcción | El Futuro es Ahora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3B82F6, #60A5FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* Force background printing */
+        @media print {
+            .hero-bg {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-blue-600 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">CONSTRUTECH <span class="text-blue-600">ANALYTICS</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#problema" class="text-gray-600 hover:text-blue-600 font-medium">El Desafío</a>
+                    <a href="#solucion" class="text-gray-600 hover:text-blue-600 font-medium">La Solución</a>
+                    <a href="#roi" class="text-gray-600 hover:text-blue-600 font-medium">ROI & Resultados</a>
+                    <a href="#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-700 transition">Solicitar Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg h-screen flex items-center justify-center text-white relative">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="inline-block bg-blue-600/20 border border-blue-400/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm">
+                <span class="text-blue-300 text-sm font-semibold tracking-wider uppercase">Liderando la Revolución ConTech en Colombia</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                Deje de Construir a Ciegas.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">El Futuro es Predictivo.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">
+                Transforme sus datos históricos en una ventaja competitiva. Prediga sobrecostos y retrasos meses antes de que ocurran con Inteligencia Artificial.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-lg font-bold transition shadow-lg shadow-blue-600/30">
+                    Agendar Consultoría Gratuita
+                </a>
+                <a href="#roi" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-lg px-8 py-4 rounded-lg font-semibold transition">
+                    Ver Casos de Éxito
+                </a>
+            </div>
+        </div>
+        
+        <!-- Stats Banner -->
+        <div class="absolute bottom-0 w-full bg-slate-900/90 border-t border-slate-700 backdrop-blur-md py-6 hidden md:block">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-8 text-center divide-x divide-slate-700">
+                <div>
+                    <p class="text-3xl font-bold text-white">98%</p>
+                    <p class="text-gray-400 text-sm">Proyectos con Sobrecostos</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-white">77%</p>
+                    <p class="text-gray-400 text-sm">Proyectos con Retrasos</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-emerald-400">15-20%</p>
+                    <p class="text-gray-400 text-sm">Ahorro Potencial Comprobado</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Problem (Pain Points) -->
+    <section id="problema" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">La Realidad del Mercado Colombiano</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
+                <p class="text-lg text-gray-600 mt-6 max-w-3xl mx-auto">
+                    La planificación tradicional (CPM) y la intuición ya no son suficientes en un mercado volátil. Las constructoras enfrentan una "tormenta perfecta" de riesgos invisibles.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 card-hover">
+                    <div class="bg-red-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-money-bill-wave text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Incertidumbre Financiera</h3>
+                    <p class="text-gray-600">
+                        El 98% de los megaproyectos exceden su presupuesto en más del 30%. Sin ML, los fondos de contingencia son "adivinanzas", no cálculos matemáticos.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 card-hover">
+                    <div class="bg-orange-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-regular fa-clock text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cronogramas Optimistas</h3>
+                    <p class="text-gray-600">
+                        El "Sesgo de Optimismo" humano ignora la "larga cola" de riesgos. El 77% de las obras terminan tarde, costando millones en multas y costos fijos.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 card-hover">
+                    <div class="bg-blue-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-chart-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Datos Desperdiciados</h3>
+                    <p class="text-gray-600">
+                        Usted tiene años de datos históricos en Excel y Project. Actualmente son archivos muertos. Nosotros los convertimos en su activo más valioso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section id="solucion" class="py-20 bg-slate-900 text-white overflow-hidden relative">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-emerald-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                        De la Intuición a la <br>
+                        <span class="gradient-text">Certeza Matemática</span>
+                    </h2>
+                    <p class="text-gray-300 text-lg mb-8">
+                        Nuestra tecnología no reemplaza a sus ingenieros; les da superpoderes. Utilizamos algoritmos avanzados (XGBoost, Redes Neuronales) para analizar miles de patrones invisibles al ojo humano.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-400 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-xl text-white">Analítica Predictiva</strong>
+                                <span class="text-gray-400">Sepa qué proyectos tendrán sobrecostos antes de poner el primer ladrillo.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-400 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-xl text-white">Planificación Probabilística</strong>
+                                <span class="text-gray-400">Reemplace fechas fijas irreales con curvas de confianza (ej. "85% de probabilidad de terminar en Mayo").</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-400 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-xl text-white">Simulación de Escenarios ("Qué Pasa Si")</strong>
+                                <span class="text-gray-400">Simule el impacto financiero de añadir una grúa o doblar turnos instantáneamente.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="bg-slate-800 rounded-xl p-2 shadow-2xl border border-slate-700">
+                        <!-- Mockup of Dashboard -->
+                        <div class="bg-slate-900 rounded-lg p-6 overflow-hidden">
+                            <div class="flex justify-between items-center mb-6">
+                                <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Probabilidad de Éxito del Proyecto</h4>
+                                <span class="bg-red-500/20 text-red-400 text-xs px-2 py-1 rounded">Riesgo Alto Detectado</span>
+                            </div>
+                            <!-- Fake Chart Bars -->
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                        <span>Cronograma Original</span>
+                                        <span>Probabilidad: 12%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-red-500 h-full w-[12%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                        <span>Cronograma Ajustado (IA)</span>
+                                        <span>Probabilidad: 88%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-emerald-500 h-full w-[88%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8 grid grid-cols-2 gap-4">
+                                <div class="bg-slate-800 p-4 rounded border border-slate-700">
+                                    <p class="text-xs text-gray-400">Sobrecosto Estimado</p>
+                                    <p class="text-xl font-bold text-white">+$420M COP</p>
+                                    <p class="text-xs text-red-400 mt-1">↑ 12% vs Presupuesto</p>
+                                </div>
+                                <div class="bg-slate-800 p-4 rounded border border-slate-700">
+                                    <p class="text-xs text-gray-400">Días de Retraso</p>
+                                    <p class="text-xl font-bold text-white">45 Días</p>
+                                    <p class="text-xs text-orange-400 mt-1">Impacto Crítico</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white text-slate-900 p-4 rounded-lg shadow-xl border-l-4 border-blue-600 hidden md:block">
+                        <p class="font-bold text-lg">Alertas Tempranas</p>
+                        <p class="text-sm text-gray-600">Detectadas 3 semanas antes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us / Essentials -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">¿Por qué es esencial para su empresa?</h2>
+                <p class="text-gray-600 mt-4">La competencia en Colombia se está digitalizando. No se quede atrás.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-blue-300 transition">
+                    <div class="text-blue-600 text-4xl mb-4"><i class="fa-solid fa-trophy"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Ventaja Competitiva</h3>
+                    <p class="text-sm text-gray-500">Líderes como Amarilo y Marval ya invierten en digitalización. Sea el primero en garantizar cronogramas a sus clientes.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-blue-300 transition">
+                    <div class="text-emerald-600 text-4xl mb-4"><i class="fa-solid fa-piggy-bank"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Protección de Margen</h3>
+                    <p class="text-sm text-gray-500">En un mercado de márgenes estrechos, evitar un solo error de sobrecosto paga el servicio por años.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-blue-300 transition">
+                    <div class="text-purple-600 text-4xl mb-4"><i class="fa-solid fa-brain"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Memoria Institucional</h3>
+                    <p class="text-sm text-gray-500">Cuando sus ingenieros senior se retiran, su conocimiento se va. Nuestros modelos capturan esa experiencia para siempre.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-blue-300 transition">
+                    <div class="text-orange-600 text-4xl mb-4"><i class="fa-solid fa-handshake"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Confianza del Inversor</h3>
+                    <p class="text-sm text-gray-500">Presente a sus fiduciarias y bancos informes de riesgo respaldados por IA, no solo promesas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / ROI -->
+    <section id="roi" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Evidencia Global, Impacto Local</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Esto no es ciencia ficción. Es la misma tecnología utilizada en los proyectos más complejos del mundo, ahora adaptada al mercado colombiano.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <h4 class="font-bold text-lg">Caso: Construcción Hospitalaria (Slate.ai)</h4>
+                            <p class="text-gray-600 text-sm mb-2">Proyecto de $500M USD. Alta complejidad de instalaciones.</p>
+                            <div class="flex gap-4">
+                                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-1 rounded">Ahorro: $676,000 USD</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">-60% Retrabajo</span>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-purple-600 pl-4">
+                            <h4 class="font-bold text-lg">Caso: Infraestructura (Transpennine Route)</h4>
+                            <p class="text-gray-600 text-sm mb-2">Mega-proyecto ferroviario con miles de dependencias.</p>
+                            <div class="flex gap-4">
+                                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-1 rounded">ROI: 327%</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">20x Más Rápido en Reportes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-400 mt-8 italic">Fuentes: Construction ML Analytics Case Studies, Slate Technologies, Nodes & Links.</p>
+                </div>
+                
+                <div class="bg-slate-900 text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 text-9xl">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-8">El Valor de la Predicción</h3>
+                    <div class="space-y-8 relative z-10">
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-gray-300">Reducción en Tiempos de Proyecto</span>
+                                <span class="text-3xl font-bold text-emerald-400">17-40%</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-1 rounded">
+                                <div class="bg-emerald-500 h-1 rounded w-[40%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-gray-300">Ahorro en Costos Laborales</span>
+                                <span class="text-3xl font-bold text-blue-400">~14%</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-1 rounded">
+                                <div class="bg-blue-500 h-1 rounded w-[14%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-gray-300">Precisión en Predicción de Retrasos</span>
+                                <span class="text-3xl font-bold text-purple-400">Hasta 80%</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-1 rounded">
+                                <div class="bg-purple-500 h-1 rounded w-[80%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Pilot Offer -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Comience con Bajo Riesgo</h2>
+            <p class="text-gray-600 mb-10">
+                Sabemos que la adopción tecnológica es un reto. Por eso ofrecemos un programa piloto diseñado para demostrar valor en 90 días.
+            </p>
+            
+            <div class="bg-white rounded-2xl shadow-xl border border-blue-100 overflow-hidden transform transition hover:scale-105 duration-300">
+                <div class="bg-blue-600 py-4">
+                    <h3 class="text-white font-bold text-xl tracking-wide">PROGRAMA PILOTO: EARLY ADOPTER</h3>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-center items-baseline mb-6">
+                        <span class="text-5xl font-extrabold text-slate-900">Demostración</span>
+                        <span class="text-gray-500 ml-2">de Valor</span>
+                    </div>
+                    <p class="text-gray-600 mb-8 px-8">
+                        Implementamos nuestros modelos en 3 de sus proyectos pasados para comparar nuestras predicciones con su realidad histórica ("Backtesting"). Si no demostramos precisión, no paga.
+                    </p>
+                    <ul class="text-left space-y-4 mb-8 max-w-md mx-auto">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fa-solid fa-check text-green-500 mr-3"></i> Auditoría de Datos Históricos
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fa-solid fa-check text-green-500 mr-3"></i> Diagnóstico de Riesgos Ocultos
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fa-solid fa-check text-green-500 mr-3"></i> Informe Ejecutivo de ROI Potencial
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fa-solid fa-check text-green-500 mr-3"></i> <strong>Soporte Local en Colombia</strong>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="block w-full bg-slate-900 text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition shadow-lg">
+                        Solicitar Evaluación de Piloto
+                    </a>
+                    <p class="text-xs text-gray-400 mt-4">Cupos limitados para el Q1 2026. Precios preferenciales para miembros de CAMACOL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-layer-group text-blue-500 text-2xl"></i>
+                    <span class="font-bold text-xl">CONSTRUTECH ANALYTICS</span>
+                </div>
+                <p class="text-gray-400 mb-6 max-w-sm">
+                    Ayudamos a las constructoras colombianas a construir el futuro con datos, no solo con concreto.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-solid fa-envelope text-xl"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-6">Contáctenos</h3>
+                <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="Nombre" class="bg-slate-800 border border-slate-700 text-white p-3 rounded focus:outline-none focus:border-blue-500">
+                        <input type="text" placeholder="Empresa" class="bg-slate-800 border border-slate-700 text-white p-3 rounded focus:outline-none focus:border-blue-500">
+                    </div>
+                    <input type="email" placeholder="Correo Corporativo" class="bg-slate-800 border border-slate-700 text-white p-3 rounded w-full focus:outline-none focus:border-blue-500">
+                    <textarea placeholder="¿Cuál es su mayor desafío actual?" rows="3" class="bg-slate-800 border border-slate-700 text-white p-3 rounded w-full focus:outline-none focus:border-blue-500"></textarea>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-full transition">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-gray-500 text-sm">
+            &copy; 2025 Construtech Analytics Colombia. Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
