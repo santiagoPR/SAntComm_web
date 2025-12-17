@@ -1,5 +1,5 @@
 /**
- * SANTCOM WIX REPLICA - MAIN JAVASCRIPT
+ * SANTCOM - MAIN JAVASCRIPT
  * Handles scroll animations and interactions
  */
 
