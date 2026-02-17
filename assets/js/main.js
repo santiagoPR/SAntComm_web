@@ -87,19 +87,20 @@
         });
     }
 
-    // Parallax scrolling effect for stats section
+    // Parallax scrolling effect for stats section and hero banner
     function initParallaxScroll() {
         const parallaxBg = document.querySelector('.stats-parallax-bg');
+        const heroBannerImg = document.querySelector('.hero-banner-right img');
 
-        if (parallaxBg) {
-            window.addEventListener('scroll', () => {
-                const scrolled = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const windowHeight = window.innerHeight;
+
+            if (parallaxBg) {
                 const statsSection = document.querySelector('.stats-section');
-
                 if (statsSection) {
                     const sectionTop = statsSection.offsetTop;
                     const sectionHeight = statsSection.offsetHeight;
-                    const windowHeight = window.innerHeight;
 
                     // Only apply parallax when section is in view
                     if (scrolled + windowHeight > sectionTop && scrolled < sectionTop + sectionHeight) {
@@ -107,8 +108,19 @@
                         parallaxBg.style.transform = `translateX(${offset}px)`;
                     }
                 }
-            });
-        }
+            }
+
+            if (heroBannerImg) {
+                const banner = heroBannerImg.closest('.hero-banner');
+                const bannerTop = banner.offsetTop;
+                const bannerHeight = banner.offsetHeight;
+
+                if (scrolled + windowHeight > bannerTop && scrolled < bannerTop + bannerHeight) {
+                    const offset = (scrolled - bannerTop + windowHeight) * 0.2;
+                    heroBannerImg.style.transform = `translateY(${-offset}px)`;
+                }
+            }
+        });
     }
 
     // Sync video layers for blending effect
@@ -207,51 +219,6 @@ function initLanguageSwitcher() {
     if (!langEn || !langEs) return;
     
     const translations = {
-        en: {
-            solutions: 'Solutions',
-            vision: 'Vision',
-            blog: 'Blog',
-            login: 'Log In',
-            getStarted: 'Get Started',
-            learnMore: 'Learn More',
-            pages: 'Pages',
-            home: 'Home',
-            resources: 'Resources',
-            subscribe: 'Subscribe to Our Newsletter',
-            submit: 'Submit',
-            followUs: 'Follow Us On:',
-            heroTitle: 'Custom Built Machine Learning Models for Predictive Analytics',
-            heroSubtitle: 'Use Data to Get a 360-Degree View of Your Business',
-            // Overlay section
-            overlayTitle: 'Empower Your Business with Advanced Predictive Analytics',
-            overlayText: 'Santcom is dedicated to revolutionizing the construction industry through advanced predictive analytics. We specialize in developing custom Machine Learning models that offer early warnings for budget overruns and schedule delays.',
-            // Feature cards
-            featureTitle1: 'Innovative Solutions for Data-driven Construction',
-            featureText1: 'With Santcom, experience the modernization of analytics tailored to the construction sector.',
-            featureTitle2: 'Tailored Machine Learning Applications',
-            featureText2: 'At Santcom, our versatility lies in creating tailored Machine Learning applications that cater to the unique needs of construction businesses.',
-            featureTitle3: 'Data Science Expertise for Construction Projects',
-            featureText3: 'Santcom offers unparalleled data science expertise for construction projects, empowering companies with the tools and insights necessary to streamline operations.',
-            featureTitle4: 'Comprehensive Customer Experience Support',
-            featureText4: 'We offer comprehensive support to enhance the customer experience in the construction industry, leveraging data and analytics to drive customer satisfaction.',
-            // Transform section
-            transformTitle: 'Transform Your Construction Business with Santcom',
-            transformText: 'Santcom brings unprecedented velocity and impeccable reliability to your construction business. Our tailored services, driven by advanced Machine Learning models, ensure that you stay ahead in the competitive construction landscape.',
-            // Stats section
-            statsTitle: 'The Construction Industry Challenge',
-            stat1: 'Projects Over Budget',
-            stat2: 'Projects Behind Schedule',
-            stat3: 'ROI with Predictive Analytics',
-            stat4: 'Annual Industry Losses',
-            stat5: 'Cost Reduction Potential',
-            partnersTitle: 'Our Collaborative Partnerships',
-            // Video section
-            videoTitle: 'Empower Your Construction Business with Santcom',
-            videoText: 'Experience the transformative power of advanced predictive analytics and Machine Learning for your construction business. Get in touch with us to explore how Santcom can accelerate your projects and optimize your operations.',
-            // CTA section
-            ctaTitle: 'Ready to Build Smarter?',
-            ctaDesc: 'Join the future of construction. Our AI-powered analytics platform helps you predict risks before they become problems, saving time, money, and resources on every project.'
-        },
         es: {
             solutions: 'Soluciones',
             vision: 'Vision',
@@ -265,37 +232,84 @@ function initLanguageSwitcher() {
             subscribe: 'Suscribase a Nuestro Boletin',
             submit: 'Enviar',
             followUs: 'Siganos En:',
-            heroTitle: 'Modelos de Machine Learning Personalizados para Analisis Predictivo',
-            heroSubtitle: 'Use Datos para Obtener una Vision 360 de su Negocio',
+            subscribeCheckbox: 'Si, suscribirme al boletin.',
+            heroTitle: 'Soluciones Inteligentes para Decisiones Estrategicas Basadas en Datos',
+            heroSubtitle: 'Ayudamos a construir el futuro con datos, no solo con concreto',
             // Overlay section
-            overlayTitle: 'Potencie su Negocio con Analisis Predictivo Avanzado',
-            overlayText: 'Santcom se dedica a revolucionar la industria de la construccion a traves del analisis predictivo avanzado. Nos especializamos en desarrollar modelos de Machine Learning personalizados que ofrecen alertas tempranas para sobrecostos y retrasos en cronogramas.',
+            overlayTitle: 'Potencie su Negocio con Analitica Avanzada e Inteligencia Artificial',
+            overlayText: 'Santcom se especializa en transformar datos en decisiones estrategicas. Desarrollamos modelos de Machine Learning personalizados que permiten anticipar riesgos, optimizar recursos y maximizar resultados en cada proyecto.',
             // Feature cards
-            featureTitle1: 'Soluciones Innovadoras para Construccion Basada en Datos',
-            featureText1: 'Con Santcom, experimente la modernizacion de la analitica adaptada al sector de la construccion.',
-            featureTitle2: 'Aplicaciones de Machine Learning a Medida',
-            featureText2: 'En Santcom, nuestra versatilidad radica en crear aplicaciones de Machine Learning adaptadas a las necesidades unicas de las empresas de construccion.',
-            featureTitle3: 'Experiencia en Ciencia de Datos para Proyectos de Construccion',
-            featureText3: 'Santcom ofrece experiencia inigualable en ciencia de datos para proyectos de construccion, empoderando a las empresas con las herramientas y conocimientos necesarios para optimizar operaciones.',
-            featureTitle4: 'Soporte Integral de Experiencia al Cliente',
-            featureText4: 'Ofrecemos soporte integral para mejorar la experiencia del cliente en la industria de la construccion, aprovechando datos y analitica para impulsar la satisfaccion del cliente.',
+            featureTitle1: 'Analitica Avanzada de Datos',
+            featureText1: 'Transformamos datos historicos y en tiempo real en insights accionables que impulsan decisiones estrategicas.',
+            featureTitle2: 'Modelos Predictivos Personalizados',
+            featureText2: 'Desarrollamos modelos de Machine Learning a medida que anticipan riesgos, sobrecostos y retrasos antes de que ocurran.',
+            featureTitle3: 'Automatizacion Inteligente de Procesos',
+            featureText3: 'Automatizamos flujos de trabajo y reportes con inteligencia artificial, eliminando tareas manuales y reduciendo errores operativos.',
+            featureTitle4: 'Consultoria Estrategica Basada en Datos',
+            featureText4: 'Acompanamos a su equipo en la toma de decisiones con consultoria especializada respaldada por ciencia de datos y analisis cuantitativo.',
             // Transform section
-            transformTitle: 'Transforme su Negocio de Construccion con Santcom',
-            transformText: 'Santcom aporta velocidad sin precedentes y confiabilidad impecable a su negocio de construccion. Nuestros servicios personalizados, impulsados por modelos avanzados de Machine Learning, aseguran que se mantenga a la vanguardia en el competitivo panorama de la construccion.',
+            transformTitle: 'Que nos Hace Diferentes',
+            transformText: 'No somos una consultora generica. Combinamos ciencia de datos avanzada con conocimiento profundo del sector para entregar soluciones que realmente transforman la operacion de su empresa. Cada modelo que construimos se calibra con sus datos reales.',
             // Stats section
-            statsTitle: 'El Desafio de la Industria de la Construccion',
-            stat1: 'Proyectos Sobre Presupuesto',
-            stat2: 'Proyectos con Retraso',
-            stat3: 'ROI con Analisis Predictivo',
-            stat4: 'Perdidas Anuales de la Industria',
-            stat5: 'Potencial de Reduccion de Costos',
-            partnersTitle: 'Nuestras Alianzas Colaborativas',
+            statsTitle: 'El Desafio de la Industria',
+            stat1: 'Proyectos con Sobrecostos',
+            stat2: 'Proyectos con Retrasos',
+            stat3: 'ROI con Analitica Predictiva',
+            stat4: 'Reduccion en Tiempos',
+            stat5: 'Precision en Predicciones',
+            partnersTitle: 'Nuestros Clientes y Aliados',
             // Video section
-            videoTitle: 'Potencie su Negocio de Construccion con Santcom',
-            videoText: 'Experimente el poder transformador del analisis predictivo avanzado y Machine Learning para su negocio de construccion. Contactenos para explorar como Santcom puede acelerar sus proyectos y optimizar sus operaciones.',
+            videoTitle: 'Potencie su Negocio con Santcom',
+            videoText: 'Experimente el poder transformador de la analitica predictiva avanzada y el Machine Learning. Contactenos para explorar como Santcom puede acelerar sus proyectos y optimizar sus operaciones.',
             // CTA section
-            ctaTitle: 'Listo para Construir de Forma Mas Inteligente?',
-            ctaDesc: 'Unase al futuro de la construccion. Nuestra plataforma de analisis impulsada por IA le ayuda a predecir riesgos antes de que se conviertan en problemas, ahorrando tiempo, dinero y recursos en cada proyecto.'
+            ctaTitle: 'Listos para Dar el Siguiente Paso?',
+            ctaDesc: 'Unase al futuro de la industria. Nuestra plataforma de analitica impulsada por IA le ayuda a predecir riesgos antes de que se conviertan en problemas, ahorrando tiempo, dinero y recursos en cada proyecto.'
+        },
+        en: {
+            solutions: 'Solutions',
+            vision: 'Vision',
+            blog: 'Blog',
+            login: 'Log In',
+            getStarted: 'Get Started',
+            learnMore: 'Learn More',
+            pages: 'Pages',
+            home: 'Home',
+            resources: 'Resources',
+            subscribe: 'Subscribe to Our Newsletter',
+            submit: 'Submit',
+            followUs: 'Follow Us On:',
+            subscribeCheckbox: 'Yes, subscribe me to your newsletter.',
+            heroTitle: 'Intelligent Solutions for Strategic Data-Driven Decisions',
+            heroSubtitle: 'We help build the future with data, not just concrete',
+            // Overlay section
+            overlayTitle: 'Empower Your Business with Advanced Analytics and AI',
+            overlayText: 'Santcom specializes in transforming data into strategic decisions. We develop custom Machine Learning models that anticipate risks, optimize resources, and maximize results on every project.',
+            // Feature cards
+            featureTitle1: 'Advanced Data Analytics',
+            featureText1: 'We transform historical and real-time data into actionable insights that drive strategic decisions.',
+            featureTitle2: 'Custom Predictive Models',
+            featureText2: 'We develop tailored Machine Learning models that anticipate risks, cost overruns, and delays before they occur.',
+            featureTitle3: 'Intelligent Process Automation',
+            featureText3: 'We automate workflows and reports with AI, eliminating manual tasks and reducing operational errors.',
+            featureTitle4: 'Data-Driven Strategic Consulting',
+            featureText4: 'We support your team in decision-making with specialized consulting backed by data science and quantitative analysis.',
+            // Transform section
+            transformTitle: 'What Makes Us Different',
+            transformText: 'We are not a generic consultancy. We combine advanced data science with deep sector knowledge to deliver solutions that truly transform your company operations. Every model we build is calibrated with your real data.',
+            // Stats section
+            statsTitle: 'The Industry Challenge',
+            stat1: 'Projects Over Budget',
+            stat2: 'Projects Behind Schedule',
+            stat3: 'ROI with Predictive Analytics',
+            stat4: 'Time Reduction',
+            stat5: 'Prediction Accuracy',
+            partnersTitle: 'Our Clients and Partners',
+            // Video section
+            videoTitle: 'Empower Your Business with Santcom',
+            videoText: 'Experience the transformative power of advanced predictive analytics and Machine Learning. Get in touch to explore how Santcom can accelerate your projects and optimize your operations.',
+            // CTA section
+            ctaTitle: 'Ready to Take the Next Step?',
+            ctaDesc: 'Join the future of the industry. Our AI-powered analytics platform helps you predict risks before they become problems, saving time, money, and resources on every project.'
         }
     };
     
@@ -312,8 +326,24 @@ function initLanguageSwitcher() {
         }
 
         // Update header buttons
-        const getStartedBtn = document.querySelector('.btn-get-started');
-        if (getStartedBtn) getStartedBtn.textContent = t.getStarted;
+        const loginBtn = document.querySelector('.login-btn');
+        if (loginBtn) {
+            const svg = loginBtn.querySelector('svg');
+            loginBtn.textContent = '';
+            if (svg) loginBtn.prepend(svg);
+            loginBtn.append(' ' + t.login);
+        }
+        const getStartedBtns = document.querySelectorAll('.btn-get-started');
+        getStartedBtns.forEach(btn => btn.textContent = t.getStarted);
+
+        // Update mobile nav links
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+        if (mobileNavLinks.length >= 4) {
+            mobileNavLinks[0].textContent = t.solutions;
+            mobileNavLinks[1].textContent = t.vision;
+            mobileNavLinks[2].textContent = t.blog;
+            mobileNavLinks[3].textContent = t.getStarted;
+        }
 
         // Update hero section
         const heroH1 = document.querySelector('.hero-content h1');
@@ -399,6 +429,18 @@ function initLanguageSwitcher() {
         const submitBtn = document.querySelector('.newsletter-form .btn-submit');
         if (submitBtn) submitBtn.textContent = t.submit;
 
+        // Update newsletter checkbox text
+        const checkboxSpan = document.querySelector('.newsletter-form label span');
+        if (checkboxSpan && t.subscribeCheckbox) checkboxSpan.textContent = t.subscribeCheckbox;
+
+        // Update footer page links
+        const footerLinks = document.querySelectorAll('.footer-col a');
+        footerLinks.forEach(link => {
+            if (link.textContent.match(/Home|Inicio/)) link.textContent = t.home;
+            if (link.textContent.match(/Solutions|Soluciones/)) link.textContent = t.solutions;
+            if (link.textContent.match(/Get Started|Comenzar/)) link.textContent = t.getStarted;
+        });
+
         // Update button states
         langEn.classList.toggle('active', lang === 'en');
         langEs.classList.toggle('active', lang === 'es');
@@ -408,11 +450,9 @@ function initLanguageSwitcher() {
     langEn.addEventListener('click', () => setLanguage('en'));
     langEs.addEventListener('click', () => setLanguage('es'));
     
-    // Check for saved language preference
-    const savedLang = localStorage.getItem('santcom-lang');
-    if (savedLang) {
-        setLanguage(savedLang);
-    }
+    // Check for saved language preference (ES is default)
+    const savedLang = localStorage.getItem('santcom-lang') || 'es';
+    setLanguage(savedLang);
 }
 
 // Initialize language switcher on DOM ready
