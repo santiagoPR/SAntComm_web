@@ -220,6 +220,7 @@ function initLanguageSwitcher() {
     
     const translations = {
         es: {
+            quienesSomos: 'Quienes Somos',
             solutions: 'Soluciones',
             vision: 'Vision',
             blog: 'Blog',
@@ -266,6 +267,7 @@ function initLanguageSwitcher() {
             ctaDesc: 'Unase al futuro de la industria. Nuestra plataforma de analitica impulsada por IA le ayuda a predecir riesgos antes de que se conviertan en problemas, ahorrando tiempo, dinero y recursos en cada proyecto.'
         },
         en: {
+            quienesSomos: 'About Us',
             solutions: 'Solutions',
             vision: 'Vision',
             blog: 'Blog',
@@ -317,12 +319,13 @@ function initLanguageSwitcher() {
         const t = translations[lang];
         localStorage.setItem('santcom-lang', lang);
 
-        // Update nav links (now 3 items: Solutions, Vision, Blog)
+        // Update nav links (4 items: Quienes Somos, Solutions, Vision, Blog)
         const navLinks = document.querySelectorAll('.nav a');
-        if (navLinks.length >= 3) {
-            navLinks[0].textContent = t.solutions;
-            navLinks[1].textContent = t.vision;
-            navLinks[2].textContent = t.blog;
+        if (navLinks.length >= 4) {
+            navLinks[0].textContent = t.quienesSomos;
+            navLinks[1].textContent = t.solutions;
+            navLinks[2].textContent = t.vision;
+            navLinks[3].textContent = t.blog;
         }
 
         // Update header buttons
@@ -336,13 +339,14 @@ function initLanguageSwitcher() {
         const getStartedBtns = document.querySelectorAll('.btn-get-started');
         getStartedBtns.forEach(btn => btn.textContent = t.getStarted);
 
-        // Update mobile nav links
+        // Update mobile nav links (5 items: Quienes Somos, Solutions, Vision, Blog, Get Started)
         const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-        if (mobileNavLinks.length >= 4) {
-            mobileNavLinks[0].textContent = t.solutions;
-            mobileNavLinks[1].textContent = t.vision;
-            mobileNavLinks[2].textContent = t.blog;
-            mobileNavLinks[3].textContent = t.getStarted;
+        if (mobileNavLinks.length >= 5) {
+            mobileNavLinks[0].textContent = t.quienesSomos;
+            mobileNavLinks[1].textContent = t.solutions;
+            mobileNavLinks[2].textContent = t.vision;
+            mobileNavLinks[3].textContent = t.blog;
+            mobileNavLinks[4].textContent = t.getStarted;
         }
 
         // Update hero section
@@ -437,6 +441,7 @@ function initLanguageSwitcher() {
         const footerLinks = document.querySelectorAll('.footer-col a');
         footerLinks.forEach(link => {
             if (link.textContent.match(/Home|Inicio/)) link.textContent = t.home;
+            if (link.textContent.match(/About Us|Quienes Somos/)) link.textContent = t.quienesSomos;
             if (link.textContent.match(/Solutions|Soluciones/)) link.textContent = t.solutions;
             if (link.textContent.match(/Get Started|Comenzar/)) link.textContent = t.getStarted;
         });
