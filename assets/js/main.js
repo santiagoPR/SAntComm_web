@@ -89,6 +89,9 @@
 
     // Parallax scrolling effect for stats section and hero banner
     function initParallaxScroll() {
+        // Disable parallax on mobile - causes scroll jank
+        if (window.innerWidth < 768) return;
+
         const parallaxBg = document.querySelector('.stats-parallax-bg');
         const heroBannerImg = document.querySelector('.hero-banner-right img');
 

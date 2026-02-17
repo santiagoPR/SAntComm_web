@@ -149,10 +149,13 @@
         [0.66, 0.51],  // Choco
     ];
 
-    // ── Config ──
-    var PARTICLE_COUNT = 2200;
-    var CONNECTION_DIST = 0.032;
-    var MAX_CONNECTIONS = 3;
+    // ── Config (responsive) ──
+    var isMobile = window.innerWidth < 768;
+    var isSmallMobile = window.innerWidth < 480;
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var PARTICLE_COUNT = prefersReducedMotion ? 150 : (isSmallMobile ? 400 : (isMobile ? 600 : 2200));
+    var CONNECTION_DIST = isMobile ? 0.04 : 0.032;
+    var MAX_CONNECTIONS = isMobile ? 2 : 3;
     var SPHERE_ROTATE_SPEED = 0.0004;
 
     // Timing (ms)
@@ -306,6 +309,8 @@
     AmericasParticles.prototype.loop = function () {
         var self = this;
         requestAnimationFrame(function () { self.loop(); });
+        // Pause when tab is hidden
+        if (document.hidden) return;
         self.update();
         self.render();
     };
@@ -370,6 +375,11 @@
         var connDist = CONNECTION_DIST * Math.max(w, h);
         var connDistSq = connDist * connDist;
 
+        // Skip connection lines on small mobile for performance
+        if (isSmallMobile) {
+            // No connections on tiny screens
+        } else {
+
         // Spatial grid for connections
         var gridSize = connDist;
         var grid = {};
@@ -384,7 +394,8 @@
 
         // Draw connections
         ctx.lineWidth = 0.5;
-        for (var i = 0; i < particles.length; i += 3) {
+        var connStep = isMobile ? 5 : 3;
+        for (var i = 0; i < particles.length; i += connStep) {
             var p = particles[i];
             var gx = Math.floor(p.px / gridSize);
             var gy = Math.floor(p.py / gridSize);
@@ -415,26 +426,43 @@
             }
         }
 
-        // Draw particles with glow
-        ctx.globalCompositeOperation = 'lighter';
-        for (var i = 0; i < particles.length; i++) {
-            var p = particles[i];
-            var depthScale = 0.6 + 0.4 * (p.depth * 0.5 + 0.5);
-            var size = p.baseSize * depthScale;
-            var alpha = p.alpha * depthScale;
-            var glowR = size * 2.5;
+        } // end else (skip connections on small mobile)
 
-            var grad = ctx.createRadialGradient(p.px, p.py, 0, p.px, p.py, glowR);
-            grad.addColorStop(0, 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',' + (alpha * 0.9) + ')');
-            grad.addColorStop(0.4, 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',' + (alpha * 0.3) + ')');
-            grad.addColorStop(1, 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',0)');
+        // Draw particles - simplified on mobile (no gradients), full glow on desktop
+        if (isMobile) {
+            // Mobile: simple filled circles, no radial gradients
+            for (var i = 0; i < particles.length; i++) {
+                var p = particles[i];
+                var depthScale = 0.6 + 0.4 * (p.depth * 0.5 + 0.5);
+                var size = p.baseSize * depthScale;
+                var alpha = p.alpha * depthScale;
+                ctx.fillStyle = 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',' + alpha + ')';
+                ctx.beginPath();
+                ctx.arc(p.px, p.py, size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        } else {
+            // Desktop: full glow with radial gradients
+            ctx.globalCompositeOperation = 'lighter';
+            for (var i = 0; i < particles.length; i++) {
+                var p = particles[i];
+                var depthScale = 0.6 + 0.4 * (p.depth * 0.5 + 0.5);
+                var size = p.baseSize * depthScale;
+                var alpha = p.alpha * depthScale;
+                var glowR = size * 2.5;
 
-            ctx.fillStyle = grad;
-            ctx.beginPath();
-            ctx.arc(p.px, p.py, glowR, 0, Math.PI * 2);
-            ctx.fill();
+                var grad = ctx.createRadialGradient(p.px, p.py, 0, p.px, p.py, glowR);
+                grad.addColorStop(0, 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',' + (alpha * 0.9) + ')');
+                grad.addColorStop(0.4, 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',' + (alpha * 0.3) + ')');
+                grad.addColorStop(1, 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',0)');
+
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(p.px, p.py, glowR, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            ctx.globalCompositeOperation = 'source-over';
         }
-        ctx.globalCompositeOperation = 'source-over';
     };
 
     // ── Bootstrap ──
