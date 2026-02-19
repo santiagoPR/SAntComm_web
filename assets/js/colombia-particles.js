@@ -4,18 +4,18 @@
     // ── Brand palette ──
     // Americas (non-Colombia): cyan / white / silver
     var COLORS_DEFAULT = [
-        { r: 0, g: 229, b: 208 },    // cyan
+        { r: 0, g: 211, b: 222 },    // cyan #00D3DE
         { r: 255, g: 255, b: 255 },  // white
-        { r: 180, g: 225, b: 220 },  // ice blue
-        { r: 100, g: 215, b: 205 },  // soft teal
-        { r: 200, g: 215, b: 225 },  // silver
+        { r: 170, g: 225, b: 228 },  // ice blue
+        { r: 80, g: 210, b: 218 },   // soft teal
+        { r: 190, g: 220, b: 225 },  // silver
     ];
-    // Colombia: salmon / coral exclusively
+    // Colombia: orange exclusively
     var COLORS_COLOMBIA = [
-        { r: 244, g: 98, b: 58 },    // coral #F4623A
-        { r: 250, g: 130, b: 95 },   // light salmon
-        { r: 235, g: 85, b: 50 },    // deep salmon
-        { r: 248, g: 115, b: 75 },   // mid salmon
+        { r: 255, g: 96, b: 65 },    // orange #FF6041
+        { r: 255, g: 135, b: 100 },  // light orange
+        { r: 240, g: 85, b: 55 },    // deep orange
+        { r: 250, g: 120, b: 80 },   // mid orange
     ];
 
     // ──────────────────────────────────────────────
