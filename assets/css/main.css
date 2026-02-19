@@ -1056,10 +1056,7 @@ a {
 
 /* Hero section branded accent */
 .hero-content h1 {
-    background: linear-gradient(135deg, #FFFFFF 0%, rgba(0, 211, 222, 0.9) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #FFFFFF;
 }
 
 /* Stats section enhanced overlay */
@@ -1077,10 +1074,7 @@ a {
 
 /* CTA section branded look */
 .cta-section h2 {
-    background: linear-gradient(135deg, #FFFFFF 0%, var(--color-cyan) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #FFFFFF;
 }
 
 /* Newsletter section subtle border */
