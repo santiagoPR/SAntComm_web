@@ -177,7 +177,7 @@
                         </div>
 
                         <div>
-                            <label class="gs-label-message" style="display: block; margin-bottom: 8px; font-weight: 500;">Cuentenos sobre su proyecto</label>
+                            <label class="gs-label-message" style="display: block; margin-bottom: 8px; font-weight: 500;">Cuéntenos sobre su proyecto</label>
                             <textarea id="messageTextarea" name="message" rows="6" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px; resize: vertical;" placeholder="Describa sus necesidades y objetivos de analítica..."></textarea>
                         </div>
 
@@ -381,7 +381,7 @@
                 interest3: 'Programas de Capacitación',
                 interest4: 'Servicios de Consultoría',
                 interest5: 'Otro',
-                labelMessage: 'Cuentenos sobre su proyecto',
+                labelMessage: 'Cuéntenos sobre su proyecto',
                 messagePlaceholder: 'Describa sus necesidades y objetivos de analítica...',
                 consentText: 'Acepto recibir comunicaciones de Santcom y entiendo que puedo cancelar mi suscripción en cualquier momento. *',
                 submitBtn: 'Enviar Solicitud',
@@ -500,7 +500,7 @@
             const footerLinks = document.querySelectorAll('.footer-col a');
             footerLinks.forEach(function(link) {
                 if (link.textContent.match(/Home|Inicio/)) link.textContent = lang === 'en' ? 'Home' : 'Inicio';
-                if (link.textContent.match(/About Us|Quienes Somos/)) link.textContent = lang === 'en' ? 'About Us' : 'Quiénes Somos';
+                if (link.textContent.match(/About Us|Quiénes Somos|Quienes Somos/)) link.textContent = lang === 'en' ? 'About Us' : 'Quiénes Somos';
                 if (link.textContent.match(/Solutions|Soluciones/)) link.textContent = lang === 'en' ? 'Solutions' : 'Soluciones';
             });
         }

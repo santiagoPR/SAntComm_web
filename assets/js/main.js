@@ -223,51 +223,51 @@ function initLanguageSwitcher() {
     
     const translations = {
         es: {
-            quienesSomos: 'Quienes Somos',
+            quienesSomos: 'Quiénes Somos',
             solutions: 'Soluciones',
-            vision: 'Vision',
+            vision: 'Visión',
             blog: 'Blog',
-            login: 'Iniciar Sesion',
+            login: 'Iniciar Sesión',
             getStarted: 'Comenzar',
-            learnMore: 'Saber Mas',
-            pages: 'Paginas',
+            learnMore: 'Saber Más',
+            pages: 'Páginas',
             home: 'Inicio',
             resources: 'Recursos',
-            subscribe: 'Suscribase a Nuestro Boletin',
+            subscribe: 'Suscríbase a Nuestro Boletín',
             submit: 'Enviar',
-            followUs: 'Siganos En:',
-            subscribeCheckbox: 'Si, suscribirme al boletin.',
-            heroTitle: 'Soluciones Inteligentes para Decisiones Estrategicas Basadas en Datos',
+            followUs: 'Síganos En:',
+            subscribeCheckbox: 'Sí, suscribirme al boletín.',
+            heroTitle: 'Soluciones Inteligentes para Decisiones Estratégicas Basadas en Datos',
             heroSubtitle: 'Ayudamos a construir el futuro con datos, no solo con concreto',
             // Overlay section
-            overlayTitle: 'Potencie su Negocio con Analitica Avanzada e Inteligencia Artificial',
-            overlayText: 'Santcom se especializa en transformar datos en decisiones estrategicas. Desarrollamos modelos de Machine Learning personalizados que permiten anticipar riesgos, optimizar recursos y maximizar resultados en cada proyecto.',
+            overlayTitle: 'Potencie su Negocio con Analítica Avanzada e Inteligencia Artificial',
+            overlayText: 'Santcom se especializa en transformar datos en decisiones estratégicas. Desarrollamos modelos de Machine Learning personalizados que permiten anticipar riesgos, optimizar recursos y maximizar resultados en cada proyecto.',
             // Feature cards
-            featureTitle1: 'Analitica Avanzada de Datos',
-            featureText1: 'Transformamos datos historicos y en tiempo real en insights accionables que impulsan decisiones estrategicas.',
+            featureTitle1: 'Analítica Avanzada de Datos',
+            featureText1: 'Transformamos datos históricos y en tiempo real en insights accionables que impulsan decisiones estratégicas.',
             featureTitle2: 'Modelos Predictivos Personalizados',
             featureText2: 'Desarrollamos modelos de Machine Learning a medida que anticipan riesgos, sobrecostos y retrasos antes de que ocurran.',
-            featureTitle3: 'Automatizacion Inteligente de Procesos',
+            featureTitle3: 'Automatización Inteligente de Procesos',
             featureText3: 'Automatizamos flujos de trabajo y reportes con inteligencia artificial, eliminando tareas manuales y reduciendo errores operativos.',
-            featureTitle4: 'Consultoria Estrategica Basada en Datos',
-            featureText4: 'Acompanamos a su equipo en la toma de decisiones con consultoria especializada respaldada por ciencia de datos y analisis cuantitativo.',
+            featureTitle4: 'Consultoría Estratégica Basada en Datos',
+            featureText4: 'Acompañamos a su equipo en la toma de decisiones con consultoría especializada respaldada por ciencia de datos y análisis cuantitativo.',
             // Transform section
-            transformTitle: 'Que nos Hace Diferentes',
-            transformText: 'No somos una consultora generica. Combinamos ciencia de datos avanzada con conocimiento profundo del sector para entregar soluciones que realmente transforman la operacion de su empresa. Cada modelo que construimos se calibra con sus datos reales.',
+            transformTitle: '¿Qué nos Hace Diferentes?',
+            transformText: 'No somos una consultora genérica. Combinamos ciencia de datos avanzada con conocimiento profundo del sector para entregar soluciones que realmente transforman la operación de su empresa. Cada modelo que construimos se calibra con sus datos reales.',
             // Stats section
-            statsTitle: 'El Desafio de la Industria',
+            statsTitle: 'El Desafío de la Industria',
             stat1: 'Proyectos con Sobrecostos',
             stat2: 'Proyectos con Retrasos',
-            stat3: 'ROI con Analitica Predictiva',
-            stat4: 'Reduccion en Tiempos',
-            stat5: 'Precision en Predicciones',
+            stat3: 'ROI con Analítica Predictiva',
+            stat4: 'Reducción en Tiempos',
+            stat5: 'Precisión en Predicciones',
             partnersTitle: 'Nuestros Clientes y Aliados',
             // Video section
             videoTitle: 'Potencie su Negocio con Santcom',
-            videoText: 'Experimente el poder transformador de la analitica predictiva avanzada y el Machine Learning. Contactenos para explorar como Santcom puede acelerar sus proyectos y optimizar sus operaciones.',
+            videoText: 'Experimente el poder transformador de la analítica predictiva avanzada y el Machine Learning. Contáctenos para explorar cómo Santcom puede acelerar sus proyectos y optimizar sus operaciones.',
             // CTA section
-            ctaTitle: 'Listos para Dar el Siguiente Paso?',
-            ctaDesc: 'Unase al futuro de la industria. Nuestra plataforma de analitica impulsada por IA le ayuda a predecir riesgos antes de que se conviertan en problemas, ahorrando tiempo, dinero y recursos en cada proyecto.'
+            ctaTitle: '¿Listos para Dar el Siguiente Paso?',
+            ctaDesc: 'Únase al futuro de la industria. Nuestra plataforma de analítica impulsada por IA le ayuda a predecir riesgos antes de que se conviertan en problemas, ahorrando tiempo, dinero y recursos en cada proyecto.'
         },
         en: {
             quienesSomos: 'About Us',
@@ -444,7 +444,7 @@ function initLanguageSwitcher() {
         const footerLinks = document.querySelectorAll('.footer-col a');
         footerLinks.forEach(link => {
             if (link.textContent.match(/Home|Inicio/)) link.textContent = t.home;
-            if (link.textContent.match(/About Us|Quienes Somos/)) link.textContent = t.quienesSomos;
+            if (link.textContent.match(/About Us|Quiénes Somos|Quienes Somos/)) link.textContent = t.quienesSomos;
             if (link.textContent.match(/Solutions|Soluciones/)) link.textContent = t.solutions;
             if (link.textContent.match(/Get Started|Comenzar/)) link.textContent = t.getStarted;
         });
