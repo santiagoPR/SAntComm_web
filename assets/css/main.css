@@ -344,7 +344,8 @@ a {
 .text-overlay p {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: var(--color-cyan);
+    color: #FFFFFF;
+    text-align: justify;
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -1340,7 +1341,7 @@ a {
     .hero {
         min-height: auto;
         height: auto !important;
-        padding: 90px 20px 30px 20px !important;
+        padding: 90px 20px 50px 20px !important;
     }
 
     .hero-content {
@@ -1382,7 +1383,7 @@ a {
     /* ---- HERO BANNER (split AI face) ---- */
     .hero-banner {
         height: 220px;
-        margin: -10px 0 0 0;
+        margin: 10px 0 0 0;
         flex-direction: row;
     }
 
@@ -1517,7 +1518,7 @@ a {
 
     /* ---- SECTION SPACING ---- */
     .section {
-        padding: 25px 15px 40px 15px;
+        padding: 35px 15px 50px 15px;
     }
 
     /* ---- FEATURE SECTION (image + cards grid) ---- */
@@ -1835,7 +1836,7 @@ a {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 80px 15px 25px 15px !important;
+        padding: 80px 15px 45px 15px !important;
     }
 
     .hero-content h1 {
