@@ -287,11 +287,12 @@ a {
    WITH BORDERS creating frame-like boxes
    ============================================ */
 .section {
-    padding: 40px 40px 100px 40px;
+    padding: 0 40px;
+    margin: 80px 0;
 }
 
 .feature-section-container {
-    max-width: 1720px;
+    max-width: 1800px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 705px 1fr;
@@ -320,7 +321,7 @@ a {
 .text-overlay {
     position: absolute;
     left: 25%;
-    max-width: 380px;
+    max-width: 500px;
     z-index: 10;
 }
 
@@ -409,13 +410,13 @@ a {
    TRANSFORM SECTION - FRAMED WITH LEFT/RIGHT
    ============================================ */
 .transform-stats-section {
-    margin: 100px 0;
+    margin: 80px 0;
     padding: 0 40px;
 }
 
 .transform-section-wrapper {
     max-width: 1800px;
-    margin: 0 auto 100px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1px 1fr;
     border: 1px solid var(--color-border);
@@ -478,7 +479,7 @@ a {
    STATS SECTION - NO FRAME, ON BACKGROUND
    ============================================ */
 .stats-section {
-    margin: 100px 0;
+    margin: 80px 0;
     padding: 0;
     position: relative;
     background: transparent;
@@ -571,7 +572,7 @@ a {
    PARTNERSHIP SECTION
    ============================================ */
 .partnership-section {
-    margin: 100px 0;
+    margin: 80px 0;
     text-align: center;
     padding: 0 40px;
 }
@@ -608,7 +609,7 @@ a {
    WITH BORDER creating frame
    ============================================ */
 .video-section-actual {
-    margin: 100px 0;
+    margin: 80px 0;
     padding: 0 40px;
 }
 
@@ -809,7 +810,7 @@ a {
    ============================================ */
 .cta-section {
     max-width: 900px;
-    margin: 100px auto;
+    margin: 80px auto;
     padding: 80px 40px;
     text-align: center;
 }
@@ -1276,7 +1277,8 @@ a {
     }
 
     .section {
-        padding: 40px 20px 60px 20px;
+        padding: 0 20px;
+        margin: 60px 0;
     }
 }
 
