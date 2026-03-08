@@ -6,18 +6,30 @@
 (function() {
     'use strict';
 
-    // Scroll Animation Observer
+    // Scroll Animation Observer with stagger support
     const observerOptions = {
         threshold: 0.15,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -80px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Optionally unobserve after animation
-                // observer.unobserve(entry.target);
+                // Stagger siblings for editorial reveal effect
+                const parent = entry.target.parentElement;
+                const siblings = parent ? Array.from(parent.children).filter(
+                    el => el.classList.contains('scroll-animate') ||
+                          el.classList.contains('feature-card') ||
+                          el.classList.contains('stat-item')
+                ) : [];
+                const index = siblings.indexOf(entry.target);
+                const delay = index >= 0 ? index * 100 : 0;
+
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, delay);
+
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -87,13 +99,12 @@
         });
     }
 
-    // Parallax scrolling effect for stats section and hero banner
+    // Parallax scrolling effect for stats section
     function initParallaxScroll() {
         // Disable parallax on mobile - causes scroll jank
         if (window.innerWidth < 768) return;
 
         const parallaxBg = document.querySelector('.stats-parallax-bg');
-        const heroBannerImg = document.querySelector('.hero-banner-right img');
 
         window.addEventListener('scroll', () => {
             const scrolled = window.scrollY;
@@ -105,22 +116,10 @@
                     const sectionTop = statsSection.offsetTop;
                     const sectionHeight = statsSection.offsetHeight;
 
-                    // Only apply parallax when section is in view
                     if (scrolled + windowHeight > sectionTop && scrolled < sectionTop + sectionHeight) {
                         const offset = (scrolled - sectionTop) * 0.15;
                         parallaxBg.style.transform = `translateX(${offset}px)`;
                     }
-                }
-            }
-
-            if (heroBannerImg) {
-                const banner = heroBannerImg.closest('.hero-banner');
-                const bannerTop = banner.offsetTop;
-                const bannerHeight = banner.offsetHeight;
-
-                if (scrolled + windowHeight > bannerTop && scrolled < bannerTop + bannerHeight) {
-                    const offset = (scrolled - bannerTop + windowHeight) * 0.2;
-                    heroBannerImg.style.transform = `translateY(${-offset}px)`;
                 }
             }
         });
@@ -237,6 +236,7 @@ function initLanguageSwitcher() {
             submit: 'Enviar',
             followUs: 'Síganos En:',
             subscribeCheckbox: 'Sí, suscribirme al boletín.',
+            heroOverline: 'Science Analytics & Communications',
             heroTitle: 'Soluciones Inteligentes para Decisiones Estratégicas Basadas en Datos',
             heroSubtitle: 'Ayudamos a construir el futuro con datos, no solo con concreto',
             // Overlay section
@@ -255,6 +255,7 @@ function initLanguageSwitcher() {
             transformTitle: '¿Qué nos Hace Diferentes?',
             transformText: 'No somos una consultora genérica. Combinamos ciencia de datos avanzada con conocimiento profundo del sector para entregar soluciones que realmente transforman la operación de su empresa. Cada modelo que construimos se calibra con sus datos reales.',
             // Stats section
+            statsOverline: 'Datos que Importan',
             statsTitle: 'El Desafío de la Industria',
             stat1: 'Proyectos con Sobrecostos',
             stat2: 'Proyectos con Retrasos',
@@ -266,6 +267,7 @@ function initLanguageSwitcher() {
             videoTitle: 'Potencie su Negocio con Santcom',
             videoText: 'Experimente el poder transformador de la analítica predictiva avanzada y el Machine Learning. Contáctenos para explorar cómo Santcom puede acelerar sus proyectos y optimizar sus operaciones.',
             // CTA section
+            ctaOverline: 'Comience Hoy',
             ctaTitle: '¿Listos para Dar el Siguiente Paso?',
             ctaDesc: 'Únase al futuro de la industria. Nuestra plataforma de analítica impulsada por IA le ayuda a predecir riesgos antes de que se conviertan en problemas, ahorrando tiempo, dinero y recursos en cada proyecto.'
         },
@@ -284,6 +286,7 @@ function initLanguageSwitcher() {
             submit: 'Submit',
             followUs: 'Follow Us On:',
             subscribeCheckbox: 'Yes, subscribe me to your newsletter.',
+            heroOverline: 'Science Analytics & Communications',
             heroTitle: 'Intelligent Solutions for Strategic Data-Driven Decisions',
             heroSubtitle: 'We help build the future with data, not just concrete',
             // Overlay section
@@ -302,6 +305,7 @@ function initLanguageSwitcher() {
             transformTitle: 'What Makes Us Different',
             transformText: 'We are not a generic consultancy. We combine advanced data science with deep sector knowledge to deliver solutions that truly transform your company operations. Every model we build is calibrated with your real data.',
             // Stats section
+            statsOverline: 'Data That Matters',
             statsTitle: 'The Industry Challenge',
             stat1: 'Projects Over Budget',
             stat2: 'Projects Behind Schedule',
@@ -313,6 +317,7 @@ function initLanguageSwitcher() {
             videoTitle: 'Empower Your Business with Santcom',
             videoText: 'Experience the transformative power of advanced predictive analytics and Machine Learning. Get in touch to explore how Santcom can accelerate your projects and optimize your operations.',
             // CTA section
+            ctaOverline: 'Get Started Today',
             ctaTitle: 'Ready to Take the Next Step?',
             ctaDesc: 'Join the future of the industry. Our AI-powered analytics platform helps you predict risks before they become problems, saving time, money, and resources on every project.'
         }
@@ -353,9 +358,11 @@ function initLanguageSwitcher() {
         }
 
         // Update hero section
+        const heroOverline = document.querySelector('.hero-content .overline');
         const heroH1 = document.querySelector('.hero-content h1');
         const heroSubtitle = document.querySelector('.hero-subtitle');
         const heroLearnMore = document.querySelector('.hero-content .btn-primary');
+        if (heroOverline) heroOverline.textContent = t.heroOverline;
         if (heroH1) heroH1.textContent = t.heroTitle;
         if (heroSubtitle) heroSubtitle.textContent = t.heroSubtitle;
         if (heroLearnMore) heroLearnMore.textContent = t.learnMore;
@@ -394,7 +401,9 @@ function initLanguageSwitcher() {
         if (transformBtn) transformBtn.textContent = t.learnMore;
 
         // Update stats section
+        const statsOverline = document.querySelector('.stats-content .overline');
         const statsH2 = document.querySelector('.stats-content h2');
+        if (statsOverline) statsOverline.textContent = t.statsOverline;
         if (statsH2) statsH2.textContent = t.statsTitle;
         const statLabels = document.querySelectorAll('.stat-label');
         const statTexts = [t.stat1, t.stat2, t.stat3, t.stat4, t.stat5];
@@ -415,9 +424,11 @@ function initLanguageSwitcher() {
         if (videoBtn) videoBtn.textContent = t.getStarted;
 
         // Update CTA section
+        const ctaOverline = document.querySelector('.cta-section .overline');
         const ctaH2 = document.querySelector('.cta-section h2');
-        const ctaP = document.querySelector('.cta-section p');
+        const ctaP = document.querySelector('.cta-section p:not(.overline)');
         const ctaBtn = document.querySelector('.cta-section .btn-primary');
+        if (ctaOverline) ctaOverline.textContent = t.ctaOverline;
         if (ctaH2) ctaH2.textContent = t.ctaTitle;
         if (ctaP) ctaP.textContent = t.ctaDesc;
         if (ctaBtn) ctaBtn.textContent = t.getStarted;
