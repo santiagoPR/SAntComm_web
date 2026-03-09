@@ -18,7 +18,7 @@
     <!-- Open Graph / Link Preview -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Santcom - Science Analytics & Communications">
-    <meta property="og:description" content="Soluciones inteligentes para decisiones estratégicas basadas en datos. Santcom transforma industrias con analítica avanzada, modelos predictivos e inteligencia artificial.">
+    <meta property="og:description" content="Soluciones inteligentes para decisiones estratégicas basadas en datos.">
     <meta property="og:image" content="https://santcom.com/assets/img/og-image.png">
     <meta property="og:url" content="https://santcom.com/">
     <meta name="twitter:card" content="summary_large_image">
@@ -29,374 +29,353 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="assets/css/main.css?v=27">
+    <link rel="stylesheet" href="assets/css/main.css?v=28">
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button id="lang-en" class="lang-btn">EN</button>
-        <button id="lang-es" class="lang-btn active">ES</button>
+
+<!-- Language Switcher -->
+<div class="lang-switcher">
+    <button id="lang-en">EN</button>
+    <button id="lang-es" class="active">ES</button>
+</div>
+
+<!-- 1. HEADER -->
+<header class="site-header" id="siteHeader">
+    <a href="index.html" class="header-logo">
+        <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo" style="height:40px;width:auto;">
+            <g transform="translate(3,11) scale(0.15)">
+                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
+                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
+                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
+                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
+                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
+                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
+                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
+            </g>
+            <g transform="translate(39.6, -37.8) scale(0.8)">
+                <g fill="#FFFFFF">
+                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
+                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
+                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
+                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
+                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
+                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
+                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
+                </g>
+                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
+            </g>
+        </svg>
+    </a>
+
+    <nav class="header-nav">
+        <a href="pages/quienes-somos.html" class="nav-quienes">Quiénes Somos</a>
+        <a href="pages/solutions.html" class="nav-soluciones">Soluciones</a>
+        <a href="pages/vision.html" class="nav-vision">Visión</a>
+        <a href="pages/blog.html" class="nav-blog">Blog</a>
+        <a href="pages/get-started.html" class="header-cta nav-cta">Comenzar</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav">
+    <a href="pages/quienes-somos.html" class="mob-quienes">Quiénes Somos</a>
+    <a href="pages/solutions.html" class="mob-soluciones">Soluciones</a>
+    <a href="pages/vision.html" class="mob-vision">Visión</a>
+    <a href="pages/blog.html" class="mob-blog">Blog</a>
+    <a href="pages/get-started.html" class="btn-ghost mob-cta" style="margin-top:16px;">Comenzar</a>
+</nav>
+
+<!-- 2. HERO BANNER -->
+<section class="hero">
+    <div class="hero-image"></div>
+    <div class="hero-content">
+        <h1 class="reveal hero-title">Soluciones Inteligentes para Decisiones Estratégicas</h1>
+        <p class="reveal hero-subtitle">Ayudamos a construir el futuro con datos, no solo con concreto</p>
+        <a href="pages/solutions.html" class="btn-ghost reveal hero-cta">Explorar Soluciones</a>
+    </div>
+</section>
+
+<!-- 3. HISTORY / STATS -->
+<section class="history">
+    <div class="history-grid">
+        <div class="history-left reveal">
+            <h2 class="history-heading">La ciencia detrás de cada decisión</h2>
+        </div>
+        <div class="history-right">
+            <p class="reveal history-desc">Santcom integra ciencia de datos, inteligencia artificial y conocimiento sectorial para transformar la manera en que las empresas constructoras planifican, ejecutan y optimizan sus proyectos. Convertimos datos complejos en decisiones claras y accionables.</p>
+            <div class="reveal">
+                <a href="pages/quienes-somos.html" class="btn-ghost history-cta">Conocer más</a>
+            </div>
+        </div>
     </div>
 
-    <!-- Site Background -->
-    <div class="site-background"></div>
+    <h3 class="stats-title reveal stats-title-text">El Desafío de la Industria</h3>
+    <div class="stats-row">
+        <div class="stat-item reveal">
+            <div class="stat-number" data-target="85">0%</div>
+            <div class="stat-label stat-label-1">Proyectos con Sobrecostos</div>
+        </div>
+        <div class="stat-item reveal">
+            <div class="stat-number" data-target="77">0%</div>
+            <div class="stat-label stat-label-2">Proyectos con Retrasos</div>
+        </div>
+        <div class="stat-item reveal">
+            <div class="stat-number" data-suffix="x" data-target="10">0x</div>
+            <div class="stat-label stat-label-3">ROI con Analítica Predictiva</div>
+        </div>
+        <div class="stat-item reveal">
+            <div class="stat-number" data-target="40">0%</div>
+            <div class="stat-label stat-label-4">Reducción en Tiempos</div>
+        </div>
+    </div>
+</section>
 
-    <!-- Site Content -->
-    <div class="site-content">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <div class="logo-section">
-                    <a href="index.html">
-                        <svg class="logo-icon" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo">
-                            <g transform="translate(3,11) scale(0.15)">
-                                <!-- Top-left bar (longer) -->
-                                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
-                                <!-- S-shape: left bar → 45° diagonal up-right → right bar -->
-                                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
-                                <!-- Left short bar 1 -->
-                                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
-                                <!-- Right short bar 1 -->
-                                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
-                                <!-- Left short bar 2 -->
-                                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
-                                <!-- C-shape: vertical → diagonal up-right → horizontal → diagonal down-left → vertical -->
-                                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
-                                <!-- Bottom-right bar (longer) -->
-                                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
-                            </g>
-                            <g transform="translate(39.6, -37.8) scale(0.8)">
-                                <g fill="#FFFFFF">
-                                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
-                                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
-                                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
-                                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
-                                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
-                                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
-                                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
-                                </g>
-                                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
+<!-- 4. 50/50 SPLIT - Image | Coral -->
+<section class="split split--coral">
+    <div class="split-image" style="background-image: url('assets/img/hero-banner.jpg');"></div>
+    <div class="split-content">
+        <h2 class="reveal split-coral-heading">No es magia — Es ciencia</h2>
+        <p class="reveal split-coral-text">Nuestros algoritmos procesan miles de variables simultáneamente: costos de materiales, condiciones climáticas, rendimiento laboral, tendencias del mercado. El resultado es una visión integral que permite anticipar riesgos y capitalizar oportunidades antes que la competencia.</p>
+        <a href="pages/solutions.html" class="btn-ghost btn-ghost--white reveal split-coral-cta">Explorar Soluciones</a>
+    </div>
+</section>
 
-                <nav class="nav">
-                    <a href="pages/quienes-somos.html">Quiénes Somos</a>
-                    <a href="pages/solutions.html">Soluciones</a>
-                    <a href="pages/vision.html">Visión</a>
-                    <a href="pages/blog.html">Blog</a>
-                </nav>
+<!-- 5. SERVICES -->
+<section class="services">
+    <h2 class="services-heading reveal services-heading-text">Soluciones integrales para la industria</h2>
 
-                <div class="header-actions">
-                    <button class="login-btn">
-                        <svg width="20" height="20" viewBox="0 0 50 50" fill="currentColor">
-                            <path d="M25 48.077c-5.924 0-11.31-2.252-15.396-5.921 2.254-5.362 7.492-8.267 15.373-8.267 7.889 0 13.139 3.044 15.408 8.418-4.084 3.659-9.471 5.77-15.385 5.77m.278-35.3c4.927 0 8.611 3.812 8.611 8.878 0 5.21-3.875 9.456-8.611 9.456s-8.611-4.246-8.611-9.456c0-5.066 3.684-8.878 8.611-8.878M25 0C11.193 0 0 11.193 0 25c0 .915.056 1.816.152 2.705.032.295.091.581.133.873.085.589.173 1.176.298 1.751.073.338.169.665.256.997.135.515.273 1.027.439 1.529.114.342.243.675.37 1.01.18.476.369.945.577 1.406.149.331.308.657.472.98.225.446.463.883.714 1.313.182.312.365.619.56.922.272.423.56.832.856 1.237.207.284.41.568.629.841.325.408.671.796 1.02 1.182.22.244.432.494.662.728.405.415.833.801 1.265 1.186.173.154.329.325.507.475l.004-.011A24.886 24.886 0 0 0 25 50a24.881 24.881 0 0 0 16.069-5.861.126.126 0 0 1 .003.01c.172-.144.324-.309.49-.458.442-.392.88-.787 1.293-1.209.228-.232.437-.479.655-.72.352-.389.701-.78 1.028-1.191.218-.272.421-.556.627-.838.297-.405.587-.816.859-1.24a26.104 26.104 0 0 0 1.748-3.216c.208-.461.398-.93.579-1.406.127-.336.256-.669.369-1.012.167-.502.305-1.014.44-1.53.087-.332.183-.659.256-.996.126-.576.214-1.164.299-1.754.042-.292.101-.577.133-.872.095-.89.152-1.791.152-2.707C50 11.193 38.807 0 25 0"/>
-                        </svg>
-                        Iniciar Sesión
-                    </button>
-                    <a href="pages/get-started.html" class="btn-get-started">Comenzar</a>
-                    <button class="mobile-menu-btn" aria-label="Toggle menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+    <div class="services-grid">
+        <div class="service-card reveal">
+            <div class="service-card-image">
+                <img src="assets/img/generated/santcom_dashboard_viz.png" alt="Analítica Avanzada" loading="lazy">
+                <div class="service-card-title svc-title-1">Analítica Avanzada</div>
             </div>
-        </header>
+            <div class="service-card-body">
+                <p class="svc-desc-1">Transformamos datos crudos en inteligencia accionable. Dashboards interactivos, reportes automatizados y visualizaciones que revelan patrones ocultos en la operación de sus proyectos.</p>
+                <a href="pages/solutions.html" class="svc-link-1">Leer más &rarr;</a>
+            </div>
+        </div>
 
-        <!-- Mobile Navigation -->
-        <nav class="mobile-nav">
-            <a href="pages/quienes-somos.html">Quiénes Somos</a>
-            <a href="pages/solutions.html">Soluciones</a>
-            <a href="pages/vision.html">Visión</a>
+        <div class="service-card reveal">
+            <div class="service-card-image">
+                <img src="assets/img/generated/santcom_solutions_hero.png" alt="Modelos Predictivos" loading="lazy">
+                <div class="service-card-title svc-title-2">Modelos Predictivos</div>
+            </div>
+            <div class="service-card-body">
+                <p class="svc-desc-2">Anticipamos escenarios con modelos de machine learning calibrados para la industria de la construcción. Predicción de costos, cronogramas y riesgos con precisión sin precedentes.</p>
+                <a href="pages/solutions.html" class="svc-link-2">Leer más &rarr;</a>
+            </div>
+        </div>
+
+        <div class="service-card reveal">
+            <div class="service-card-image">
+                <img src="assets/img/generated/santcom_cta_bg.png" alt="Automatización Inteligente" loading="lazy">
+                <div class="service-card-title svc-title-3">Automatización Inteligente</div>
+            </div>
+            <div class="service-card-body">
+                <p class="svc-desc-3">Eliminamos tareas repetitivas y liberamos a su equipo para lo que realmente importa. Flujos automatizados que integran sus sistemas existentes con inteligencia artificial.</p>
+                <a href="pages/solutions.html" class="svc-link-3">Leer más &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. 50/50 SPLIT REVERSED - Navy | Image -->
+<section class="split split--navy split--reversed">
+    <div class="split-content">
+        <h2 class="reveal split-navy-heading">Decisiones respaldadas por evidencia</h2>
+        <p class="reveal split-navy-text">En un sector donde cada decisión tiene impacto millonario, la intuición ya no es suficiente. Nuestras soluciones combinan el rigor científico con la experiencia práctica para entregar recomendaciones que transforman resultados.</p>
+        <a href="pages/get-started.html" class="btn-ghost reveal split-navy-cta">Comenzar ahora</a>
+    </div>
+    <div class="split-image" style="background-image: url('assets/img/extracted/1.png'); background-position: center;"></div>
+</section>
+
+<!-- 7. CORAL ACCENT BAR -->
+<section class="accent-bar">
+    <p class="reveal accent-bar-text">Nuestros Clientes y Aliados</p>
+    <div class="client-logos">
+        <img src="logo/Logo_CASA_Verde_Negro.png" alt="Casa" loading="lazy">
+    </div>
+</section>
+
+<!-- 8. BOTTOM CTA HERO -->
+<section class="cta-hero">
+    <div class="cta-hero-content">
+        <h2 class="reveal cta-hero-heading">Ayudamos a construir el futuro con datos, no solo con concreto</h2>
+        <a href="pages/get-started.html" class="btn-ghost reveal cta-hero-btn">Contáctenos</a>
+    </div>
+</section>
+
+<!-- 9. FOOTER -->
+<footer class="site-footer">
+    <div class="footer-logo">
+        <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo" style="height:40px;width:auto;">
+            <g transform="translate(3,11) scale(0.15)">
+                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
+                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
+                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
+                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
+                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
+                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
+                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
+            </g>
+            <g transform="translate(39.6, -37.8) scale(0.8)">
+                <g fill="#FFFFFF">
+                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
+                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
+                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
+                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
+                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
+                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
+                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
+                </g>
+                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
+            </g>
+        </svg>
+    </div>
+
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-col-heading">Santcom</div>
+            <p class="footer-about">Soluciones basadas en ciencia de datos e inteligencia artificial para la industria de la construcción. Transformamos la complejidad en claridad.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-heading footer-empresa">Empresa</div>
+            <a href="pages/quienes-somos.html" class="footer-link-quienes">Quiénes Somos</a>
+            <a href="pages/vision.html" class="footer-link-vision">Visión</a>
             <a href="pages/blog.html">Blog</a>
-            <a href="pages/get-started.html" class="btn-get-started">Comenzar</a>
-        </nav>
-
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <p class="overline">Science Analytics & Communications</p>
-                <h1>Soluciones Inteligentes para Decisiones Estratégicas Basadas en Datos</h1>
-                <p class="hero-subtitle">Ayudamos a construir el futuro con datos, no solo con concreto</p>
-                <a href="pages/solutions.html" class="btn-primary">Saber Más</a>
-            </div>
-        </section>
-
-        <!-- Hero Banner - Parallax -->
-        <div class="hero-banner">
-            <div class="hero-banner-left">
-                <svg viewBox="0 0 254 181" xmlns="http://www.w3.org/2000/svg" class="hero-banner-logo" aria-label="Santcom Icon">
-                    <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
-                    <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
-                    <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
-                    <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
-                    <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
-                    <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
-                    <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
-                </svg>
-            </div>
-            <div class="hero-banner-right">
-                <img src="assets/img/hero-banner.jpg" alt="AI Analytics Vision">
-            </div>
         </div>
-
-        <!-- Main Content Section -->
-        <section class="section">
-            <div class="feature-section-container">
-                <div class="image-with-overlay">
-                    <img src="assets/img/left-section.jpg?v=2" alt="Predictive Analytics Visualization" loading="lazy">
-                    <div class="text-overlay text-overlay-top">
-                        <h2 class="overlay-title">Potencie su Negocio con Analítica Avanzada e Inteligencia Artificial</h2>
-                    </div>
-                    <div class="text-overlay text-overlay-bottom">
-                        <p class="overlay-text">Santcom se especializa en transformar datos en decisiones estratégicas. Desarrollamos modelos de Machine Learning personalizados que permiten anticipar riesgos, optimizar recursos y maximizar resultados en cada proyecto.</p>
-                    </div>
-                </div>
-                <div class="feature-cards-container">
-                    <div class="feature-cards">
-                        <div class="feature-card scroll-animate">
-                            <div class="feature-icon">
-                                <svg width="40" height="40" viewBox="19.868 38.586 160.264 121.194" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M149.73 83.547c-2.538-25.284-24.211-44.961-49.73-44.961S52.808 58.263 50.269 83.547c-17.67 3.837-30.401 19.54-30.401 37.674 0 21.261 17.297 38.559 38.559 38.559h83.146c21.261 0 38.559-17.297 38.559-38.559 0-18.135-12.732-33.838-30.402-37.674zm-8.157 64.423H58.427a26.755 26.755 0 0 1-16.198-5.482l21.237-21.114 13.181 13.19 36.505-35.875 8.081 8.047 6.076-30.357-30.353 6.177 8.281 8.243-28.512 28.025-13.236-13.239-28.56 28.399a26.646 26.646 0 0 1-3.252-12.763c0-13.887 10.85-25.598 24.701-26.661l5.452-.419v-5.488l-.003-.16C61.868 67.486 78.992 50.395 100 50.395c21.047 0 38.171 17.078 38.172 38.069l-.004 5.677 5.453.419c13.851 1.063 24.701 12.774 24.701 26.661 0 14.749-11.999 26.749-26.749 26.749z" fill="#FF6041"/>
-                                </svg>
-                            </div>
-                            <h3 class="feature-title-1">Analítica Avanzada de Datos</h3>
-                            <p class="feature-text-1">Transformamos datos históricos y en tiempo real en insights accionables que impulsan decisiones estratégicas.</p>
-                            <div class="feature-divider"></div>
-                        </div>
-
-                        <div class="feature-card scroll-animate">
-                            <div class="feature-icon">
-                                <svg width="40" height="40" viewBox="20.42 48.257 159.16 103.485" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M177.118 96.151L142.48 80.165a4.235 4.235 0 0 0-3.555 0l-34.637 15.986a4.252 4.252 0 0 0-2.464 3.849c0 1.648.967 3.159 2.463 3.85l34.638 15.986c.553.255 1.167.39 1.777.39.619 0 1.217-.131 1.778-.39l34.638-15.986c1.496-.691 2.462-2.202 2.462-3.85s-.967-3.159-2.462-3.849zM165.223 100l-24.521 11.316L116.181 100l24.52-11.316L165.223 100z" fill="#FF6041"/>
-                                    <path d="M98.177 100a4.251 4.251 0 0 0-2.463-3.849L61.076 80.165a4.236 4.236 0 0 0-3.554 0L22.883 96.151c-1.496.691-2.463 2.202-2.463 3.849s.967 3.159 2.463 3.85l34.638 15.985a4.257 4.257 0 0 0 1.777.391c.619 0 1.216-.131 1.777-.39l34.638-15.986a4.253 4.253 0 0 0 2.464-3.85zm-14.358 0l-24.521 11.316L34.778 100l24.52-11.316L83.819 100z" fill="#FF6041"/>
-                                    <path d="M63.585 72.333l34.638 15.985a4.257 4.257 0 0 0 1.777.391 4.21 4.21 0 0 0 1.777-.39l34.639-15.986a4.253 4.253 0 0 0 2.462-3.85 4.252 4.252 0 0 0-2.462-3.849l-34.639-15.986a4.236 4.236 0 0 0-3.554 0L63.585 64.634a4.253 4.253 0 0 0-2.463 3.849c0 1.648.966 3.159 2.463 3.85zm11.895-3.85L100 57.167l24.52 11.316L100 79.8 75.48 68.483z" fill="#FF6041"/>
-                                    <path d="M136.417 127.667l-34.639-15.986a4.236 4.236 0 0 0-3.554 0l-34.639 15.986c-1.496.691-2.463 2.202-2.463 3.849s.967 3.159 2.463 3.85l34.638 15.985a4.257 4.257 0 0 0 1.777.391 4.21 4.21 0 0 0 1.777-.39l34.639-15.986c1.496-.691 2.462-2.202 2.462-3.85s-.966-3.158-2.461-3.849zm-11.897 3.85L100 142.833l-24.52-11.316L100 120.2l24.52 11.317z" fill="#FF6041"/>
-                                </svg>
-                            </div>
-                            <h3 class="feature-title-2">Modelos Predictivos Personalizados</h3>
-                            <p class="feature-text-2">Desarrollamos modelos de Machine Learning a medida que anticipan riesgos, sobrecostos y retrasos antes de que ocurran.</p>
-                            <div class="feature-divider"></div>
-                        </div>
-
-                        <div class="feature-card scroll-animate">
-                            <div class="feature-icon">
-                                <svg width="40" height="40" viewBox="20.532 45.947 158.928 108.107" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M82.935 75.852l44.836 20.692a4.833 4.833 0 0 0 4.048 0l44.836-20.692a4.828 4.828 0 0 0 0-8.768l-44.836-20.692a4.826 4.826 0 0 0-4.047 0L82.935 67.083a4.828 4.828 0 0 0 0 8.769zm46.86-19.759l33.312 15.374-33.312 15.374-33.312-15.374 33.312-15.374z" fill="#FF6041"/>
-                                    <path d="M172.608 95.616l-42.813 19.758-42.813-19.758a4.83 4.83 0 0 0-4.047 8.769l44.836 20.692a4.833 4.833 0 0 0 4.048 0l44.836-20.692a4.83 4.83 0 0 0-4.047-8.769z" fill="#FF6041"/>
-                                    <path d="M172.608 124.149l-42.813 19.758-42.813-19.758a4.828 4.828 0 1 0-4.047 8.769l44.836 20.692a4.833 4.833 0 0 0 4.048 0l44.836-20.692a4.83 4.83 0 0 0-4.047-8.769z" fill="#FF6041"/>
-                                    <path d="M65.095 95.171H25.368a4.829 4.829 0 1 0 0 9.658h39.727a4.829 4.829 0 1 0 0-9.658z" fill="#FF6041"/>
-                                    <path d="M65.095 76.446H37.44a4.829 4.829 0 1 0 0 9.658h27.655a4.829 4.829 0 1 0 0-9.658z" fill="#FF6041"/>
-                                    <path d="M65.095 113.897H49.512a4.829 4.829 0 1 0 0 9.658h15.583a4.829 4.829 0 1 0 0-9.658z" fill="#FF6041"/>
-                                </svg>
-                            </div>
-                            <h3 class="feature-title-3">Automatización Inteligente de Procesos</h3>
-                            <p class="feature-text-3">Automatizamos flujos de trabajo y reportes con inteligencia artificial, eliminando tareas manuales y reduciendo errores operativos.</p>
-                            <div class="feature-divider"></div>
-                        </div>
-
-                        <div class="feature-card scroll-animate">
-                            <div class="feature-icon">
-                                <svg width="40" height="40" viewBox="20.124 26.752 159.752 146.495" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M117.275 125.299c8.267-5.705 13.161-14.963 13.161-25.039 0-16.782-13.653-30.435-30.435-30.435S69.566 83.478 69.566 100.26c0 10.076 4.892 19.333 13.159 25.039-17.083 6.994-28.462 23.834-28.462 42.343v5.605h91.474v-5.605c0-18.509-11.38-35.349-28.462-42.343zm-17.274-5.814c-10.6 0-19.225-8.624-19.225-19.225 0-10.6 8.625-19.224 19.225-19.224s19.225 8.624 19.225 19.224c0 10.601-8.625 19.225-19.225 19.225zm-34.074 42.552c2.713-16.546 17.215-28.921 34.074-28.921 16.857 0 31.36 12.375 34.072 28.921H65.927z" fill="#FF6041"/>
-                                    <path d="M100.001 62.03c9.726 0 17.639-7.913 17.639-17.639 0-9.726-7.913-17.639-17.639-17.639-9.727 0-17.64 7.913-17.64 17.639 0 9.726 7.912 17.639 17.64 17.639zm-6.429-17.639a6.435 6.435 0 0 1 6.429-6.428 6.435 6.435 0 0 1 6.428 6.428 6.435 6.435 0 0 1-6.428 6.429 6.437 6.437 0 0 1-6.429-6.429z" fill="#FF6041"/>
-                                    <path d="M37.764 101.971c-9.727 0-17.64 7.913-17.64 17.639 0 9.727 7.913 17.639 17.64 17.639 9.726 0 17.639-7.913 17.639-17.639 0-9.726-7.913-17.639-17.639-17.639zm6.428 17.639c0 3.545-2.883 6.429-6.428 6.429s-6.429-2.884-6.429-6.429c0-3.545 2.884-6.429 6.429-6.429s6.428 2.884 6.428 6.429z" fill="#FF6041"/>
-                                    <path d="M162.236 101.971c-9.726 0-17.639 7.913-17.639 17.639 0 9.727 7.913 17.639 17.639 17.639 9.727 0 17.64-7.913 17.64-17.639 0-9.726-7.913-17.639-17.64-17.639zm6.429 17.639a6.436 6.436 0 0 1-6.429 6.429 6.435 6.435 0 0 1-6.428-6.429 6.435 6.435 0 0 1 6.428-6.429 6.437 6.437 0 0 1 6.429 6.429z" fill="#FF6041"/>
-                                </svg>
-                            </div>
-                            <h3 class="feature-title-4">Consultoría Estratégica Basada en Datos</h3>
-                            <p class="feature-text-4">Acompañamos a su equipo en la toma de decisiones con consultoría especializada respaldada por ciencia de datos y análisis cuantitativo.</p>
-                            <div class="feature-divider"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="footer-col">
+            <div class="footer-col-heading footer-soluciones">Soluciones</div>
+            <a href="pages/solutions.html" class="footer-link-plataforma">Plataforma</a>
+            <a href="pages/solutions.html" class="footer-link-analitica">Analítica</a>
+            <a href="pages/solutions.html" class="footer-link-modelos">Modelos Predictivos</a>
         </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- Transform Section - FRAMED WITH LEFT/RIGHT -->
-        <section class="transform-stats-section">
-            <div class="transform-section-wrapper">
-                <div class="transform-visual-left">
-                    <img src="assets/img/section_2.png" alt="Transform Your Business" loading="lazy">
-                    <div class="transform-text-overlay">
-                        <h2 class="transform-title">Qué nos Hace Diferentes</h2>
-                    </div>
-                </div>
-                <div></div>
-                <div class="transform-text-right">
-                    <p class="transform-text">No somos una consultora genérica. Combinamos ciencia de datos avanzada con conocimiento profundo del sector para entregar soluciones que realmente transforman la operación de su empresa. Cada modelo que construimos se calibra con sus datos reales.</p>
-                    <a href="pages/vision.html" class="btn-primary transform-btn">Saber Más</a>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- Stats Section - NO FRAME, ON BACKGROUND -->
-        <section class="stats-section">
-            <div class="stats-background">
-                <img class="stats-parallax-bg" src="assets/img/sec_3_image.jpg?v=3" alt="Background" loading="lazy">
-            </div>
-            <div class="stats-content">
-                <p class="overline">Datos que Importan</p>
-                <h2>El Desafío de la Industria</h2>
-                <div class="stats-grid">
-                    <div class="stat-item scroll-animate">
-                        <div class="stat-number">85%</div>
-                        <div class="stat-label">Proyectos con Sobrecostos</div>
-                        <div class="stat-line"></div>
-                    </div>
-                    <div class="stat-item scroll-animate">
-                        <div class="stat-number">77%</div>
-                        <div class="stat-label">Proyectos con Retrasos</div>
-                        <div class="stat-line"></div>
-                    </div>
-                    <div class="stat-item scroll-animate">
-                        <div class="stat-number">10x</div>
-                        <div class="stat-label">ROI con Analítica Predictiva</div>
-                        <div class="stat-line"></div>
-                    </div>
-                    <div class="stat-item scroll-animate">
-                        <div class="stat-number">40%</div>
-                        <div class="stat-label">Reducción en Tiempos</div>
-                        <div class="stat-line"></div>
-                    </div>
-                    <div class="stat-item scroll-animate">
-                        <div class="stat-number">80%</div>
-                        <div class="stat-label">Precisión en Predicciónes</div>
-                        <div class="stat-line"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- Partnership Section -->
-        <section class="partnership-section">
-            <h2>Nuestros Clientes y Aliados</h2>
-            <div class="partnership-logos">
-                <img src="assets/img/casa-logo.png" alt="CASA - Obramos bien" loading="lazy">
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- Video Section - Video on left, Text on right -->
-        <section class="section video-section-actual">
-            <div class="video-section-wrapper">
-                <div class="video-visual-left">
-                    <!-- Colombia particle animation (canvas replaces video) -->
-                    <canvas class="particles-canvas"></canvas>
-                    <!-- REVERT: uncomment video below and remove canvas above to restore original
-                    <video class="video-single" autoplay loop muted playsinline>
-                        <source src="assets/video/particles.mp4" type="video/mp4">
-                    </video>
-                    -->
-                </div>
-                <div></div>
-                <div class="video-text-content">
-                    <h2 class="video-title">Potencie su Negocio con Santcom</h2>
-                    <p class="video-text">Experimente el poder transformador de la analítica predictiva avanzada y el Machine Learning. Contáctenos para explorar cómo Santcom puede acelerar sus proyectos y optimizar sus operaciónes.</p>
-                    <a href="pages/get-started.html" class="btn-primary video-btn">Comenzar</a>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <p class="overline">Comience Hoy</p>
-            <h2>¿Listos para Dar el Siguiente Paso?</h2>
-            <p>Únase al futuro de la industria. Nuestra plataforma de analítica impulsada por IA le ayuda a predecir riesgos antes de que se conviertan en problemas, ahorrando tiempo, dinero y recursos en cada proyecto.</p>
-            <a href="pages/get-started.html" class="btn-primary btn-large">Comenzar</a>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-col footer-logo-col">
-                    <div class="footer-logo">
-                        <svg width="180" height="45" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo">
-                            <g transform="translate(3,11) scale(0.15)">
-                                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
-                                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
-                                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
-                                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
-                                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
-                                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
-                                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
-                            </g>
-                            <g transform="translate(39.6, -37.8) scale(0.8)">
-                                <g fill="#FFFFFF">
-                                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
-                                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
-                                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
-                                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
-                                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
-                                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
-                                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
-                                </g>
-                                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <p class="footer-contact">request@santcom.com</p>
-
-                </div>
-                <div class="footer-col">
-                    <h4>Páginas</h4>
-                    <a href="index.html">Inicio</a>
-                    <a href="pages/quienes-somos.html">Quiénes Somos</a>
-                    <a href="pages/solutions.html">Soluciones</a>
-                    <a href="pages/vision.html">Visión</a>
-                    <a href="pages/blog.html">Blog</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <a href="#">Insights</a>
-                    <a href="#">Recursos</a>
-                    <a href="pages/get-started.html">Comenzar</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Suscríbase a Nuestro Boletín</h4>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Correo electrónico" required>
-                        <label>
-                            <input type="checkbox" required>
-                            <span>Sí, suscribirme al boletín.</span>
-                        </label>
-                        <button type="submit" class="btn-submit">Enviar</button>
-                    </form>
-                    <div class="social-links">
-                        <h5>Síganos En:</h5>
-                        <div class="social-icons">
-                            <a href="#" aria-label="LinkedIn"><img src="assets/img/linkedin.png" alt="LinkedIn" width="25" height="25"></a>
-                            <a href="#" aria-label="Facebook"><img src="assets/img/facebook.png" alt="Facebook" width="25" height="25"></a>
-                            <a href="#" aria-label="Twitter"><img src="assets/img/twitter.png" alt="Twitter" width="25" height="25"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Santcom. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+        <div class="footer-col">
+            <div class="footer-col-heading footer-contacto">Contacto</div>
+            <a href="mailto:contacto@santcom.com">contacto@santcom.com</a>
+        </div>
     </div>
 
-    <!-- Scroll Animation Script -->
-    <script src="assets/js/main.js?v=27"></script>
-    <!-- Colombia Particles Animation (remove this line to revert) -->
-    <script src="assets/js/colombia-particles.js?v=04"></script>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Santcom. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/main.js?v=28"></script>
+<script>
+    // Homepage translations
+    initLanguageSwitcher({
+        es: {
+            '.hero-title': 'Soluciones Inteligentes para Decisiones Estratégicas',
+            '.hero-subtitle': 'Ayudamos a construir el futuro con datos, no solo con concreto',
+            '.hero-cta': 'Explorar Soluciones',
+            '.history-heading': 'La ciencia detrás de cada decisión',
+            '.history-desc': 'Santcom integra ciencia de datos, inteligencia artificial y conocimiento sectorial para transformar la manera en que las empresas constructoras planifican, ejecutan y optimizan sus proyectos. Convertimos datos complejos en decisiones claras y accionables.',
+            '.history-cta': 'Conocer más',
+            '.stats-title-text': 'El Desafío de la Industria',
+            '.stat-label-1': 'Proyectos con Sobrecostos',
+            '.stat-label-2': 'Proyectos con Retrasos',
+            '.stat-label-3': 'ROI con Analítica Predictiva',
+            '.stat-label-4': 'Reducción en Tiempos',
+            '.split-coral-heading': 'No es magia — Es ciencia',
+            '.split-coral-text': 'Nuestros algoritmos procesan miles de variables simultáneamente: costos de materiales, condiciones climáticas, rendimiento laboral, tendencias del mercado. El resultado es una visión integral que permite anticipar riesgos y capitalizar oportunidades antes que la competencia.',
+            '.split-coral-cta': 'Explorar Soluciones',
+            '.services-heading-text': 'Soluciones integrales para la industria',
+            '.svc-title-1': 'Analítica Avanzada',
+            '.svc-desc-1': 'Transformamos datos crudos en inteligencia accionable. Dashboards interactivos, reportes automatizados y visualizaciones que revelan patrones ocultos en la operación de sus proyectos.',
+            '.svc-title-2': 'Modelos Predictivos',
+            '.svc-desc-2': 'Anticipamos escenarios con modelos de machine learning calibrados para la industria de la construcción. Predicción de costos, cronogramas y riesgos con precisión sin precedentes.',
+            '.svc-title-3': 'Automatización Inteligente',
+            '.svc-desc-3': 'Eliminamos tareas repetitivas y liberamos a su equipo para lo que realmente importa. Flujos automatizados que integran sus sistemas existentes con inteligencia artificial.',
+            '.split-navy-heading': 'Decisiones respaldadas por evidencia',
+            '.split-navy-text': 'En un sector donde cada decisión tiene impacto millonario, la intuición ya no es suficiente. Nuestras soluciones combinan el rigor científico con la experiencia práctica para entregar recomendaciones que transforman resultados.',
+            '.split-navy-cta': 'Comenzar ahora',
+            '.accent-bar-text': 'Nuestros Clientes y Aliados',
+            '.cta-hero-heading': 'Ayudamos a construir el futuro con datos, no solo con concreto',
+            '.cta-hero-btn': 'Contáctenos',
+            '.nav-quienes': 'Quiénes Somos',
+            '.nav-soluciones': 'Soluciones',
+            '.nav-vision': 'Visión',
+            '.nav-blog': 'Blog',
+            '.nav-cta': 'Comenzar',
+            '.mob-quienes': 'Quiénes Somos',
+            '.mob-soluciones': 'Soluciones',
+            '.mob-vision': 'Visión',
+            '.mob-blog': 'Blog',
+            '.mob-cta': 'Comenzar',
+            '.footer-empresa': 'Empresa',
+            '.footer-soluciones': 'Soluciones',
+            '.footer-contacto': 'Contacto',
+            '.footer-link-quienes': 'Quiénes Somos',
+            '.footer-link-plataforma': 'Plataforma',
+            '.footer-link-analitica': 'Analítica',
+            '.footer-link-modelos': 'Modelos Predictivos',
+            '.svc-link-1': 'Leer más \u2192',
+            '.svc-link-2': 'Leer más \u2192',
+            '.svc-link-3': 'Leer más \u2192'
+        },
+        en: {
+            '.hero-title': 'Intelligent Solutions for Strategic Decisions',
+            '.hero-subtitle': 'We help build the future with data, not just concrete',
+            '.hero-cta': 'Explore Solutions',
+            '.history-heading': 'The science behind every decision',
+            '.history-desc': 'Santcom integrates data science, artificial intelligence and sector knowledge to transform the way construction companies plan, execute and optimize their projects. We turn complex data into clear, actionable decisions.',
+            '.history-cta': 'Learn more',
+            '.stats-title-text': 'The Industry Challenge',
+            '.stat-label-1': 'Projects with Cost Overruns',
+            '.stat-label-2': 'Projects with Delays',
+            '.stat-label-3': 'ROI with Predictive Analytics',
+            '.stat-label-4': 'Reduction in Timelines',
+            '.split-coral-heading': 'Not magic — It\'s science',
+            '.split-coral-text': 'Our algorithms process thousands of variables simultaneously: material costs, weather conditions, labor performance, market trends. The result is a comprehensive vision that allows anticipating risks and capitalizing on opportunities ahead of the competition.',
+            '.split-coral-cta': 'Explore Solutions',
+            '.services-heading-text': 'Comprehensive solutions for the industry',
+            '.svc-title-1': 'Advanced Analytics',
+            '.svc-desc-1': 'We transform raw data into actionable intelligence. Interactive dashboards, automated reports and visualizations that reveal hidden patterns in your project operations.',
+            '.svc-title-2': 'Predictive Models',
+            '.svc-desc-2': 'We anticipate scenarios with machine learning models calibrated for the construction industry. Cost, schedule and risk prediction with unprecedented precision.',
+            '.svc-title-3': 'Intelligent Automation',
+            '.svc-desc-3': 'We eliminate repetitive tasks and free your team for what really matters. Automated workflows that integrate your existing systems with artificial intelligence.',
+            '.split-navy-heading': 'Decisions backed by evidence',
+            '.split-navy-text': 'In a sector where every decision has a million-dollar impact, intuition is no longer enough. Our solutions combine scientific rigor with practical experience to deliver recommendations that transform results.',
+            '.split-navy-cta': 'Get started now',
+            '.accent-bar-text': 'Our Clients and Partners',
+            '.cta-hero-heading': 'We help build the future with data, not just concrete',
+            '.cta-hero-btn': 'Contact Us',
+            '.nav-quienes': 'About Us',
+            '.nav-soluciones': 'Solutions',
+            '.nav-vision': 'Vision',
+            '.nav-blog': 'Blog',
+            '.nav-cta': 'Get Started',
+            '.mob-quienes': 'About Us',
+            '.mob-soluciones': 'Solutions',
+            '.mob-vision': 'Vision',
+            '.mob-blog': 'Blog',
+            '.mob-cta': 'Get Started',
+            '.footer-empresa': 'Company',
+            '.footer-soluciones': 'Solutions',
+            '.footer-contacto': 'Contact',
+            '.footer-link-quienes': 'About Us',
+            '.footer-link-plataforma': 'Platform',
+            '.footer-link-analitica': 'Analytics',
+            '.footer-link-modelos': 'Predictive Models',
+            '.svc-link-1': 'Read more \u2192',
+            '.svc-link-2': 'Read more \u2192',
+            '.svc-link-3': 'Read more \u2192'
+        }
+    });
+</script>
+
 </body>
 </html>

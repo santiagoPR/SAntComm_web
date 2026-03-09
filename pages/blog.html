@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Insights y artículos sobre analítica de construcción, machine learning y modelado predictivo de los expertos de Santcom.">
+    <meta name="description" content="Insights y artículos sobre analítica de construcción, machine learning y modelado predictivo.">
 
     <title>Blog | Santcom</title>
 
@@ -17,7 +17,7 @@
     <!-- Open Graph / Link Preview -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Blog | Santcom">
-    <meta property="og:description" content="Insights y artículos sobre analítica de construcción, machine learning y modelado predictivo de los expertos de Santcom.">
+    <meta property="og:description" content="Insights y artículos sobre analítica de construcción, machine learning y modelado predictivo.">
     <meta property="og:image" content="https://santcom.com/assets/img/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://santcom.com/assets/img/og-image.png">
@@ -25,276 +25,269 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/main.css?v=27">
+    <link rel="stylesheet" href="../assets/css/main.css?v=28">
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button id="lang-en" class="lang-btn">EN</button>
-        <button id="lang-es" class="lang-btn active">ES</button>
+
+<!-- Language Switcher -->
+<div class="lang-switcher">
+    <button type="button" id="lang-en">EN</button>
+    <button type="button" id="lang-es" class="active">ES</button>
+</div>
+
+<!-- 1. HEADER -->
+<header class="site-header" id="siteHeader">
+    <a href="../index.html" class="header-logo">
+        <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo" style="height:40px;width:auto;">
+            <g transform="translate(3,11) scale(0.15)">
+                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
+                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
+                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
+                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
+                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
+                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
+                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
+            </g>
+            <g transform="translate(39.6, -37.8) scale(0.8)">
+                <g fill="#FFFFFF">
+                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
+                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
+                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
+                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
+                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
+                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
+                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
+                </g>
+                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
+            </g>
+        </svg>
+    </a>
+
+    <nav class="header-nav">
+        <a href="quienes-somos.html" class="nav-quienes">Quiénes Somos</a>
+        <a href="solutions.html" class="nav-soluciones">Soluciones</a>
+        <a href="vision.html" class="nav-vision">Visión</a>
+        <a href="blog.html" class="nav-blog">Blog</a>
+        <a href="get-started.html" class="header-cta nav-cta">Comenzar</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav">
+    <a href="quienes-somos.html" class="mob-quienes">Quiénes Somos</a>
+    <a href="solutions.html" class="mob-soluciones">Soluciones</a>
+    <a href="vision.html" class="mob-vision">Visión</a>
+    <a href="blog.html" class="mob-blog">Blog</a>
+    <a href="get-started.html" class="btn-ghost mob-cta">Comenzar</a>
+</nav>
+
+<!-- 2. PAGE HERO -->
+<section class="page-hero">
+    <h1 class="reveal blog-hero-title">Insights y Artículos</h1>
+    <p class="reveal blog-hero-subtitle">Lo último en analítica e inteligencia artificial aplicada</p>
+</section>
+
+<!-- 3. BLOG GRID -->
+<section class="content-section content-section--white">
+    <div class="blog-grid">
+
+        <!-- Blog Post 1 -->
+        <article class="blog-card reveal">
+            <div class="blog-card-image"></div>
+            <div class="blog-card-body">
+                <span class="category">ANALYTICS</span>
+                <h3>How Predictive Analytics is Transforming Construction Project Management</h3>
+                <p>Discover how machine learning models are helping construction companies identify risks before they become problems, saving millions in cost overruns.</p>
+                <a href="#">Read More &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="blog-card reveal">
+            <div class="blog-card-image"></div>
+            <div class="blog-card-body">
+                <span class="category">CASE STUDY</span>
+                <h3>Case Study: Reducing Budget Overruns by 35% with ML Models</h3>
+                <p>Learn how a major commercial construction firm used our predictive models to dramatically reduce cost overruns on a $500M development project.</p>
+                <a href="#">Read More &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="blog-card reveal">
+            <div class="blog-card-image"></div>
+            <div class="blog-card-body">
+                <span class="category">TECHNOLOGY</span>
+                <h3>The Future of Construction: AI and Machine Learning Trends</h3>
+                <p>Explore emerging trends in AI and machine learning that are set to revolutionize the construction industry over the next five years.</p>
+                <a href="#">Read More &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Blog Post 4 -->
+        <article class="blog-card reveal">
+            <div class="blog-card-image"></div>
+            <div class="blog-card-body">
+                <span class="category">BEST PRACTICES</span>
+                <h3>Data Governance Best Practices for Construction Firms</h3>
+                <p>Essential guidelines for establishing robust data governance frameworks that ensure data quality and enable effective analytics.</p>
+                <a href="#">Read More &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Blog Post 5 -->
+        <article class="blog-card reveal">
+            <div class="blog-card-image"></div>
+            <div class="blog-card-body">
+                <span class="category">INSIGHTS</span>
+                <h3>Understanding the ROI of Construction Analytics Investments</h3>
+                <p>A comprehensive guide to measuring and maximizing the return on investment from your construction analytics initiatives.</p>
+                <a href="#">Read More &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Blog Post 6 -->
+        <article class="blog-card reveal">
+            <div class="blog-card-image"></div>
+            <div class="blog-card-body">
+                <span class="category">TUTORIAL</span>
+                <h3>Getting Started with Descriptive Analytics in Construction</h3>
+                <p>A beginner-friendly introduction to descriptive analytics and how to apply it to your construction project data for immediate insights.</p>
+                <a href="#">Read More &rarr;</a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- 4. NEWSLETTER CTA -->
+<section class="content-section content-section--navy">
+    <h2 class="reveal blog-newsletter-title">Manténgase Actualizado</h2>
+    <p class="reveal blog-newsletter-desc">Suscríbase a nuestro boletín y reciba los últimos insights sobre analítica, tendencias de machine learning y mejores prácticas de la industria.</p>
+    <form class="newsletter-form reveal">
+        <input type="email" placeholder="Ingrese su correo electrónico" required>
+        <button type="submit" class="btn-submit blog-newsletter-btn">Suscríbase Ahora</button>
+    </form>
+</section>
+
+<!-- 5. FOOTER -->
+<footer class="site-footer">
+    <div class="footer-logo">
+        <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo" style="height:40px;width:auto;">
+            <g transform="translate(3,11) scale(0.15)">
+                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
+                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
+                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
+                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
+                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
+                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
+                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
+            </g>
+            <g transform="translate(39.6, -37.8) scale(0.8)">
+                <g fill="#FFFFFF">
+                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
+                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
+                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
+                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
+                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
+                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
+                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
+                </g>
+                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
+            </g>
+        </svg>
     </div>
 
-    <!-- Site Background -->
-    <div class="site-background"></div>
-
-    <!-- Site Content -->
-    <div class="site-content">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <div class="logo-section">
-                    <a href="../index.html">
-                        <svg class="logo-icon" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo">
-                            <g transform="translate(3,11) scale(0.15)">
-                                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
-                                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
-                                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
-                                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
-                                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
-                                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
-                                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
-                            </g>
-                            <g transform="translate(39.6, -37.8) scale(0.8)">
-                                <g fill="#FFFFFF">
-                                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
-                                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
-                                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
-                                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
-                                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
-                                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
-                                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
-                                </g>
-                                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-
-                <nav class="nav">
-                    <a href="quienes-somos.html">Quiénes Somos</a>
-                    <a href="solutions.html">Soluciones</a>
-                    <a href="vision.html">Visión</a>
-                    <a href="blog.html">Blog</a>
-                </nav>
-
-                <div class="header-actions">
-                    <button class="login-btn">
-                        <svg width="20" height="20" viewBox="0 0 50 50" fill="currentColor">
-                            <path d="M25 48.077c-5.924 0-11.31-2.252-15.396-5.921 2.254-5.362 7.492-8.267 15.373-8.267 7.889 0 13.139 3.044 15.408 8.418-4.084 3.659-9.471 5.77-15.385 5.77m.278-35.3c4.927 0 8.611 3.812 8.611 8.878 0 5.21-3.875 9.456-8.611 9.456s-8.611-4.246-8.611-9.456c0-5.066 3.684-8.878 8.611-8.878M25 0C11.193 0 0 11.193 0 25c0 .915.056 1.816.152 2.705.032.295.091.581.133.873.085.589.173 1.176.298 1.751.073.338.169.665.256.997.135.515.273 1.027.439 1.529.114.342.243.675.37 1.01.18.476.369.945.577 1.406.149.331.308.657.472.98.225.446.463.883.714 1.313.182.312.365.619.56.922.272.423.56.832.856 1.237.207.284.41.568.629.841.325.408.671.796 1.02 1.182.22.244.432.494.662.728.405.415.833.801 1.265 1.186.173.154.329.325.507.475l.004-.011A24.886 24.886 0 0 0 25 50a24.881 24.881 0 0 0 16.069-5.861.126.126 0 0 1 .003.01c.172-.144.324-.309.49-.458.442-.392.88-.787 1.293-1.209.228-.232.437-.479.655-.72.352-.389.701-.78 1.028-1.191.218-.272.421-.556.627-.838.297-.405.587-.816.859-1.24a26.104 26.104 0 0 0 1.748-3.216c.208-.461.398-.93.579-1.406.127-.336.256-.669.369-1.012.167-.502.305-1.014.44-1.53.087-.332.183-.659.256-.996.126-.576.214-1.164.299-1.754.042-.292.101-.577.133-.872.095-.89.152-1.791.152-2.707C50 11.193 38.807 0 25 0"/>
-                        </svg>
-                        Iniciar Sesión
-                    </button>
-                    <a href="get-started.html" class="btn-get-started">Comenzar</a>
-                    <button class="mobile-menu-btn" aria-label="Toggle menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-        </header>
-
-        <!-- Mobile Navigation -->
-        <nav class="mobile-nav">
-            <a href="quienes-somos.html">Quiénes Somos</a>
-            <a href="solutions.html">Soluciones</a>
-            <a href="vision.html">Visión</a>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-col-heading">Santcom</div>
+            <p class="footer-about">Soluciones basadas en ciencia de datos e inteligencia artificial para la industria de la construcción. Transformamos la complejidad en claridad.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-heading footer-empresa">Empresa</div>
+            <a href="quienes-somos.html" class="footer-link-quienes">Quiénes Somos</a>
+            <a href="vision.html" class="footer-link-vision">Visión</a>
             <a href="blog.html">Blog</a>
-            <a href="get-started.html" class="btn-get-started">Comenzar</a>
-        </nav>
-
-        <!-- Page Header -->
-        <section class="hero" style="height: 400px;">
-            <div class="hero-content">
-                <h1 style="font-size: 56px;">Insights y Artículos</h1>
-                <p class="hero-subtitle" style="font-size: 24px; margin-top: 20px;">Lo último en analítica e inteligencia artificial aplicada</p>
-            </div>
-        </section>
-
-        <!-- Blog Posts Section -->
-        <section class="section">
-            <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px;">
-
-                    <!-- Blog Post 1 -->
-                    <article class="feature-card scroll-animate" style="height: auto;">
-                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #0F1B2D 0%, #2A2D33 100%); border-radius: 8px; margin-bottom: 25px;"></div>
-                        <div style="padding: 0 10px;">
-                            <p style="color: #FF6041; font-size: 14px; font-weight: 600; margin-bottom: 10px;">ANALYTICS</p>
-                            <h3 style="margin-bottom: 15px;">How Predictive Analytics is Transforming Construction Project Management</h3>
-                            <p style="font-size: 15px; line-height: 1.7; margin-bottom: 20px;">Discover how machine learning models are helping construction companies identify risks before they become problems, saving millions in cost overruns.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.6); font-size: 14px;">
-                                <span>Jan 15, 2024</span>
-                                <a href="#" style="color: #FF6041; text-decoration: none; font-weight: 600;">Read More →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Blog Post 2 -->
-                    <article class="feature-card scroll-animate" style="height: auto;">
-                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #0F1B2D 0%, #2A2D33 100%); border-radius: 8px; margin-bottom: 25px;"></div>
-                        <div style="padding: 0 10px;">
-                            <p style="color: #FF6041; font-size: 14px; font-weight: 600; margin-bottom: 10px;">CASE STUDY</p>
-                            <h3 style="margin-bottom: 15px;">Case Study: Reducing Budget Overruns by 35% with ML Models</h3>
-                            <p style="font-size: 15px; line-height: 1.7; margin-bottom: 20px;">Learn how a major commercial construction firm used our predictive models to dramatically reduce cost overruns on a $500M development project.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.6); font-size: 14px;">
-                                <span>Jan 8, 2024</span>
-                                <a href="#" style="color: #FF6041; text-decoration: none; font-weight: 600;">Read More →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Blog Post 3 -->
-                    <article class="feature-card scroll-animate" style="height: auto;">
-                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #0F1B2D 0%, #2A2D33 100%); border-radius: 8px; margin-bottom: 25px;"></div>
-                        <div style="padding: 0 10px;">
-                            <p style="color: #FF6041; font-size: 14px; font-weight: 600; margin-bottom: 10px;">TECHNOLOGY</p>
-                            <h3 style="margin-bottom: 15px;">The Future of Construction: AI and Machine Learning Trends</h3>
-                            <p style="font-size: 15px; line-height: 1.7; margin-bottom: 20px;">Explore emerging trends in AI and machine learning that are set to revolutionize the construction industry over the next five years.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.6); font-size: 14px;">
-                                <span>Dec 28, 2023</span>
-                                <a href="#" style="color: #FF6041; text-decoration: none; font-weight: 600;">Read More →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Blog Post 4 -->
-                    <article class="feature-card scroll-animate" style="height: auto;">
-                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #0F1B2D 0%, #2A2D33 100%); border-radius: 8px; margin-bottom: 25px;"></div>
-                        <div style="padding: 0 10px;">
-                            <p style="color: #FF6041; font-size: 14px; font-weight: 600; margin-bottom: 10px;">BEST PRACTICES</p>
-                            <h3 style="margin-bottom: 15px;">Data Governance Best Practices for Construction Firms</h3>
-                            <p style="font-size: 15px; line-height: 1.7; margin-bottom: 20px;">Essential guidelines for establishing robust data governance frameworks that ensure data quality and enable effective analytics.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.6); font-size: 14px;">
-                                <span>Dec 15, 2023</span>
-                                <a href="#" style="color: #FF6041; text-decoration: none; font-weight: 600;">Read More →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Blog Post 5 -->
-                    <article class="feature-card scroll-animate" style="height: auto;">
-                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #0F1B2D 0%, #2A2D33 100%); border-radius: 8px; margin-bottom: 25px;"></div>
-                        <div style="padding: 0 10px;">
-                            <p style="color: #FF6041; font-size: 14px; font-weight: 600; margin-bottom: 10px;">INSIGHTS</p>
-                            <h3 style="margin-bottom: 15px;">Understanding the ROI of Construction Analytics Investments</h3>
-                            <p style="font-size: 15px; line-height: 1.7; margin-bottom: 20px;">A comprehensive guide to measuring and maximizing the return on investment from your construction analytics initiatives.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.6); font-size: 14px;">
-                                <span>Dec 1, 2023</span>
-                                <a href="#" style="color: #FF6041; text-decoration: none; font-weight: 600;">Read More →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Blog Post 6 -->
-                    <article class="feature-card scroll-animate" style="height: auto;">
-                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #0F1B2D 0%, #2A2D33 100%); border-radius: 8px; margin-bottom: 25px;"></div>
-                        <div style="padding: 0 10px;">
-                            <p style="color: #FF6041; font-size: 14px; font-weight: 600; margin-bottom: 10px;">TUTORIAL</p>
-                            <h3 style="margin-bottom: 15px;">Getting Started with Descriptive Analytics in Construction</h3>
-                            <p style="font-size: 15px; line-height: 1.7; margin-bottom: 20px;">A beginner-friendly introduction to descriptive analytics and how to apply it to your construction project data for immediate insights.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.6); font-size: 14px;">
-                                <span>Nov 20, 2023</span>
-                                <a href="#" style="color: #FF6041; text-decoration: none; font-weight: 600;">Read More →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter CTA Section -->
-        <section class="section">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 80px 40px;">
-                <h2 style="font-size: 42px; margin-bottom: 20px;">Manténgase Actualizado</h2>
-                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 40px; color: rgba(255,255,255,0.8);">
-                    Suscríbase a nuestro boletín y reciba los últimos insights sobre analítica, tendencias de machine learning y mejores prácticas de la industria.
-                </p>
-                <form class="newsletter-form" style="max-width: 500px; margin: 0 auto;">
-                    <input type="email" placeholder="Ingrese su correo electrónico" required style="width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 16px;">
-                    <button type="submit" class="btn-primary" style="width: 100%; padding: 15px; font-size: 16px;">Suscríbase Ahora</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-col footer-logo-col">
-                    <div class="footer-logo">
-                        <svg class="logo-icon" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo" width="180" height="45">
-                            <g transform="translate(3,11) scale(0.15)">
-                                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
-                                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
-                                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
-                                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
-                                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
-                                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
-                                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
-                            </g>
-                            <g transform="translate(39.6, -37.8) scale(0.8)">
-                                <g fill="#FFFFFF">
-                                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
-                                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
-                                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
-                                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
-                                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
-                                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
-                                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
-                                </g>
-                                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <p class="footer-contact">request@santcom.com</p>
-                    
-                </div>
-                <div class="footer-col">
-                    <h4>Páginas</h4>
-                    <a href="../index.html">Inicio</a>
-                    <a href="quienes-somos.html">Quiénes Somos</a>
-                    <a href="solutions.html">Soluciones</a>
-                    <a href="vision.html">Visión</a>
-                    <a href="blog.html">Blog</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <a href="#">Insights</a>
-                    <a href="#">Resources</a>
-                    <a href="get-started.html">Comenzar</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Suscríbase a Nuestro Boletín</h4>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Correo electrónico" required>
-                        <label>
-                            <input type="checkbox" required>
-                            <span>Sí, suscribirme al boletín.</span>
-                        </label>
-                        <button type="submit" class="btn-submit">Enviar</button>
-                    </form>
-                    <div class="social-links">
-                        <h5>Síganos En:</h5>
-                        <div class="social-icons">
-                            <a href="#" aria-label="LinkedIn"><img src="../assets/img/linkedin.png" alt="LinkedIn" width="25" height="25"></a>
-                            <a href="#" aria-label="Facebook"><img src="../assets/img/facebook.png" alt="Facebook" width="25" height="25"></a>
-                            <a href="#" aria-label="Twitter"><img src="../assets/img/twitter.png" alt="Twitter" width="25" height="25"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Santcom. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-heading footer-soluciones">Soluciones</div>
+            <a href="solutions.html" class="footer-link-plataforma">Plataforma</a>
+            <a href="solutions.html" class="footer-link-analitica">Analítica</a>
+            <a href="solutions.html" class="footer-link-modelos">Modelos Predictivos</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-heading footer-contacto">Contacto</div>
+            <a href="mailto:contacto@santcom.com">contacto@santcom.com</a>
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="../assets/js/main.js?v=27"></script>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Santcom. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/main.js?v=28"></script>
+<script>
+    initLanguageSwitcher({
+        es: {
+            '.blog-hero-title': 'Insights y Artículos',
+            '.blog-hero-subtitle': 'Lo último en analítica e inteligencia artificial aplicada',
+            '.blog-newsletter-title': 'Manténgase Actualizado',
+            '.blog-newsletter-desc': 'Suscríbase a nuestro boletín y reciba los últimos insights sobre analítica, tendencias de machine learning y mejores prácticas de la industria.',
+            '.blog-newsletter-btn': 'Suscríbase Ahora',
+            '.nav-quienes': 'Quiénes Somos',
+            '.nav-soluciones': 'Soluciones',
+            '.nav-vision': 'Visión',
+            '.nav-blog': 'Blog',
+            '.nav-cta': 'Comenzar',
+            '.mob-quienes': 'Quiénes Somos',
+            '.mob-soluciones': 'Soluciones',
+            '.mob-vision': 'Visión',
+            '.mob-blog': 'Blog',
+            '.mob-cta': 'Comenzar',
+            '.footer-empresa': 'Empresa',
+            '.footer-soluciones': 'Soluciones',
+            '.footer-contacto': 'Contacto',
+            '.footer-link-quienes': 'Quiénes Somos',
+            '.footer-link-plataforma': 'Plataforma',
+            '.footer-link-analitica': 'Analítica',
+            '.footer-link-modelos': 'Modelos Predictivos'
+        },
+        en: {
+            '.blog-hero-title': 'Insights and Articles',
+            '.blog-hero-subtitle': 'The latest in analytics and applied artificial intelligence',
+            '.blog-newsletter-title': 'Stay Updated',
+            '.blog-newsletter-desc': 'Subscribe to our newsletter and receive the latest insights on analytics, machine learning trends and industry best practices.',
+            '.blog-newsletter-btn': 'Subscribe Now',
+            '.nav-quienes': 'About Us',
+            '.nav-soluciones': 'Solutions',
+            '.nav-vision': 'Vision',
+            '.nav-blog': 'Blog',
+            '.nav-cta': 'Get Started',
+            '.mob-quienes': 'About Us',
+            '.mob-soluciones': 'Solutions',
+            '.mob-vision': 'Vision',
+            '.mob-blog': 'Blog',
+            '.mob-cta': 'Get Started',
+            '.footer-empresa': 'Company',
+            '.footer-soluciones': 'Solutions',
+            '.footer-contacto': 'Contact',
+            '.footer-link-quienes': 'About Us',
+            '.footer-link-plataforma': 'Platform',
+            '.footer-link-analitica': 'Analytics',
+            '.footer-link-modelos': 'Predictive Models'
+        }
+    });
+</script>
 </body>
 </html>

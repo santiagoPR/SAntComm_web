@@ -28,453 +28,265 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,300&display=swap" rel="stylesheet">
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/main.css?v=27">
+    <link rel="stylesheet" href="../assets/css/main.css?v=28">
+
+    <style>
+        .subtitle-cyan { color: var(--cyan); font-family: var(--font-heading); font-size: 20px; margin-bottom: 40px; }
+        .qs-cta-subtext { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.85); margin-top: 8px; margin-bottom: 20px; }
+    </style>
 </head>
 <body>
     <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button id="lang-en" class="lang-btn">EN</button>
-        <button id="lang-es" class="lang-btn active">ES</button>
+    <div class="lang-switcher">
+        <button type="button" id="lang-en">EN</button>
+        <button type="button" id="lang-es" class="active">ES</button>
     </div>
 
-    <!-- Site Background -->
-    <div class="site-background"></div>
+    <header class="site-header" id="siteHeader">
+        <a href="../index.html" class="header-logo">
+            <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo" style="height:40px;width:auto;">
+                <g transform="translate(3,11) scale(0.15)">
+                    <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
+                    <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
+                    <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
+                    <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
+                    <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
+                    <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
+                    <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
+                </g>
+                <g transform="translate(39.6, -37.8) scale(0.8)">
+                    <g fill="#FFFFFF">
+                        <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
+                        <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
+                        <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
+                        <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
+                        <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
+                        <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
+                        <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
+                    </g>
+                    <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
+                </g>
+            </svg>
+        </a>
 
-    <!-- Site Content -->
-    <div class="site-content">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <div class="logo-section">
-                    <a href="../index.html">
-                        <svg class="logo-icon" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo">
-                            <g transform="translate(3,11) scale(0.15)">
-                                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
-                                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
-                                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
-                                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
-                                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
-                                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
-                                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
-                            </g>
-                            <g transform="translate(39.6, -37.8) scale(0.8)">
-                                <g fill="#FFFFFF">
-                                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
-                                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
-                                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
-                                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
-                                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
-                                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
-                                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
-                                </g>
-                                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-
-                <nav class="nav">
-                    <a href="quienes-somos.html">Quiénes Somos</a>
-                    <a href="solutions.html">Soluciones</a>
-                    <a href="vision.html">Visión</a>
-                    <a href="blog.html">Blog</a>
-                </nav>
-
-                <div class="header-actions">
-                    <button class="login-btn">
-                        <svg width="20" height="20" viewBox="0 0 50 50" fill="currentColor">
-                            <path d="M25 48.077c-5.924 0-11.31-2.252-15.396-5.921 2.254-5.362 7.492-8.267 15.373-8.267 7.889 0 13.139 3.044 15.408 8.418-4.084 3.659-9.471 5.77-15.385 5.77m.278-35.3c4.927 0 8.611 3.812 8.611 8.878 0 5.21-3.875 9.456-8.611 9.456s-8.611-4.246-8.611-9.456c0-5.066 3.684-8.878 8.611-8.878M25 0C11.193 0 0 11.193 0 25c0 .915.056 1.816.152 2.705.032.295.091.581.133.873.085.589.173 1.176.298 1.751.073.338.169.665.256.997.135.515.273 1.027.439 1.529.114.342.243.675.37 1.01.18.476.369.945.577 1.406.149.331.308.657.472.98.225.446.463.883.714 1.313.182.312.365.619.56.922.272.423.56.832.856 1.237.207.284.41.568.629.841.325.408.671.796 1.02 1.182.22.244.432.494.662.728.405.415.833.801 1.265 1.186.173.154.329.325.507.475l.004-.011A24.886 24.886 0 0 0 25 50a24.881 24.881 0 0 0 16.069-5.861.126.126 0 0 1 .003.01c.172-.144.324-.309.49-.458.442-.392.88-.787 1.293-1.209.228-.232.437-.479.655-.72.352-.389.701-.78 1.028-1.191.218-.272.421-.556.627-.838.297-.405.587-.816.859-1.24a26.104 26.104 0 0 0 1.748-3.216c.208-.461.398-.93.579-1.406.127-.336.256-.669.369-1.012.167-.502.305-1.014.44-1.53.087-.332.183-.659.256-.996.126-.576.214-1.164.299-1.754.042-.292.101-.577.133-.872.095-.89.152-1.791.152-2.707C50 11.193 38.807 0 25 0"/>
-                        </svg>
-                        Iniciar Sesión
-                    </button>
-                    <a href="get-started.html" class="btn-get-started">Comenzar</a>
-                    <button class="mobile-menu-btn" aria-label="Toggle menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-        </header>
-
-        <!-- Mobile Navigation -->
-        <nav class="mobile-nav">
-            <a href="quienes-somos.html">Quiénes Somos</a>
-            <a href="solutions.html">Soluciones</a>
-            <a href="vision.html">Visión</a>
-            <a href="blog.html">Blog</a>
-            <a href="get-started.html" class="btn-get-started">Comenzar</a>
+        <nav class="header-nav">
+            <a href="quienes-somos.html" class="nav-quienes">Quiénes Somos</a>
+            <a href="solutions.html" class="nav-soluciones">Soluciones</a>
+            <a href="vision.html" class="nav-vision">Visión</a>
+            <a href="blog.html" class="nav-blog">Blog</a>
+            <a href="get-started.html" class="header-cta nav-cta">Comenzar</a>
         </nav>
 
-        <!-- Brand Banner — matches PDF layout: SANTCOM [icon] Science Analytics & Communications -->
-        <section class="qs-brand-banner">
-            <div class="qs-brand-inner">
-                <span class="qs-brand-name">SANTCOM</span>
-                <svg class="qs-brand-icon" viewBox="0 0 254 181" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Icon">
-                    <rect x="0" y="0" width="89.9" height="21.3" fill="#00D3DE"/>
-                    <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#00D3DE"/>
-                    <rect x="0" y="112.8" width="65.2" height="21.3" fill="#00D3DE"/>
-                    <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#00D3DE"/>
-                    <rect x="0" y="159.6" width="65.2" height="21.3" fill="#00D3DE"/>
-                    <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#00D3DE"/>
-                    <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#00D3DE"/>
-                </svg>
-                <div class="qs-brand-tagline">
-                    <span>Science</span>
-                    <span>Analytics &</span>
-                    <span>Communications</span>
-                </div>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="quienes-somos.html" class="mob-quienes">Quiénes Somos</a>
+        <a href="solutions.html" class="mob-soluciones">Soluciones</a>
+        <a href="vision.html" class="mob-vision">Visión</a>
+        <a href="blog.html" class="mob-blog">Blog</a>
+        <a href="get-started.html" class="btn-ghost mob-cta" style="margin-top:16px;">Comenzar</a>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1 class="qs-hero-title">Quiénes Somos</h1>
+    </section>
+
+    <!-- Quienes Somos Section -->
+    <section class="content-section content-section--white">
+        <h2 class="qs-title">¿Quiénes somos?</h2>
+        <p class="reveal qs-text-1">SANTCOM S.A.S. es una compañía especializada en <strong style="color:#00D3DE;">analítica avanzada, modelos predictivos y automatización estratégica,</strong> orientada a apoyar a las organizaciones en la toma de decisiones informadas, anticipadas y sostenibles.</p>
+        <p class="reveal qs-text-2">Integramos <strong style="color:#00D3DE;">ciencia de datos, ingeniería y visión estratégica</strong> para transformar información compleja en inteligencia accionable. Nuestro enfoque se centra en comprender los procesos reales de las organizaciones, especialmente en sectores intensivos en datos como la industria de la construcción, donde cada decisión impacta costos, tiempos y resultados.</p>
+        <p class="reveal qs-text-3">En SANTCOM acompañamos a las empresas en el uso inteligente de sus datos, convirtiéndolos en una ventaja competitiva que fortalece la gestión, reduce la incertidumbre y mejora el desempeño de los proyectos.</p>
+    </section>
+
+    <!-- Especializacion Local Section -->
+    <section class="content-section content-section--offwhite">
+        <h2 class="qs-local-title">Especialización local.</h2>
+        <p class="subtitle-cyan qs-local-subtitle">Datos que entienden el territorio</p>
+        <p class="reveal qs-local-text-1">En SANTCOM no desarrollamos soluciones genéricas. Nuestra analítica y nuestros modelos están diseñados específicamente para el entorno colombiano y su industria de la construcción.</p>
+        <p class="reveal qs-local-text-2">Conocemos el contexto normativo, operativo y cultural en el que se ejecutan los proyectos, así como las particularidades del mercado local.</p>
+        <p class="reveal qs-local-text-3">Nuestros modelos incorporan variables propias del territorio que impactan directamente el desempeño de las obras y la toma de decisiones.</p>
+    </section>
+
+    <!-- Que nos hace diferentes Section -->
+    <section class="content-section content-section--white">
+        <h2 class="qs-diff-title">¿Qué nos hace diferentes?</h2>
+        <div class="card-grid">
+            <div class="card reveal">
+                <h3 class="qs-diff-title-1">Especialización en el gremio colombiano</h3>
+                <p class="qs-diff-text-1">Trabajamos con datos, procesos y dinámicas propias del sector construcción en Colombia, entendiendo sus retos reales en obra, contratación, planeación y ejecución.</p>
             </div>
-        </section>
-
-        <!-- Quienes Somos Section -->
-        <section class="section">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="qs-title" style="font-size: 48px; font-family: 'Poppins', sans-serif; font-weight: 700;">¿Quiénes somos?</h2>
+            <div class="card reveal">
+                <h3 class="qs-diff-title-2">Modelos ajustados al clima y la geografía</h3>
+                <p class="qs-diff-text-2">Integramos variables climáticas, estacionales y geográficas que influyen directamente en tiempos, costos y productividad, y que suelen ser ignoradas por soluciones genéricas.</p>
             </div>
-
-            <div style="max-width: 900px; margin: 0 auto; padding: 0 40px;">
-                <div class="feature-card scroll-animate" style="max-width: 100%; margin-bottom: 30px;">
-                    <p class="qs-text-1" style="font-size: 17px; line-height: 1.9;">
-                        SANTCOM S.A.S. es una compañía especializada en <strong style="color: #00D3DE;">analítica avanzada, modelos predictivos y automatización estratégica,</strong> orientada a apoyar a las organizaciones en la toma de decisiones informadas, anticipadas y sostenibles.
-                    </p>
-                </div>
-
-                <div class="feature-card scroll-animate" style="max-width: 100%; margin-bottom: 30px;">
-                    <p class="qs-text-2" style="font-size: 17px; line-height: 1.9;">
-                        Integramos <strong style="color: #00D3DE;">ciencia de datos, ingeniería y visión estratégica</strong> para transformar información compleja en inteligencia accionable. Nuestro enfoque se centra en comprender los procesos reales de las organizaciones, especialmente en sectores intensivos en datos como la industria de la construcción, donde cada decisión impacta costos, tiempos y resultados.
-                    </p>
-                </div>
-
-                <div class="feature-card scroll-animate" style="max-width: 100%;">
-                    <p class="qs-text-3" style="font-size: 17px; line-height: 1.9;">
-                        En SANTCOM acompañamos a las empresas en el uso inteligente de sus datos, convirtiéndolos en una ventaja competitiva que fortalece la gestión, reduce la incertidumbre y mejora el desempeño de los proyectos.
-                    </p>
-                </div>
+            <div class="card reveal">
+                <h3 class="qs-diff-title-3">Lenguaje técnico y operativo local</h3>
+                <p class="qs-diff-text-3">Nuestras soluciones están diseñadas para equipos colombianos, con tableros, reportes y acompañamiento en español, alineados con la realidad operativa del país.</p>
             </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- Especialización Local Section -->
-        <section class="section">
-            <div style="text-align: center; margin-bottom: 20px;">
-                <h2 class="qs-local-title" style="font-size: 48px; font-family: 'Poppins', sans-serif; font-weight: 700;">Especialización local.</h2>
+            <div class="card reveal">
+                <h3 class="qs-diff-title-4">Más allá de modelos estándar en inglés</h3>
+                <p class="qs-diff-text-4">A diferencia de desarrollos genéricos o plataformas internacionales, nuestras soluciones no son plantillas replicadas: se construyen desde el conocimiento del contexto local y se adaptan a cada proyecto.</p>
             </div>
-            <div style="text-align: center; margin-bottom: 60px;">
-                <p class="qs-local-subtitle" style="font-size: 22px; color: var(--color-cyan); font-family: 'Poppins', sans-serif;">Datos que entienden el territorio</p>
+        </div>
+    </section>
+
+    <!-- Accent Bar CTA -->
+    <section class="accent-bar">
+        <p class="qs-cta-text">¿Quiere conocer cómo podemos apoyar su organización?</p>
+        <p class="qs-cta-subtext">Contáctenos para explorar cómo SANTCOM puede transformar sus datos en decisiones estratégicas.</p>
+        <a href="get-started.html" class="btn-ghost--white qs-cta-btn">Comenzar</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo" style="height:40px;width:auto;">
+                <g transform="translate(3,11) scale(0.15)">
+                    <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
+                    <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
+                    <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
+                    <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
+                    <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
+                    <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
+                    <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
+                </g>
+                <g transform="translate(39.6, -37.8) scale(0.8)">
+                    <g fill="#FFFFFF">
+                        <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
+                        <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
+                        <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
+                        <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
+                        <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
+                        <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
+                        <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
+                    </g>
+                    <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
+                </g>
+            </svg>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-col-heading">Santcom</div>
+                <p class="footer-about">Soluciones basadas en ciencia de datos e inteligencia artificial para la industria de la construcción. Transformamos la complejidad en claridad.</p>
             </div>
-
-            <div style="max-width: 900px; margin: 0 auto; padding: 0 40px;">
-                <div class="feature-card scroll-animate" style="max-width: 100%; margin-bottom: 30px;">
-                    <p class="qs-local-text-1" style="font-size: 17px; line-height: 1.9;">
-                        En SANTCOM no desarrollamos soluciones genéricas. Nuestra analítica y nuestros modelos están diseñados específicamente para el entorno colombiano y su industria de la construcción.
-                    </p>
-                </div>
-
-                <div class="feature-card scroll-animate" style="max-width: 100%; margin-bottom: 30px;">
-                    <p class="qs-local-text-2" style="font-size: 17px; line-height: 1.9;">
-                        Conocemos el contexto normativo, operativo y cultural en el que se ejecutan los proyectos, así como las particularidades del mercado local.
-                    </p>
-                </div>
-
-                <div class="feature-card scroll-animate" style="max-width: 100%;">
-                    <p class="qs-local-text-3" style="font-size: 17px; line-height: 1.9;">
-                        Nuestros modelos incorporan variables propias del territorio que impactan directamente el desempeño de las obras y la toma de decisiones.
-                    </p>
-                </div>
+            <div class="footer-col">
+                <div class="footer-col-heading footer-empresa">Empresa</div>
+                <a href="quienes-somos.html" class="footer-link-quienes">Quiénes Somos</a>
+                <a href="vision.html" class="footer-link-vision">Visión</a>
+                <a href="blog.html">Blog</a>
             </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- Que Nos Hace Diferentes Section -->
-        <section class="section">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="qs-diff-title" style="font-size: 48px; font-family: 'Poppins', sans-serif; font-weight: 700;">¿Qué nos hace diferentes?</h2>
+            <div class="footer-col">
+                <div class="footer-col-heading footer-soluciones">Soluciones</div>
+                <a href="solutions.html" class="footer-link-plataforma">Plataforma</a>
+                <a href="solutions.html" class="footer-link-analitica">Analítica</a>
+                <a href="solutions.html" class="footer-link-modelos">Modelos Predictivos</a>
             </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 0 40px; max-width: 1400px; margin: 0 auto;">
-                <div class="feature-card scroll-animate">
-                    <div class="feature-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6041" stroke-width="2">
-                            <path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
-                        </svg>
-                    </div>
-                    <h3 class="qs-diff-title-1">Especialización en el gremio colombiano</h3>
-                    <p class="qs-diff-text-1">Trabajamos con datos, procesos y dinámicas propias del sector construcción en Colombia, entendiendo sus retos reales en obra, contratación, planeación y ejecución.</p>
-                </div>
-
-                <div class="feature-card scroll-animate">
-                    <div class="feature-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6041" stroke-width="2">
-                            <path d="M12 2v10l4.5 4.5M12 2a10 10 0 1 0 10 10"/>
-                            <path d="M2 12h2M20 12h2M12 2v2M12 20v2"/>
-                        </svg>
-                    </div>
-                    <h3 class="qs-diff-title-2">Modelos ajustados al clima y la geografía</h3>
-                    <p class="qs-diff-text-2">Integramos variables climáticas, estacionales y geográficas que influyen directamente en tiempos, costos y productividad, y que suelen ser ignoradas por soluciones genéricas.</p>
-                </div>
-
-                <div class="feature-card scroll-animate">
-                    <div class="feature-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6041" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="qs-diff-title-3">Lenguaje técnico y operativo local</h3>
-                    <p class="qs-diff-text-3">Nuestras soluciones están diseñadas para equipos colombianos, con tableros, reportes y acompañamiento en español, alineados con la realidad operativa del país.</p>
-                </div>
-
-                <div class="feature-card scroll-animate">
-                    <div class="feature-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6041" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <line x1="2" y1="12" x2="22" y2="12"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        </svg>
-                    </div>
-                    <h3 class="qs-diff-title-4">Más allá de modelos estándar en inglés</h3>
-                    <p class="qs-diff-text-4">A diferencia de desarrollos genéricos o plataformas internacionales, nuestras soluciones no son plantillas replicadas: se construyen desde el conocimiento del contexto local y se adaptan a cada proyecto.</p>
-                </div>
+            <div class="footer-col">
+                <div class="footer-col-heading footer-contacto">Contacto</div>
+                <a href="mailto:contacto@santcom.com">contacto@santcom.com</a>
             </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <h2 class="qs-cta-title">¿Quiere conocer cómo podemos apoyar su organización?</h2>
-            <p class="qs-cta-desc">Contáctenos para explorar cómo SANTCOM puede transformar sus datos en decisiones estratégicas.</p>
-            <a href="get-started.html" class="btn-primary btn-large">Comenzar</a>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-col footer-logo-col">
-                    <div class="footer-logo">
-                        <svg class="logo-icon" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo">
-                            <g transform="translate(3,11) scale(0.15)">
-                                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
-                                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
-                                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
-                                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
-                                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
-                                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
-                                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
-                            </g>
-                            <g transform="translate(39.6, -37.8) scale(0.8)">
-                                <g fill="#FFFFFF">
-                                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
-                                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
-                                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
-                                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
-                                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
-                                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
-                                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
-                                </g>
-                                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <p class="footer-contact">request@santcom.com</p>
-
-                </div>
-                <div class="footer-col">
-                    <h4>Páginas</h4>
-                    <a href="../index.html">Inicio</a>
-                    <a href="solutions.html">Soluciones</a>
-                    <a href="vision.html">Visión</a>
-                    <a href="quienes-somos.html">Quiénes Somos</a>
-                    <a href="blog.html">Blog</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <a href="#">Insights</a>
-                    <a href="#">Resources</a>
-                    <a href="get-started.html">Comenzar</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Suscríbase a Nuestro Boletín</h4>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Correo electrónico" required>
-                        <label>
-                            <input type="checkbox" required>
-                            <span>Sí, suscribirme al boletín.</span>
-                        </label>
-                        <button type="submit" class="btn-submit">Enviar</button>
-                    </form>
-                    <div class="social-links">
-                        <h5>Síganos En:</h5>
-                        <div class="social-icons">
-                            <a href="#" aria-label="LinkedIn"><img src="../assets/img/linkedin.png" alt="LinkedIn" width="25" height="25"></a>
-                            <a href="#" aria-label="Facebook"><img src="../assets/img/facebook.png" alt="Facebook" width="25" height="25"></a>
-                            <a href="#" aria-label="Twitter"><img src="../assets/img/twitter.png" alt="Twitter" width="25" height="25"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Santcom. Todos los derechos reservados.</p>
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Santcom. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
-    <script src="../assets/js/main.js?v=27"></script>
+    <script src="../assets/js/main.js?v=28"></script>
     <script>
-        // Quienes Somos Language Switcher
-        function initQSLanguage() {
-            var langEn = document.getElementById('lang-en');
-            var langEs = document.getElementById('lang-es');
-            if (!langEn || !langEs) return;
-
-            var translations = {
-                en: {
-                    title: 'Who are we?',
-                    text1p1: 'SANTCOM S.A.S. is a company specialized in ',
-                    text1bold: 'advanced analytics, predictive models and strategic automation,',
-                    text1p2: ' oriented to support organizations in making informed, anticipated and sustainable decisions.',
-                    text2p1: 'We integrate ',
-                    text2bold: 'data science, engineering and strategic vision',
-                    text2p2: ' to transform complex information into actionable intelligence. Our approach focuses on understanding the real processes of organizations, especially in data-intensive sectors such as the construction industry, where every decision impacts costs, timelines and results.',
-                    text3: 'At SANTCOM we accompany companies in the intelligent use of their data, turning them into a competitive advantage that strengthens management, reduces uncertainty and improves project performance.',
-                    localTitle: 'Local specialization.',
-                    localSubtitle: 'Data that understands the territory',
-                    localText1: 'At SANTCOM we do not develop generic solutions. Our analytics and models are specifically designed for the Colombian environment and its construction industry.',
-                    localText2: 'We understand the regulatory, operational and cultural context in which projects are executed, as well as the particularities of the local market.',
-                    localText3: 'Our models incorporate territory-specific variables that directly impact the performance of construction works and decision-making.',
-                    diffTitle: 'What makes us different?',
-                    diff1Title: 'Specialization in the Colombian sector',
-                    diff1Text: 'We work with data, processes and dynamics specific to the construction sector in Colombia, understanding its real challenges in construction, contracting, planning and execution.',
-                    diff2Title: 'Models adjusted to climate and geography',
-                    diff2Text: 'We integrate climatic, seasonal and geographic variables that directly influence timelines, costs and productivity, and that are usually ignored by generic solutions.',
-                    diff3Title: 'Local technical and operational language',
-                    diff3Text: 'Our solutions are designed for Colombian teams, with dashboards, reports and support in Spanish, aligned with the operational reality of the country.',
-                    diff4Title: 'Beyond standard English models',
-                    diff4Text: 'Unlike generic developments or international platforms, our solutions are not replicated templates: they are built from knowledge of the local context and adapted to each project.',
-                    ctaTitle: 'Want to learn how we can support your organization?',
-                    ctaDesc: 'Contact us to explore how SANTCOM can transform your data into strategic decisions.',
-                    ctaButton: 'Get Started'
-                },
-                es: {
-                    title: '¿Quiénes somos?',
-                    text1p1: 'SANTCOM S.A.S. es una compañía especializada en ',
-                    text1bold: 'analítica avanzada, modelos predictivos y automatización estratégica,',
-                    text1p2: ' orientada a apoyar a las organizaciones en la toma de decisiones informadas, anticipadas y sostenibles.',
-                    text2p1: 'Integramos ',
-                    text2bold: 'ciencia de datos, ingeniería y visión estratégica',
-                    text2p2: ' para transformar información compleja en inteligencia accionable. Nuestro enfoque se centra en comprender los procesos reales de las organizaciones, especialmente en sectores intensivos en datos como la industria de la construcción, donde cada decisión impacta costos, tiempos y resultados.',
-                    text3: 'En SANTCOM acompañamos a las empresas en el uso inteligente de sus datos, convirtiéndolos en una ventaja competitiva que fortalece la gestión, reduce la incertidumbre y mejora el desempeño de los proyectos.',
-                    localTitle: 'Especialización local.',
-                    localSubtitle: 'Datos que entienden el territorio',
-                    localText1: 'En SANTCOM no desarrollamos soluciones genéricas. Nuestra analítica y nuestros modelos están diseñados específicamente para el entorno colombiano y su industria de la construcción.',
-                    localText2: 'Conocemos el contexto normativo, operativo y cultural en el que se ejecutan los proyectos, así como las particularidades del mercado local.',
-                    localText3: 'Nuestros modelos incorporan variables propias del territorio que impactan directamente el desempeño de las obras y la toma de decisiones.',
-                    diffTitle: '¿Qué nos hace diferentes?',
-                    diff1Title: 'Especialización en el gremio colombiano',
-                    diff1Text: 'Trabajamos con datos, procesos y dinámicas propias del sector construcción en Colombia, entendiendo sus retos reales en obra, contratación, planeación y ejecución.',
-                    diff2Title: 'Modelos ajustados al clima y la geografía',
-                    diff2Text: 'Integramos variables climáticas, estacionales y geográficas que influyen directamente en tiempos, costos y productividad, y que suelen ser ignoradas por soluciones genéricas.',
-                    diff3Title: 'Lenguaje técnico y operativo local',
-                    diff3Text: 'Nuestras soluciones están diseñadas para equipos colombianos, con tableros, reportes y acompañamiento en español, alineados con la realidad operativa del país.',
-                    diff4Title: 'Más allá de modelos estándar en inglés',
-                    diff4Text: 'A diferencia de desarrollos genéricos o plataformas internacionales, nuestras soluciones no son plantillas replicadas: se construyen desde el conocimiento del contexto local y se adaptan a cada proyecto.',
-                    ctaTitle: '¿Quiere conocer cómo podemos apoyar su organización?',
-                    ctaDesc: 'Contáctenos para explorar cómo SANTCOM puede transformar sus datos en decisiones estratégicas.',
-                    ctaButton: 'Comenzar'
-                }
-            };
-
-            function setLanguage(lang) {
-                var t = translations[lang];
-                localStorage.setItem('santcom-lang', lang);
-
-                // Update nav links
-                var navLabels = lang === 'en' ? ['About Us','Solutions','Visión','Blog'] : ['Quiénes Somos','Soluciones','Visión','Blog'];
-                var navLinks = document.querySelectorAll('.nav a');
-                navLinks.forEach(function(a, i) { if (navLabels[i]) a.textContent = navLabels[i]; });
-                var mobileNavLabels = lang === 'en' ? ['About Us','Solutions','Visión','Blog','Get Started'] : ['Quiénes Somos','Soluciones','Visión','Blog','Comenzar'];
-                var mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-                mobileNavLinks.forEach(function(a, i) { if (mobileNavLabels[i]) a.textContent = mobileNavLabels[i]; });
-                // Update header buttons
-                var loginBtn = document.querySelector('.login-btn');
-                if (loginBtn) { var svg = loginBtn.querySelector('svg'); loginBtn.textContent = ''; if (svg) loginBtn.prepend(svg); loginBtn.append(' ' + (lang === 'en' ? 'Log In' : 'Iniciar Sesión')); }
-                var gsBtns = document.querySelectorAll('.btn-get-started');
-                gsBtns.forEach(function(b) { b.textContent = lang === 'en' ? 'Get Started' : 'Comenzar'; });
-
-                var title = document.querySelector('.qs-title');
-                if (title) title.textContent = t.title;
-
-                // Main text paragraphs (rebuild with bold)
-                var t1 = document.querySelector('.qs-text-1');
-                if (t1) t1.innerHTML = t.text1p1 + '<strong style="color: #00D3DE;">' + t.text1bold + '</strong>' + t.text1p2;
-                var t2 = document.querySelector('.qs-text-2');
-                if (t2) t2.innerHTML = t.text2p1 + '<strong style="color: #00D3DE;">' + t.text2bold + '</strong>' + t.text2p2;
-                var t3 = document.querySelector('.qs-text-3');
-                if (t3) t3.textContent = t.text3;
-
-                var lt = document.querySelector('.qs-local-title');
-                if (lt) lt.textContent = t.localTitle;
-                var ls = document.querySelector('.qs-local-subtitle');
-                if (ls) ls.textContent = t.localSubtitle;
-                var l1 = document.querySelector('.qs-local-text-1');
-                if (l1) l1.textContent = t.localText1;
-                var l2 = document.querySelector('.qs-local-text-2');
-                if (l2) l2.textContent = t.localText2;
-                var l3 = document.querySelector('.qs-local-text-3');
-                if (l3) l3.textContent = t.localText3;
-
-                var dt = document.querySelector('.qs-diff-title');
-                if (dt) dt.textContent = t.diffTitle;
-                var d1t = document.querySelector('.qs-diff-title-1');
-                if (d1t) d1t.textContent = t.diff1Title;
-                var d1p = document.querySelector('.qs-diff-text-1');
-                if (d1p) d1p.textContent = t.diff1Text;
-                var d2t = document.querySelector('.qs-diff-title-2');
-                if (d2t) d2t.textContent = t.diff2Title;
-                var d2p = document.querySelector('.qs-diff-text-2');
-                if (d2p) d2p.textContent = t.diff2Text;
-                var d3t = document.querySelector('.qs-diff-title-3');
-                if (d3t) d3t.textContent = t.diff3Title;
-                var d3p = document.querySelector('.qs-diff-text-3');
-                if (d3p) d3p.textContent = t.diff3Text;
-                var d4t = document.querySelector('.qs-diff-title-4');
-                if (d4t) d4t.textContent = t.diff4Title;
-                var d4p = document.querySelector('.qs-diff-text-4');
-                if (d4p) d4p.textContent = t.diff4Text;
-
-                var ct = document.querySelector('.qs-cta-title');
-                if (ct) ct.textContent = t.ctaTitle;
-                var cd = document.querySelector('.qs-cta-desc');
-                if (cd) cd.textContent = t.ctaDesc;
-                var cb = document.querySelector('.cta-section .btn-primary');
-                if (cb) cb.textContent = t.ctaButton;
-
-                // Update footer links
-                var footerLinks = document.querySelectorAll('.footer-col a');
-                footerLinks.forEach(function(link) {
-                    if (link.textContent.match(/Home|Inicio/)) link.textContent = lang === 'en' ? 'Home' : 'Inicio';
-                    if (link.textContent.match(/About Us|Quiénes Somos|Quienes Somos/)) link.textContent = lang === 'en' ? 'About Us' : 'Quiénes Somos';
-                    if (link.textContent.match(/Solutions|Soluciones/)) link.textContent = lang === 'en' ? 'Solutions' : 'Soluciones';
-                });
-
-                langEn.classList.toggle('active', lang === 'en');
-                langEs.classList.toggle('active', lang === 'es');
+        initLanguageSwitcher({
+            es: {
+                '.nav-quienes': 'Quiénes Somos',
+                '.nav-soluciones': 'Soluciones',
+                '.nav-vision': 'Visión',
+                '.nav-blog': 'Blog',
+                '.nav-cta': 'Comenzar',
+                '.mob-quienes': 'Quiénes Somos',
+                '.mob-soluciones': 'Soluciones',
+                '.mob-vision': 'Visión',
+                '.mob-blog': 'Blog',
+                '.mob-cta': 'Comenzar',
+                '.qs-hero-title': 'Quiénes Somos',
+                '.qs-title': '¿Quiénes somos?',
+                '.qs-text-1': 'SANTCOM S.A.S. es una compañía especializada en <strong style="color:#00D3DE;">analítica avanzada, modelos predictivos y automatización estratégica,</strong> orientada a apoyar a las organizaciones en la toma de decisiones informadas, anticipadas y sostenibles.',
+                '.qs-text-2': 'Integramos <strong style="color:#00D3DE;">ciencia de datos, ingeniería y visión estratégica</strong> para transformar información compleja en inteligencia accionable. Nuestro enfoque se centra en comprender los procesos reales de las organizaciones, especialmente en sectores intensivos en datos como la industria de la construcción, donde cada decisión impacta costos, tiempos y resultados.',
+                '.qs-text-3': 'En SANTCOM acompañamos a las empresas en el uso inteligente de sus datos, convirtiéndolos en una ventaja competitiva que fortalece la gestión, reduce la incertidumbre y mejora el desempeño de los proyectos.',
+                '.qs-local-title': 'Especialización local.',
+                '.qs-local-subtitle': 'Datos que entienden el territorio',
+                '.qs-local-text-1': 'En SANTCOM no desarrollamos soluciones genéricas. Nuestra analítica y nuestros modelos están diseñados específicamente para el entorno colombiano y su industria de la construcción.',
+                '.qs-local-text-2': 'Conocemos el contexto normativo, operativo y cultural en el que se ejecutan los proyectos, así como las particularidades del mercado local.',
+                '.qs-local-text-3': 'Nuestros modelos incorporan variables propias del territorio que impactan directamente el desempeño de las obras y la toma de decisiones.',
+                '.qs-diff-title': '¿Qué nos hace diferentes?',
+                '.qs-diff-title-1': 'Especialización en el gremio colombiano',
+                '.qs-diff-text-1': 'Trabajamos con datos, procesos y dinámicas propias del sector construcción en Colombia, entendiendo sus retos reales en obra, contratación, planeación y ejecución.',
+                '.qs-diff-title-2': 'Modelos ajustados al clima y la geografía',
+                '.qs-diff-text-2': 'Integramos variables climáticas, estacionales y geográficas que influyen directamente en tiempos, costos y productividad, y que suelen ser ignoradas por soluciones genéricas.',
+                '.qs-diff-title-3': 'Lenguaje técnico y operativo local',
+                '.qs-diff-text-3': 'Nuestras soluciones están diseñadas para equipos colombianos, con tableros, reportes y acompañamiento en español, alineados con la realidad operativa del país.',
+                '.qs-diff-title-4': 'Más allá de modelos estándar en inglés',
+                '.qs-diff-text-4': 'A diferencia de desarrollos genéricos o plataformas internacionales, nuestras soluciones no son plantillas replicadas: se construyen desde el conocimiento del contexto local y se adaptan a cada proyecto.',
+                '.qs-cta-text': '¿Quiere conocer cómo podemos apoyar su organización?',
+                '.qs-cta-subtext': 'Contáctenos para explorar cómo SANTCOM puede transformar sus datos en decisiones estratégicas.',
+                '.qs-cta-btn': 'Comenzar',
+                '.footer-about': 'Soluciones basadas en ciencia de datos e inteligencia artificial para la industria de la construcción. Transformamos la complejidad en claridad.',
+                '.footer-empresa': 'Empresa',
+                '.footer-link-quienes': 'Quiénes Somos',
+                '.footer-link-vision': 'Visión',
+                '.footer-soluciones': 'Soluciones',
+                '.footer-link-plataforma': 'Plataforma',
+                '.footer-link-analitica': 'Analítica',
+                '.footer-link-modelos': 'Modelos Predictivos',
+                '.footer-contacto': 'Contacto'
+            },
+            en: {
+                '.nav-quienes': 'About Us',
+                '.nav-soluciones': 'Solutions',
+                '.nav-vision': 'Vision',
+                '.nav-blog': 'Blog',
+                '.nav-cta': 'Get Started',
+                '.mob-quienes': 'About Us',
+                '.mob-soluciones': 'Solutions',
+                '.mob-vision': 'Vision',
+                '.mob-blog': 'Blog',
+                '.mob-cta': 'Get Started',
+                '.qs-hero-title': 'About Us',
+                '.qs-title': 'Who are we?',
+                '.qs-text-1': 'SANTCOM S.A.S. is a company specialized in <strong style="color:#00D3DE;">advanced analytics, predictive models and strategic automation,</strong> oriented to support organizations in making informed, anticipated and sustainable decisions.',
+                '.qs-text-2': 'We integrate <strong style="color:#00D3DE;">data science, engineering and strategic vision</strong> to transform complex information into actionable intelligence. Our approach focuses on understanding the real processes of organizations, especially in data-intensive sectors such as the construction industry, where every decision impacts costs, timelines and results.',
+                '.qs-text-3': 'At SANTCOM we accompany companies in the intelligent use of their data, turning them into a competitive advantage that strengthens management, reduces uncertainty and improves project performance.',
+                '.qs-local-title': 'Local specialization.',
+                '.qs-local-subtitle': 'Data that understands the territory',
+                '.qs-local-text-1': 'At SANTCOM we do not develop generic solutions. Our analytics and models are specifically designed for the Colombian environment and its construction industry.',
+                '.qs-local-text-2': 'We understand the regulatory, operational and cultural context in which projects are executed, as well as the particularities of the local market.',
+                '.qs-local-text-3': 'Our models incorporate territory-specific variables that directly impact the performance of construction works and decision-making.',
+                '.qs-diff-title': 'What makes us different?',
+                '.qs-diff-title-1': 'Specialization in the Colombian sector',
+                '.qs-diff-text-1': 'We work with data, processes and dynamics specific to the construction sector in Colombia, understanding its real challenges in construction, contracting, planning and execution.',
+                '.qs-diff-title-2': 'Models adjusted to climate and geography',
+                '.qs-diff-text-2': 'We integrate climatic, seasonal and geographic variables that directly influence timelines, costs and productivity, and that are usually ignored by generic solutions.',
+                '.qs-diff-title-3': 'Local technical and operational language',
+                '.qs-diff-text-3': 'Our solutions are designed for Colombian teams, with dashboards, reports and support in Spanish, aligned with the operational reality of the country.',
+                '.qs-diff-title-4': 'Beyond standard English models',
+                '.qs-diff-text-4': 'Unlike generic developments or international platforms, our solutions are not replicated templates: they are built from knowledge of the local context and adapted to each project.',
+                '.qs-cta-text': 'Want to learn how we can support your organization?',
+                '.qs-cta-subtext': 'Contact us to explore how SANTCOM can transform your data into strategic decisions.',
+                '.qs-cta-btn': 'Get Started',
+                '.footer-about': 'Solutions based on data science and artificial intelligence for the construction industry. We transform complexity into clarity.',
+                '.footer-empresa': 'Company',
+                '.footer-link-quienes': 'About Us',
+                '.footer-link-vision': 'Vision',
+                '.footer-soluciones': 'Solutions',
+                '.footer-link-plataforma': 'Platform',
+                '.footer-link-analitica': 'Analytics',
+                '.footer-link-modelos': 'Predictive Models',
+                '.footer-contacto': 'Contact'
             }
-
-            langEn.addEventListener('click', function() { setLanguage('en'); });
-            langEs.addEventListener('click', function() { setLanguage('es'); });
-
-            var saved = localStorage.getItem('santcom-lang');
-            if (saved) setLanguage(saved);
-        }
-
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initQSLanguage);
-        } else {
-            initQSLanguage();
-        }
+        });
     </script>
 </body>
 </html>

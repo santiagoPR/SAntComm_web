@@ -25,557 +25,355 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/main.css?v=27">
+    <link rel="stylesheet" href="../assets/css/main.css?v=28">
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button id="lang-en" class="lang-btn">EN</button>
-        <button id="lang-es" class="lang-btn active">ES</button>
+
+<!-- Language Switcher -->
+<div class="lang-switcher">
+    <button type="button" id="lang-en">EN</button>
+    <button type="button" id="lang-es" class="active">ES</button>
+</div>
+
+<!-- 1. HEADER -->
+<header class="site-header" id="siteHeader">
+    <a href="../index.html" class="header-logo">
+        <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo" style="height:40px;width:auto;">
+            <g transform="translate(3,11) scale(0.15)">
+                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
+                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
+                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
+                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
+                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
+                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
+                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
+            </g>
+            <g transform="translate(39.6, -37.8) scale(0.8)">
+                <g fill="#FFFFFF">
+                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
+                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
+                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
+                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
+                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
+                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
+                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
+                </g>
+                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
+            </g>
+        </svg>
+    </a>
+
+    <nav class="header-nav">
+        <a href="quienes-somos.html" class="nav-quienes">Quiénes Somos</a>
+        <a href="solutions.html" class="nav-soluciones">Soluciones</a>
+        <a href="vision.html" class="nav-vision">Visión</a>
+        <a href="blog.html" class="nav-blog">Blog</a>
+        <a href="get-started.html" class="header-cta nav-cta">Comenzar</a>
+    </nav>
+
+    <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav">
+    <a href="quienes-somos.html" class="mob-quienes">Quiénes Somos</a>
+    <a href="solutions.html" class="mob-soluciones">Soluciones</a>
+    <a href="vision.html" class="mob-vision">Visión</a>
+    <a href="blog.html" class="mob-blog">Blog</a>
+    <a href="get-started.html" class="btn-ghost mob-cta" style="margin-top:16px;">Comenzar</a>
+</nav>
+
+<!-- 2. PAGE HERO -->
+<section class="page-hero">
+    <h1 class="vision-hero-title">Propósito, Visión y Enfoque Estratégico</h1>
+</section>
+
+<!-- 3. NUESTRO PROPOSITO -->
+<section class="content-section content-section--white">
+    <h2 class="reveal vision-section-title">Nuestro Propósito</h2>
+    <p class="reveal vision-main-text" style="text-align:center;max-width:700px;margin-left:auto;margin-right:auto;">Transformar la forma en que las empresas toman decisiones. Convertimos datos históricos en ventaja competitiva, prediciendo sobrecostos y retrasos meses antes de que ocurran con Inteligencia Artificial.</p>
+</section>
+
+<!-- 4. EL DESAFIO DE LA INDUSTRIA -->
+<section class="content-section content-section--offwhite">
+    <h2 class="reveal vision-challenge-title">El Desafío de la Industria</h2>
+    <div class="card-grid">
+        <div class="card reveal">
+            <h3 class="challenge-title-1">Incertidumbre Financiera</h3>
+            <p class="challenge-text-1">El 98% de los megaproyectos exceden su presupuesto en más del 30%. Sin ML, los fondos de contingencia son adivinanzas, no cálculos matemáticos.</p>
+        </div>
+        <div class="card reveal">
+            <h3 class="challenge-title-2">Cronogramas Optimistas</h3>
+            <p class="challenge-text-2">El Sesgo de Optimismo humano ignora la larga cola de riesgos. El 77% de las obras terminan tarde, costando millones en multas y costos fijos.</p>
+        </div>
+        <div class="card reveal">
+            <h3 class="challenge-title-3">Datos Desperdiciados</h3>
+            <p class="challenge-text-3">Usted tiene años de datos históricos en Excel y Project. Actualmente son archivos muertos. Nosotros los convertimos en su activo más valioso.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 5. DE LA INTUICION A LA CERTEZA MATEMATICA -->
+<section class="content-section content-section--white">
+    <h2 class="reveal vision-solution-title">De la Intuición a la Certeza Matemática</h2>
+    <p class="reveal solution-intro">Nuestra tecnología no reemplaza a sus ingenieros; les da superpoderes. Utilizamos algoritmos avanzados (XGBoost, Redes Neuronales) para analizar miles de patrones invisibles al ojo humano.</p>
+    <div class="card-grid">
+        <div class="card reveal">
+            <h3 class="solution-title-1">Analítica Predictiva</h3>
+            <p class="solution-text-1">Sepa qué proyectos tendrán sobrecostos antes de poner el primer ladrillo.</p>
+        </div>
+        <div class="card reveal">
+            <h3 class="solution-title-2">Planificación Probabilística</h3>
+            <p class="solution-text-2">Reemplace fechas fijas irreales con curvas de confianza (ej. 85% de probabilidad de terminar en Mayo).</p>
+        </div>
+        <div class="card reveal">
+            <h3 class="solution-title-3">Simulación de Escenarios</h3>
+            <p class="solution-text-3">Simule el impacto financiero de añadir una grúa o doblar turnos instantáneamente.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 6. POR QUE ES ESENCIAL -->
+<section class="content-section content-section--navy">
+    <h2 class="reveal vision-why-title">¿Por Qué es Esencial?</h2>
+    <div class="card-grid">
+        <div class="card card--navy reveal">
+            <h3 class="why-title-1">Ventaja Competitiva</h3>
+            <p class="why-text-1">Los líderes de la industria ya invierten en digitalización. Sea el primero en garantizar cronogramas a sus clientes.</p>
+        </div>
+        <div class="card card--navy reveal">
+            <h3 class="why-title-2">Protección de Margen</h3>
+            <p class="why-text-2">En un mercado de márgenes estrechos, evitar un solo error de sobrecosto paga el servicio por años.</p>
+        </div>
+        <div class="card card--navy reveal">
+            <h3 class="why-title-3">Memoria Institucional</h3>
+            <p class="why-text-3">Cuando sus ingenieros senior se retiran, su conocimiento se va. Nuestros modelos capturan esa experiencia para siempre.</p>
+        </div>
+        <div class="card card--navy reveal">
+            <h3 class="why-title-4">Confianza del Inversor</h3>
+            <p class="why-text-4">Presente a sus bancos e inversores informes de riesgo respaldados por IA, no solo promesas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 7. EL VALOR DE LA PREDICCION -->
+<section class="content-section content-section--white">
+    <h2 class="reveal vision-results-title">El Valor de la Predicción</h2>
+    <div class="reveal" style="max-width:700px;">
+        <div class="progress-item">
+            <div class="progress-label">
+                <span class="result-label-1">Reducción en Tiempos de Proyecto</span>
+                <span>17-40%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:40%;"></div>
+            </div>
+        </div>
+        <div class="progress-item">
+            <div class="progress-label">
+                <span class="result-label-2">Ahorro en Costos Laborales</span>
+                <span>~14%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:14%;"></div>
+            </div>
+        </div>
+        <div class="progress-item">
+            <div class="progress-label">
+                <span class="result-label-3">Precisión en Predicción de Retrasos</span>
+                <span>Hasta 80%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:80%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 8. CTA -->
+<section class="content-section" style="background:var(--coral);padding:80px var(--pad-x);text-align:center;">
+    <h2 class="reveal vision-cta-title" style="color:var(--white);">¿Listo para Construir de Forma Más Inteligente?</h2>
+    <p class="reveal vision-cta-desc" style="color:var(--white);max-width:700px;margin-left:auto;margin-right:auto;">Comience con bajo riesgo. Implementamos nuestros modelos en sus proyectos pasados para comparar nuestras predicciones con su realidad histórica.</p>
+    <a href="get-started.html" class="btn-ghost btn-ghost--white reveal vision-cta-btn">Comenzar</a>
+</section>
+
+<!-- 9. FOOTER -->
+<footer class="site-footer">
+    <div class="footer-logo">
+        <svg viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo" style="height:40px;width:auto;">
+            <g transform="translate(3,11) scale(0.15)">
+                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
+                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
+                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
+                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
+                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
+                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
+                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
+            </g>
+            <g transform="translate(39.6, -37.8) scale(0.8)">
+                <g fill="#FFFFFF">
+                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
+                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
+                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
+                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
+                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
+                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
+                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
+                </g>
+                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
+            </g>
+        </svg>
     </div>
 
-    <!-- Site Background -->
-    <div class="site-background"></div>
-
-    <!-- Site Content -->
-    <div class="site-content">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-container">
-                <div class="logo-section">
-                    <a href="../index.html">
-                        <svg class="logo-icon" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo">
-                            <g transform="translate(3,11) scale(0.15)">
-                                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
-                                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
-                                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
-                                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
-                                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
-                                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
-                                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
-                            </g>
-                            <g transform="translate(39.6, -37.8) scale(0.8)">
-                                <g fill="#FFFFFF">
-                                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
-                                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
-                                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
-                                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
-                                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
-                                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
-                                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
-                                </g>
-                                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-
-                <nav class="nav">
-                    <a href="quienes-somos.html">Quiénes Somos</a>
-                    <a href="solutions.html">Soluciones</a>
-                    <a href="vision.html">Visión</a>
-                    <a href="blog.html">Blog</a>
-                </nav>
-
-                <div class="header-actions">
-                    <button class="login-btn">
-                        <svg width="20" height="20" viewBox="0 0 50 50" fill="currentColor">
-                            <path d="M25 48.077c-5.924 0-11.31-2.252-15.396-5.921 2.254-5.362 7.492-8.267 15.373-8.267 7.889 0 13.139 3.044 15.408 8.418-4.084 3.659-9.471 5.77-15.385 5.77m.278-35.3c4.927 0 8.611 3.812 8.611 8.878 0 5.21-3.875 9.456-8.611 9.456s-8.611-4.246-8.611-9.456c0-5.066 3.684-8.878 8.611-8.878M25 0C11.193 0 0 11.193 0 25c0 .915.056 1.816.152 2.705.032.295.091.581.133.873.085.589.173 1.176.298 1.751.073.338.169.665.256.997.135.515.273 1.027.439 1.529.114.342.243.675.37 1.01.18.476.369.945.577 1.406.149.331.308.657.472.98.225.446.463.883.714 1.313.182.312.365.619.56.922.272.423.56.832.856 1.237.207.284.41.568.629.841.325.408.671.796 1.02 1.182.22.244.432.494.662.728.405.415.833.801 1.265 1.186.173.154.329.325.507.475l.004-.011A24.886 24.886 0 0 0 25 50a24.881 24.881 0 0 0 16.069-5.861.126.126 0 0 1 .003.01c.172-.144.324-.309.49-.458.442-.392.88-.787 1.293-1.209.228-.232.437-.479.655-.72.352-.389.701-.78 1.028-1.191.218-.272.421-.556.627-.838.297-.405.587-.816.859-1.24a26.104 26.104 0 0 0 1.748-3.216c.208-.461.398-.93.579-1.406.127-.336.256-.669.369-1.012.167-.502.305-1.014.44-1.53.087-.332.183-.659.256-.996.126-.576.214-1.164.299-1.754.042-.292.101-.577.133-.872.095-.89.152-1.791.152-2.707C50 11.193 38.807 0 25 0"/>
-                        </svg>
-                        Iniciar Sesión
-                    </button>
-                    <a href="get-started.html" class="btn-get-started">Comenzar</a>
-                    <button class="mobile-menu-btn" aria-label="Toggle menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-        </header>
-
-        <!-- Mobile Navigation -->
-        <nav class="mobile-nav">
-            <a href="quienes-somos.html">Quiénes Somos</a>
-            <a href="solutions.html">Soluciones</a>
-            <a href="vision.html">Visión</a>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-col-heading">Santcom</div>
+            <p class="footer-about">Soluciones basadas en ciencia de datos e inteligencia artificial para la industria de la construcción. Transformamos la complejidad en claridad.</p>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-heading footer-empresa">Empresa</div>
+            <a href="quienes-somos.html" class="footer-link-quienes">Quiénes Somos</a>
+            <a href="vision.html" class="footer-link-vision">Visión</a>
             <a href="blog.html">Blog</a>
-            <a href="get-started.html" class="btn-get-started">Comenzar</a>
-        </nav>
-
-        <!-- Page Header -->
-        <section class="hero" style="height: 400px;">
-            <div class="hero-content">
-                <h1 class="vision-hero-title" style="font-size: 56px;">Propósito, Visión y Enfoque Estratégico</h1>
-            </div>
-        </section>
-
-        <!-- Our Vision Section -->
-        <section class="section">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="vision-section-title" style="font-size: 48px; font-family: 'Poppins', sans-serif; font-weight: 700;">Nuestro Propósito</h2>
-            </div>
-
-            <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
-                <div class="feature-card scroll-animate" style="max-width: 100%; margin-bottom: 40px;">
-                    <p class="vision-main-text" style="font-size: 18px; line-height: 1.8; text-align: center;">
-                        Transformar la forma en que las empresas toman decisiones. Convertimos datos históricos en ventaja competitiva, prediciendo sobrecostos y retrasos meses antes de que ocurran con Inteligencia Artificial.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- The Challenge Section -->
-        <section class="section">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="vision-challenge-title" style="font-size: 48px; font-family: 'Poppins', sans-serif; font-weight: 700;">El Desafío de la Industria</h2>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 0 40px; max-width: 1400px; margin: 0 auto;">
-                <div class="feature-card scroll-animate">
-                    <div class="feature-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6041" stroke-width="2">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                        </svg>
-                    </div>
-                    <h3 class="challenge-title-1">Incertidumbre Financiera</h3>
-                    <p class="challenge-text-1">El 98% de los megaproyectos exceden su presupuesto en más del 30%. Sin ML, los fondos de contingencia son adivinanzas, no cálculos matemáticos.</p>
-                </div>
-
-                <div class="feature-card scroll-animate">
-                    <div class="feature-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6041" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                    </div>
-                    <h3 class="challenge-title-2">Cronogramas Optimistas</h3>
-                    <p class="challenge-text-2">El Sesgo de Optimismo humano ignora la larga cola de riesgos. El 77% de las obras terminan tarde, costando millones en multas y costos fijos.</p>
-                </div>
-
-                <div class="feature-card scroll-animate">
-                    <div class="feature-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6041" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                            <line x1="12" y1="22.08" x2="12" y2="12"/>
-                        </svg>
-                    </div>
-                    <h3 class="challenge-title-3">Datos Desperdiciados</h3>
-                    <p class="challenge-text-3">Usted tiene años de datos históricos en Excel y Project. Actualmente son archivos muertos. Nosotros los convertimos en su activo más valioso.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Solution Section -->
-        <section class="section">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="vision-solution-title" style="font-size: 48px; font-family: 'Poppins', sans-serif; font-weight: 700;">De la Intuición a la Certeza Matemática</h2>
-            </div>
-
-            <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
-                <div class="feature-card scroll-animate" style="max-width: 100%; margin-bottom: 40px;">
-                    <p class="solution-intro" style="font-size: 18px; line-height: 1.8; text-align: center; margin-bottom: 30px;">
-                        Nuestra tecnología no reemplaza a sus ingenieros; les da superpoderes. Utilizamos algoritmos avanzados (XGBoost, Redes Neuronales) para analizar miles de patrones invisibles al ojo humano.
-                    </p>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                    <div class="feature-card scroll-animate">
-                        <h3 class="solution-title-1">Analítica Predictiva</h3>
-                        <p class="solution-text-1">Sepa qué proyectos tendrán sobrecostos antes de poner el primer ladrillo.</p>
-                    </div>
-
-                    <div class="feature-card scroll-animate">
-                        <h3 class="solution-title-2">Planificación Probabilística</h3>
-                        <p class="solution-text-2">Reemplace fechas fijas irreales con curvas de confianza (ej. 85% de probabilidad de terminar en Mayo).</p>
-                    </div>
-
-                    <div class="feature-card scroll-animate">
-                        <h3 class="solution-title-3">Simulación de Escenarios</h3>
-                        <p class="solution-text-3">Simule el impacto financiero de añadir una grúa o doblar turnos instantáneamente.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Essential Section -->
-        <section class="section">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="vision-why-title" style="font-size: 48px; font-family: 'Poppins', sans-serif; font-weight: 700;">¿Por Qué es Esencial?</h2>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 0 40px; max-width: 1400px; margin: 0 auto;">
-                <div class="feature-card scroll-animate" style="text-align: center;">
-                    <h3 class="why-title-1">Ventaja Competitiva</h3>
-                    <p class="why-text-1">Los líderes de la industria ya invierten en digitalización. Sea el primero en garantizar cronogramas a sus clientes.</p>
-                </div>
-
-                <div class="feature-card scroll-animate" style="text-align: center;">
-                    <h3 class="why-title-2">Protección de Margen</h3>
-                    <p class="why-text-2">En un mercado de márgenes estrechos, evitar un solo error de sobrecosto paga el servicio por años.</p>
-                </div>
-
-                <div class="feature-card scroll-animate" style="text-align: center;">
-                    <h3 class="why-title-3">Memoria Institucional</h3>
-                    <p class="why-text-3">Cuando sus ingenieros senior se retiran, su conocimiento se va. Nuestros modelos capturan esa experiencia para siempre.</p>
-                </div>
-
-                <div class="feature-card scroll-animate" style="text-align: center;">
-                    <h3 class="why-title-4">Confianza del Inversor</h3>
-                    <p class="why-text-4">Presente a sus bancos e inversores informes de riesgo respaldados por IA, no solo promesas.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Results Section -->
-        <section class="section">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="vision-results-title" style="font-size: 48px; font-family: 'Poppins', sans-serif; font-weight: 700;">El Valor de la Predicción</h2>
-            </div>
-
-            <div style="max-width: 800px; margin: 0 auto; padding: 0 40px;">
-                <div class="feature-card scroll-animate" style="max-width: 100%;">
-                    <div style="display: grid; gap: 30px;">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <span class="result-label-1">Reducción en Tiempos de Proyecto</span>
-                                <span style="font-size: 24px; font-weight: 700; color: #FF6041;">17-40%</span>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px;">
-                                <div style="background: #FF6041; height: 100%; width: 40%; border-radius: 4px;"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <span class="result-label-2">Ahorro en Costos Laborales</span>
-                                <span style="font-size: 24px; font-weight: 700; color: #FF6041;">~14%</span>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px;">
-                                <div style="background: #FF6041; height: 100%; width: 14%; border-radius: 4px;"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <span class="result-label-3">Precisión en Predicción de Retrasos</span>
-                                <span style="font-size: 24px; font-weight: 700; color: #FF6041;">Hasta 80%</span>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px;">
-                                <div style="background: #FF6041; height: 100%; width: 80%; border-radius: 4px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <h2 class="vision-cta-title">¿Listo para Construir de Forma Más Inteligente?</h2>
-            <p class="vision-cta-desc">Comience con bajo riesgo. Implementamos nuestros modelos en sus proyectos pasados para comparar nuestras predicciones con su realidad histórica.</p>
-            <a href="get-started.html" class="btn-primary btn-large">Comenzar</a>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-col footer-logo-col">
-                    <div class="footer-logo">
-                        <svg class="logo-icon" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" aria-label="Santcom Logo">
-                            <g transform="translate(3,11) scale(0.15)">
-                                <rect x="0" y="0" width="89.9" height="21.3" fill="#FF6041"/>
-                                <path d="M0,87.4 L0,66.1 L90.3,66.1 L156.4,0 L254,0 L254,21.3 L165.2,21.3 L99.1,87.4 Z" fill="#FF6041"/>
-                                <rect x="0" y="112.8" width="65.2" height="21.3" fill="#FF6041"/>
-                                <rect x="185.3" y="112.8" width="68.7" height="21.3" fill="#FF6041"/>
-                                <rect x="0" y="159.6" width="65.2" height="21.3" fill="#FF6041"/>
-                                <path d="M98.7,180.3 L98.7,141.9 L175.6,66.1 L254,66.1 L254,87.4 L184.3,87.4 L120,150.9 L120,180.3 Z" fill="#FF6041"/>
-                                <rect x="149.1" y="159.6" width="104.9" height="21.3" fill="#FF6041"/>
-                            </g>
-                            <g transform="translate(39.6, -37.8) scale(0.8)">
-                                <g fill="#FFFFFF">
-                                    <path d="M11.94,81.73c-1.14-.47-2.05-1.16-2.73-2.07-.68-.91-1.04-2.01-1.08-3.3h5.09c.07.73.33,1.28.75,1.66s.99.57,1.68.57,1.27-.16,1.68-.49c.41-.33.62-.78.62-1.36,0-.48-.16-.88-.49-1.2-.33-.32-.73-.58-1.2-.78-.48-.21-1.15-.44-2.03-.7-1.27-.39-2.3-.78-3.1-1.17-.8-.39-1.49-.97-2.07-1.73-.58-.76-.87-1.76-.87-2.99,0-1.83.66-3.26,1.98-4.29,1.32-1.03,3.05-1.55,5.17-1.55s3.9.52,5.23,1.55c1.32,1.03,2.03,2.47,2.12,4.32h-5.17c-.04-.63-.27-1.13-.7-1.5-.43-.36-.98-.54-1.65-.54-.58,0-1.04.15-1.4.46-.35.31-.53.75-.53,1.33,0,.63.3,1.13.89,1.48.6.35,1.53.74,2.79,1.15,1.27.43,2.3.84,3.09,1.23.79.39,1.48.96,2.05,1.7.58.75.87,1.71.87,2.88s-.28,2.13-.85,3.05c-.57.91-1.39,1.64-2.47,2.18-1.08.54-2.36.81-3.83.81s-2.72-.23-3.86-.7Z"/>
-                                    <path d="M37.57,78.77h-7.32l-1.17,3.47h-5l7.1-19.62h5.53l7.1,19.62h-5.06l-1.17-3.47ZM36.34,75.08l-2.43-7.18-2.4,7.18h4.84Z"/>
-                                    <path d="M64.03,82.23h-4.78l-7.99-12.1v12.1h-4.78v-19.62h4.78l7.99,12.16v-12.16h4.78v19.62Z"/>
-                                    <path d="M82.17,62.61v3.83h-5.2v15.79h-4.78v-15.79h-5.2v-3.83h15.18Z"/>
-                                    <path d="M85.02,67.21c.84-1.52,2.01-2.7,3.51-3.55s3.2-1.27,5.1-1.27c2.33,0,4.32.61,5.98,1.84s2.77,2.91,3.33,5.03h-5.25c-.39-.82-.95-1.44-1.66-1.87-.72-.43-1.53-.64-2.45-.64-1.47,0-2.67.51-3.58,1.54-.91,1.02-1.37,2.39-1.37,4.11s.46,3.08,1.37,4.11c.91,1.02,2.11,1.54,3.58,1.54.91,0,1.73-.21,2.45-.64.72-.43,1.27-1.05,1.66-1.87h5.25c-.56,2.12-1.67,3.8-3.33,5.02-1.66,1.22-3.65,1.83-5.98,1.83-1.9,0-3.6-.42-5.1-1.27s-2.67-2.03-3.51-3.54c-.84-1.51-1.26-3.23-1.26-5.17s.42-3.67,1.26-5.18Z"/>
-                                    <path d="M109.8,81.14c-1.54-.86-2.76-2.05-3.66-3.59-.9-1.54-1.36-3.27-1.36-5.18s.45-3.64,1.36-5.17c.9-1.53,2.12-2.72,3.66-3.58s3.23-1.29,5.07-1.29,3.54.43,5.07,1.29,2.75,2.05,3.63,3.58c.88,1.53,1.33,3.25,1.33,5.17s-.45,3.65-1.34,5.18c-.89,1.54-2.11,2.73-3.63,3.59-1.53.86-3.21,1.29-5.06,1.29s-3.54-.43-5.07-1.29ZM118.63,76.51c.94-1.04,1.41-2.42,1.41-4.14s-.47-3.12-1.41-4.15c-.94-1.03-2.19-1.55-3.76-1.55s-2.85.51-3.79,1.54c-.94,1.02-1.41,2.41-1.41,4.16s.47,3.12,1.41,4.15c.94,1.03,2.2,1.55,3.79,1.55s2.82-.52,3.76-1.57Z"/>
-                                    <path d="M150.06,62.61v19.62h-4.78v-11.77l-4.39,11.77h-3.86l-4.42-11.79v11.79h-4.78v-19.62h5.65l5.51,13.58,5.45-13.58h5.62Z"/>
-                                </g>
-                                <text x="8.14" y="92.74" font-family="'Montserrat', sans-serif" font-weight="300" font-size="8.3" fill="rgba(255,255,255,0.5)" textLength="148" lengthAdjust="spacingAndGlyphs">Science Analytics &amp; Communications</text>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <p class="footer-contact">request@santcom.com</p>
-
-                </div>
-                <div class="footer-col">
-                    <h4>Páginas</h4>
-                    <a href="../index.html">Inicio</a>
-                    <a href="quienes-somos.html">Quiénes Somos</a>
-                    <a href="solutions.html">Soluciones</a>
-                    <a href="vision.html">Visión</a>
-                    <a href="blog.html">Blog</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <a href="#">Insights</a>
-                    <a href="#">Resources</a>
-                    <a href="get-started.html">Comenzar</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Suscríbase a Nuestro Boletín</h4>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Correo electrónico" required>
-                        <label>
-                            <input type="checkbox" required>
-                            <span>Sí, suscribirme al boletín.</span>
-                        </label>
-                        <button type="submit" class="btn-submit">Enviar</button>
-                    </form>
-                    <div class="social-links">
-                        <h5>Síganos En:</h5>
-                        <div class="social-icons">
-                            <a href="#" aria-label="LinkedIn"><img src="../assets/img/linkedin.png" alt="LinkedIn" width="25" height="25"></a>
-                            <a href="#" aria-label="Facebook"><img src="../assets/img/facebook.png" alt="Facebook" width="25" height="25"></a>
-                            <a href="#" aria-label="Twitter"><img src="../assets/img/twitter.png" alt="Twitter" width="25" height="25"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Santcom. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-heading footer-soluciones">Soluciones</div>
+            <a href="solutions.html" class="footer-link-plataforma">Plataforma</a>
+            <a href="solutions.html" class="footer-link-analitica">Analítica</a>
+            <a href="solutions.html" class="footer-link-modelos">Modelos Predictivos</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-heading footer-contacto">Contacto</div>
+            <a href="mailto:contacto@santcom.com">contacto@santcom.com</a>
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="../assets/js/main.js?v=27"></script>
-    <script>
-        // Vision Page Language Switcher
-        function initVisionLanguage() {
-            const langEn = document.getElementById('lang-en');
-            const langEs = document.getElementById('lang-es');
+    <div class="footer-bottom">
+        <p>&copy; 2026 Santcom. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
-            if (!langEn || !langEs) return;
-
-            const visionTranslations = {
-                en: {
-                    heroTitle: 'Purpose, Vision and Strategic Approach',
-                    visionTitle: 'Our Purpose',
-                    visionText: 'Transform the way companies make decisions. We convert histórical data into competitive advantage, predicting cost overruns and delays months before they occur with Artificial Intelligence.',
-                    challengeTitle: 'The Industry Challenge',
-                    challenge1Title: 'Financial Uncertainty',
-                    challenge1Text: '98% of mega-projects exceed their budget by more than 30%. Without ML, contingency funds are guesses, not mathematical calculations.',
-                    challenge2Title: 'Optimistic Schedules',
-                    challenge2Text: 'Human Optimism Bias ignores the long tail of risks. 77% of projects finish late, costing millions in penalties and fixed costs.',
-                    challenge3Title: 'Wasted Data',
-                    challenge3Text: 'You have years of histórical data in Excel and Project. Currently they are dead files. We convert them into your most valuable asset.',
-                    solutionTitle: 'From Intuition to Mathematical Certainty',
-                    solutionIntro: 'Our technology doesn\'t replace your engineers; it gives them superpowers. We use advanced algorithms (XGBoost, Neural Networks) to analyze thousands of patterns invisible to the human eye.',
-                    solution1Title: 'Predictive Analytics',
-                    solution1Text: 'Know which projects will have cost overruns before laying the first brick.',
-                    solution2Title: 'Probabilistic Planning',
-                    solution2Text: 'Replace unrealistic fixed dates with confidence curves (e.g., 85% probability of finishing in May).',
-                    solution3Title: 'Scenario Simulation',
-                    solution3Text: 'Instantly simulate the financial impact of adding a crane or doubling shifts.',
-                    whyTitle: 'Why Is This Essential?',
-                    why1Title: 'Competitive Advantage',
-                    why1Text: 'Industry leaders are already investing in digitalization. Be the first to guarantee schedules to your clients.',
-                    why2Title: 'Margin Protection',
-                    why2Text: 'In a market with tight margins, avoiding a single cost overrun error pays for the service for years.',
-                    why3Title: 'Institutional Memory',
-                    why3Text: 'When your senior engineers retire, their knowledge leaves. Our models capture that experience forever.',
-                    why4Title: 'Investor Confidence',
-                    why4Text: 'Present AI-backed risk reports to your banks and investors, not just promises.',
-                    resultsTitle: 'The Value of Prediction',
-                    result1Label: 'Reduction in Project Times',
-                    result2Label: 'Labor Cost Savings',
-                    result3Label: 'Delay Prediction Accuracy',
-                    ctaTitle: 'Ready to Build Smarter?',
-                    ctaDesc: 'Start with low risk. We implement our models on your past projects to compare our predictions with your histórical reality.',
-                    ctaButton: 'Get Started'
-                },
-                es: {
-                    heroTitle: 'Propósito, Visión y Enfoque Estratégico',
-                    visionTitle: 'Nuestro Propósito',
-                    visionText: 'Transformar la forma en que las empresas toman decisiones. Convertimos datos históricos en ventaja competitiva, prediciendo sobrecostos y retrasos meses antes de que ocurran con Inteligencia Artificial.',
-                    challengeTitle: 'El Desafío de la Industria',
-                    challenge1Title: 'Incertidumbre Financiera',
-                    challenge1Text: 'El 98% de los megaproyectos exceden su presupuesto en más del 30%. Sin ML, los fondos de contingencia son adivinanzas, no cálculos matemáticos.',
-                    challenge2Title: 'Cronogramas Optimistas',
-                    challenge2Text: 'El Sesgo de Optimismo humano ignora la larga cola de riesgos. El 77% de las obras terminan tarde, costando millones en multas y costos fijos.',
-                    challenge3Title: 'Datos Desperdiciados',
-                    challenge3Text: 'Usted tiene años de datos históricos en Excel y Project. Actualmente son archivos muertos. Nosotros los convertimos en su activo más valioso.',
-                    solutionTitle: 'De la Intuición a la Certeza Matemática',
-                    solutionIntro: 'Nuestra tecnología no reemplaza a sus ingenieros; les da superpoderes. Utilizamos algoritmos avanzados (XGBoost, Redes Neuronales) para analizar miles de patrones invisibles al ojo humano.',
-                    solution1Title: 'Analítica Predictiva',
-                    solution1Text: 'Sepa qué proyectos tendrán sobrecostos antes de poner el primer ladrillo.',
-                    solution2Title: 'Planificación Probabilística',
-                    solution2Text: 'Reemplace fechas fijas irreales con curvas de confianza (ej. 85% de probabilidad de terminar en Mayo).',
-                    solution3Title: 'Simulación de Escenarios',
-                    solution3Text: 'Simule el impacto financiero de añadir una grúa o doblar turnos instantáneamente.',
-                    whyTitle: '¿Por Qué es Esencial?',
-                    why1Title: 'Ventaja Competitiva',
-                    why1Text: 'Los líderes de la industria ya invierten en digitalización. Sea el primero en garantizar cronogramas a sus clientes.',
-                    why2Title: 'Protección de Margen',
-                    why2Text: 'En un mercado de márgenes estrechos, evitar un solo error de sobrecosto paga el servicio por años.',
-                    why3Title: 'Memoria Institucional',
-                    why3Text: 'Cuando sus ingenieros senior se retiran, su conocimiento se va. Nuestros modelos capturan esa experiencia para siempre.',
-                    why4Title: 'Confianza del Inversor',
-                    why4Text: 'Presente a sus bancos e inversores informes de riesgo respaldados por IA, no solo promesas.',
-                    resultsTitle: 'El Valor de la Predicción',
-                    result1Label: 'Reducción en Tiempos de Proyecto',
-                    result2Label: 'Ahorro en Costos Laborales',
-                    result3Label: 'Precisión en Predicción de Retrasos',
-                    ctaTitle: '¿Listo para Construir de Forma Más Inteligente?',
-                    ctaDesc: 'Comience con bajo riesgo. Implementamos nuestros modelos en sus proyectos pasados para comparar nuestras predicciones con su realidad histórica.',
-                    ctaButton: 'Comenzar'
-                }
-            };
-
-            function setVisionLanguage(lang) {
-                const t = visionTranslations[lang];
-                localStorage.setItem('santcom-lang', lang);
-
-                // Update nav links
-                const navLabels = lang === 'en' ? ['About Us','Solutions','Visión','Blog'] : ['Quiénes Somos','Soluciones','Visión','Blog'];
-                const navLinks = document.querySelectorAll('.nav a');
-                navLinks.forEach(function(a, i) { if (navLabels[i]) a.textContent = navLabels[i]; });
-                const mobileNavLabels = lang === 'en' ? ['About Us','Solutions','Visión','Blog','Get Started'] : ['Quiénes Somos','Soluciones','Visión','Blog','Comenzar'];
-                const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-                mobileNavLinks.forEach(function(a, i) { if (mobileNavLabels[i]) a.textContent = mobileNavLabels[i]; });
-                // Update header buttons
-                const loginBtn = document.querySelector('.login-btn');
-                if (loginBtn) { const svg = loginBtn.querySelector('svg'); loginBtn.textContent = ''; if (svg) loginBtn.prepend(svg); loginBtn.append(' ' + (lang === 'en' ? 'Log In' : 'Iniciar Sesión')); }
-                const gsBtns = document.querySelectorAll('.btn-get-started');
-                gsBtns.forEach(function(b) { b.textContent = lang === 'en' ? 'Get Started' : 'Comenzar'; });
-
-                // Update hero
-                const heroTitle = document.querySelector('.vision-hero-title');
-                if (heroTitle) heroTitle.textContent = t.heroTitle;
-
-                // Update vision section
-                const visionTitle = document.querySelector('.vision-section-title');
-                const visionText = document.querySelector('.vision-main-text');
-                if (visionTitle) visionTitle.textContent = t.visionTitle;
-                if (visionText) visionText.textContent = t.visionText;
-
-                // Update challenge section
-                const challengeTitle = document.querySelector('.vision-challenge-title');
-                if (challengeTitle) challengeTitle.textContent = t.challengeTitle;
-
-                const challenge1Title = document.querySelector('.challenge-title-1');
-                const challenge1Text = document.querySelector('.challenge-text-1');
-                const challenge2Title = document.querySelector('.challenge-title-2');
-                const challenge2Text = document.querySelector('.challenge-text-2');
-                const challenge3Title = document.querySelector('.challenge-title-3');
-                const challenge3Text = document.querySelector('.challenge-text-3');
-
-                if (challenge1Title) challenge1Title.textContent = t.challenge1Title;
-                if (challenge1Text) challenge1Text.textContent = t.challenge1Text;
-                if (challenge2Title) challenge2Title.textContent = t.challenge2Title;
-                if (challenge2Text) challenge2Text.textContent = t.challenge2Text;
-                if (challenge3Title) challenge3Title.textContent = t.challenge3Title;
-                if (challenge3Text) challenge3Text.textContent = t.challenge3Text;
-
-                // Update solution section
-                const solutionTitle = document.querySelector('.vision-solution-title');
-                const solutionIntro = document.querySelector('.solution-intro');
-                if (solutionTitle) solutionTitle.textContent = t.solutionTitle;
-                if (solutionIntro) solutionIntro.textContent = t.solutionIntro;
-
-                const solution1Title = document.querySelector('.solution-title-1');
-                const solution1Text = document.querySelector('.solution-text-1');
-                const solution2Title = document.querySelector('.solution-title-2');
-                const solution2Text = document.querySelector('.solution-text-2');
-                const solution3Title = document.querySelector('.solution-title-3');
-                const solution3Text = document.querySelector('.solution-text-3');
-
-                if (solution1Title) solution1Title.textContent = t.solution1Title;
-                if (solution1Text) solution1Text.textContent = t.solution1Text;
-                if (solution2Title) solution2Title.textContent = t.solution2Title;
-                if (solution2Text) solution2Text.textContent = t.solution2Text;
-                if (solution3Title) solution3Title.textContent = t.solution3Title;
-                if (solution3Text) solution3Text.textContent = t.solution3Text;
-
-                // Update why section
-                const whyTitle = document.querySelector('.vision-why-title');
-                if (whyTitle) whyTitle.textContent = t.whyTitle;
-
-                const why1Title = document.querySelector('.why-title-1');
-                const why1Text = document.querySelector('.why-text-1');
-                const why2Title = document.querySelector('.why-title-2');
-                const why2Text = document.querySelector('.why-text-2');
-                const why3Title = document.querySelector('.why-title-3');
-                const why3Text = document.querySelector('.why-text-3');
-                const why4Title = document.querySelector('.why-title-4');
-                const why4Text = document.querySelector('.why-text-4');
-
-                if (why1Title) why1Title.textContent = t.why1Title;
-                if (why1Text) why1Text.textContent = t.why1Text;
-                if (why2Title) why2Title.textContent = t.why2Title;
-                if (why2Text) why2Text.textContent = t.why2Text;
-                if (why3Title) why3Title.textContent = t.why3Title;
-                if (why3Text) why3Text.textContent = t.why3Text;
-                if (why4Title) why4Title.textContent = t.why4Title;
-                if (why4Text) why4Text.textContent = t.why4Text;
-
-                // Update results section
-                const resultsTitle = document.querySelector('.vision-results-title');
-                if (resultsTitle) resultsTitle.textContent = t.resultsTitle;
-
-                const result1Label = document.querySelector('.result-label-1');
-                const result2Label = document.querySelector('.result-label-2');
-                const result3Label = document.querySelector('.result-label-3');
-
-                if (result1Label) result1Label.textContent = t.result1Label;
-                if (result2Label) result2Label.textContent = t.result2Label;
-                if (result3Label) result3Label.textContent = t.result3Label;
-
-                // Update CTA section
-                const ctaTitle = document.querySelector('.vision-cta-title');
-                const ctaDesc = document.querySelector('.vision-cta-desc');
-                const ctaButton = document.querySelector('.cta-section .btn-primary');
-                if (ctaTitle) ctaTitle.textContent = t.ctaTitle;
-                if (ctaDesc) ctaDesc.textContent = t.ctaDesc;
-                if (ctaButton) ctaButton.textContent = t.ctaButton;
-
-                // Update footer links
-                const footerLinks = document.querySelectorAll('.footer-col a');
-                footerLinks.forEach(function(link) {
-                    if (link.textContent.match(/Home|Inicio/)) link.textContent = lang === 'en' ? 'Home' : 'Inicio';
-                    if (link.textContent.match(/About Us|Quiénes Somos|Quienes Somos/)) link.textContent = lang === 'en' ? 'About Us' : 'Quiénes Somos';
-                    if (link.textContent.match(/Solutions|Soluciones/)) link.textContent = lang === 'en' ? 'Solutions' : 'Soluciones';
-                });
-
-                // Update button states
-                langEn.classList.toggle('active', lang === 'en');
-                langEs.classList.toggle('active', lang === 'es');
-            }
-
-            // Event listeners
-            langEn.addEventListener('click', () => setVisionLanguage('en'));
-            langEs.addEventListener('click', () => setVisionLanguage('es'));
-
-            // Check for saved language preference
-            const savedLang = localStorage.getItem('santcom-lang');
-            if (savedLang) {
-                setVisionLanguage(savedLang);
-            }
+<!-- Scripts -->
+<script src="../assets/js/main.js?v=28"></script>
+<script>
+    initLanguageSwitcher({
+        es: {
+            '.vision-hero-title': 'Propósito, Visión y Enfoque Estratégico',
+            '.vision-section-title': 'Nuestro Propósito',
+            '.vision-main-text': 'Transformar la forma en que las empresas toman decisiones. Convertimos datos históricos en ventaja competitiva, prediciendo sobrecostos y retrasos meses antes de que ocurran con Inteligencia Artificial.',
+            '.vision-challenge-title': 'El Desafío de la Industria',
+            '.challenge-title-1': 'Incertidumbre Financiera',
+            '.challenge-text-1': 'El 98% de los megaproyectos exceden su presupuesto en más del 30%. Sin ML, los fondos de contingencia son adivinanzas, no cálculos matemáticos.',
+            '.challenge-title-2': 'Cronogramas Optimistas',
+            '.challenge-text-2': 'El Sesgo de Optimismo humano ignora la larga cola de riesgos. El 77% de las obras terminan tarde, costando millones en multas y costos fijos.',
+            '.challenge-title-3': 'Datos Desperdiciados',
+            '.challenge-text-3': 'Usted tiene años de datos históricos en Excel y Project. Actualmente son archivos muertos. Nosotros los convertimos en su activo más valioso.',
+            '.vision-solution-title': 'De la Intuición a la Certeza Matemática',
+            '.solution-intro': 'Nuestra tecnología no reemplaza a sus ingenieros; les da superpoderes. Utilizamos algoritmos avanzados (XGBoost, Redes Neuronales) para analizar miles de patrones invisibles al ojo humano.',
+            '.solution-title-1': 'Analítica Predictiva',
+            '.solution-text-1': 'Sepa qué proyectos tendrán sobrecostos antes de poner el primer ladrillo.',
+            '.solution-title-2': 'Planificación Probabilística',
+            '.solution-text-2': 'Reemplace fechas fijas irreales con curvas de confianza (ej. 85% de probabilidad de terminar en Mayo).',
+            '.solution-title-3': 'Simulación de Escenarios',
+            '.solution-text-3': 'Simule el impacto financiero de añadir una grúa o doblar turnos instantáneamente.',
+            '.vision-why-title': '¿Por Qué es Esencial?',
+            '.why-title-1': 'Ventaja Competitiva',
+            '.why-text-1': 'Los líderes de la industria ya invierten en digitalización. Sea el primero en garantizar cronogramas a sus clientes.',
+            '.why-title-2': 'Protección de Margen',
+            '.why-text-2': 'En un mercado de márgenes estrechos, evitar un solo error de sobrecosto paga el servicio por años.',
+            '.why-title-3': 'Memoria Institucional',
+            '.why-text-3': 'Cuando sus ingenieros senior se retiran, su conocimiento se va. Nuestros modelos capturan esa experiencia para siempre.',
+            '.why-title-4': 'Confianza del Inversor',
+            '.why-text-4': 'Presente a sus bancos e inversores informes de riesgo respaldados por IA, no solo promesas.',
+            '.vision-results-title': 'El Valor de la Predicción',
+            '.result-label-1': 'Reducción en Tiempos de Proyecto',
+            '.result-label-2': 'Ahorro en Costos Laborales',
+            '.result-label-3': 'Precisión en Predicción de Retrasos',
+            '.vision-cta-title': '¿Listo para Construir de Forma Más Inteligente?',
+            '.vision-cta-desc': 'Comience con bajo riesgo. Implementamos nuestros modelos en sus proyectos pasados para comparar nuestras predicciones con su realidad histórica.',
+            '.vision-cta-btn': 'Comenzar',
+            '.nav-quienes': 'Quiénes Somos',
+            '.nav-soluciones': 'Soluciones',
+            '.nav-vision': 'Visión',
+            '.nav-blog': 'Blog',
+            '.nav-cta': 'Comenzar',
+            '.mob-quienes': 'Quiénes Somos',
+            '.mob-soluciones': 'Soluciones',
+            '.mob-vision': 'Visión',
+            '.mob-blog': 'Blog',
+            '.mob-cta': 'Comenzar',
+            '.footer-empresa': 'Empresa',
+            '.footer-soluciones': 'Soluciones',
+            '.footer-contacto': 'Contacto',
+            '.footer-link-quienes': 'Quiénes Somos',
+            '.footer-link-vision': 'Visión',
+            '.footer-link-plataforma': 'Plataforma',
+            '.footer-link-analitica': 'Analítica',
+            '.footer-link-modelos': 'Modelos Predictivos'
+        },
+        en: {
+            '.vision-hero-title': 'Purpose, Vision and Strategic Approach',
+            '.vision-section-title': 'Our Purpose',
+            '.vision-main-text': 'Transform the way companies make decisions. We convert historical data into competitive advantage, predicting cost overruns and delays months before they occur with Artificial Intelligence.',
+            '.vision-challenge-title': 'The Industry Challenge',
+            '.challenge-title-1': 'Financial Uncertainty',
+            '.challenge-text-1': '98% of mega-projects exceed their budget by more than 30%. Without ML, contingency funds are guesses, not mathematical calculations.',
+            '.challenge-title-2': 'Optimistic Schedules',
+            '.challenge-text-2': 'Human Optimism Bias ignores the long tail of risks. 77% of projects finish late, costing millions in penalties and fixed costs.',
+            '.challenge-title-3': 'Wasted Data',
+            '.challenge-text-3': 'You have years of historical data in Excel and Project. Currently they are dead files. We convert them into your most valuable asset.',
+            '.vision-solution-title': 'From Intuition to Mathematical Certainty',
+            '.solution-intro': 'Our technology does not replace your engineers; it gives them superpowers. We use advanced algorithms (XGBoost, Neural Networks) to analyze thousands of patterns invisible to the human eye.',
+            '.solution-title-1': 'Predictive Analytics',
+            '.solution-text-1': 'Know which projects will have cost overruns before laying the first brick.',
+            '.solution-title-2': 'Probabilistic Planning',
+            '.solution-text-2': 'Replace unrealistic fixed dates with confidence curves (e.g., 85% probability of finishing in May).',
+            '.solution-title-3': 'Scenario Simulation',
+            '.solution-text-3': 'Instantly simulate the financial impact of adding a crane or doubling shifts.',
+            '.vision-why-title': 'Why Is This Essential?',
+            '.why-title-1': 'Competitive Advantage',
+            '.why-text-1': 'Industry leaders are already investing in digitalization. Be the first to guarantee schedules to your clients.',
+            '.why-title-2': 'Margin Protection',
+            '.why-text-2': 'In a market with tight margins, avoiding a single cost overrun error pays for the service for years.',
+            '.why-title-3': 'Institutional Memory',
+            '.why-text-3': 'When your senior engineers retire, their knowledge leaves. Our models capture that experience forever.',
+            '.why-title-4': 'Investor Confidence',
+            '.why-text-4': 'Present AI-backed risk reports to your banks and investors, not just promises.',
+            '.vision-results-title': 'The Value of Prediction',
+            '.result-label-1': 'Reduction in Project Times',
+            '.result-label-2': 'Labor Cost Savings',
+            '.result-label-3': 'Delay Prediction Accuracy',
+            '.vision-cta-title': 'Ready to Build Smarter?',
+            '.vision-cta-desc': 'Start with low risk. We implement our models on your past projects to compare our predictions with your historical reality.',
+            '.vision-cta-btn': 'Get Started',
+            '.nav-quienes': 'About Us',
+            '.nav-soluciones': 'Solutions',
+            '.nav-vision': 'Vision',
+            '.nav-blog': 'Blog',
+            '.nav-cta': 'Get Started',
+            '.mob-quienes': 'About Us',
+            '.mob-soluciones': 'Solutions',
+            '.mob-vision': 'Vision',
+            '.mob-blog': 'Blog',
+            '.mob-cta': 'Get Started',
+            '.footer-empresa': 'Company',
+            '.footer-soluciones': 'Solutions',
+            '.footer-contacto': 'Contact',
+            '.footer-link-quienes': 'About Us',
+            '.footer-link-vision': 'Vision',
+            '.footer-link-plataforma': 'Platform',
+            '.footer-link-analitica': 'Analytics',
+            '.footer-link-modelos': 'Predictive Models'
         }
+    });
+</script>
 
-        // Initialize vision language switcher on DOM ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initVisionLanguage);
-        } else {
-            initVisionLanguage();
-        }
-    </script>
 </body>
 </html>
